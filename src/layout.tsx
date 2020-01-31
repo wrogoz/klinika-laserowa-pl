@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Header from "./components/header";
+
 import Footer from "./components/footer";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import styled from 'styled-components';
@@ -8,11 +8,11 @@ export default class Layout extends Component<{}, {}> {
   render() {
     return (
       <LayoutContainer>
-        <Header />
+
         <Router>
           <Switch>
             <Route exact path="/">
-    <div><MainPage/></div>
+              <MainPage/>
             </Route>
             <Route exact path="/second">
               <div>second page</div>
