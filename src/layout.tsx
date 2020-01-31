@@ -3,6 +3,7 @@ import Header from "./components/header";
 import Footer from "./components/footer";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import styled from 'styled-components';
+import MainPage from './components/mainPage';
 export default class Layout extends Component<{}, {}> {
   render() {
     return (
@@ -11,7 +12,7 @@ export default class Layout extends Component<{}, {}> {
         <Router>
           <Switch>
             <Route exact path="/">
-              <div>main page</div>
+    <div><MainPage/></div>
             </Route>
             <Route exact path="/second">
               <div>second page</div>

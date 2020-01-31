@@ -1,13 +1,16 @@
 
 const initialState = {
-    randomData:'dziala'
+    randomData:'moj store zadziałał'
 
  }
 
 const reducer = (state = initialState, action: { type: string })=> {
     switch (action.type) {
-      case 'INCREMENT':
-        return state
+      case 'CHANGEVALUE':
+        return {
+          ...state,
+          randomData:"Value Changed to Main Page"
+        }
       case 'DECREMENT':
         return state
       default:
