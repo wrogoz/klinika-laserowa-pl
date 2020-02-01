@@ -12,7 +12,7 @@ export default class Header extends Component<HeaderProps,{}> {
         return (
             <StHeader>
                 <Logo/>
-                <p>Klinika laserowa - </p><p>  {this.props.pageName}</p>
+                <p>Klinika laserowa - {this.props.pageName}</p>
                 <img src={Hamburger} alt="hamburger menu"/>
             </StHeader>
         )
