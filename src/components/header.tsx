@@ -33,6 +33,10 @@ export default class Header extends Component<HeaderProps,{}> {
 
 
 const StHeader = styled.header`
+    position:sticky;
+    top:0;
+    z-index:1;
+    background-color:#fff;
     .row{
         align-items:center;
         height:100%;
