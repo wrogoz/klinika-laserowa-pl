@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import LogoIm from '../images/logo-im.png';
 import Hamburger from '../images/menu-24px.svg';
-
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 interface HeaderProps{
     pageName:string;
 }
@@ -11,9 +12,20 @@ export default class Header extends Component<HeaderProps,{}> {
     render() {
         return (
             <StHeader>
-                <Logo/>
-                <p>Klinika laserowa - {this.props.pageName}</p>
-                <img src={Hamburger} alt="hamburger menu"/>
+                <Row>
+                    <Col xs={5}>
+                        <Logo src={LogoIm} alt="logo"/>
+                     </Col>
+                    <Col xs={5}>
+                        <p>Klinika laserowa - {this.props.pageName}</p>
+                    </Col>
+                    <Col xs={2}>
+                    <img src={Hamburger} alt="hamburger menu"/>
+                    </Col>
+                </Row>
+
+
+
             </StHeader>
         )
     }
@@ -21,38 +33,32 @@ export default class Header extends Component<HeaderProps,{}> {
 
 
 const StHeader = styled.header`
-
-    display:flex;
-    align-items:center;
-    justify-content:space-evenly;
+    .row{
+        align-items:center;
+        height:100%;
+        padding:0 15px 0 15px;
+    }
     height:75px;
     width:100%;
-
     border-bottom:1px solid #ff3a3a;
     p{
         font-size:0.5em;
         text-transform:uppercase;
         color:#8849a5;
         font-family: 'Lato', sans-serif;
+        margin-bottom:0;
 
     }
-    p:first-of-type{
-        margin-left:15px;
-        font-size:0.5em;
-    }
+
     img{
-        margin-left:10px;
-        height:30px;
-        margin-right:15px;
+        height:25px;
     }
+
+
 `
-const Logo = styled.div`
+const Logo = styled.img`
 
-    background-image:url("${LogoIm}");
 
-    background-repeat:no-repeat;
-    background-size:100%;
-    background-position-y:center;
     height:80%;
-    width:32%;
+    width:100px;
 `

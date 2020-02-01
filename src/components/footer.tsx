@@ -1,11 +1,17 @@
 import React, { Component } from 'react'
 import styled from 'styled-components';
-
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 export class Footer extends Component<{},{}> {
     render() {
         return (
             <footer>
-                footerr
+                <Row>
+                    <Col xs={12}>
+                    footerr
+                    </Col>
+                </Row>
+
             </footer>
         )
     }
