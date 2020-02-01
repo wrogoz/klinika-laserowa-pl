@@ -4,7 +4,7 @@ export class Footer extends Component<{},{}> {
     render() {
         return (
             <footer>
-                footer
+                footerr
             </footer>
         )
     }
