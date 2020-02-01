@@ -44,7 +44,7 @@ const StHeader = styled.header`
     }
     height:75px;
     width:100%;
-    border-bottom:1px solid #ff3a3a;
+
     p{
         font-size:0.5em;
         text-transform:uppercase;
