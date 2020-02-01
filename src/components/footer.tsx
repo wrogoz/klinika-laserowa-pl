@@ -23,12 +23,15 @@ const Logo = styled.div`
     width:32%;
 `
 const FooterContainer = styled.footer`
+    position:sticky;
+    bottom:0;
+    background-color:#fff;
+    margin-top:auto;
     width:100%;
     height:50px;
     display:flex;
     justify-content:center;
     align-items:center;
-    margin-top:auto;
-    border-top:1px solid red;
+    border:1px solid grey;
 `
 export default Footer

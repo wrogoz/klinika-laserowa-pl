@@ -24,7 +24,7 @@ const StHeader = styled.header`
 
     display:flex;
     align-items:center;
-    justify-content:space-between;
+    justify-content:space-evenly;
     height:75px;
     width:100%;
 
