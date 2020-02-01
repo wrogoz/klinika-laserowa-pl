@@ -13,16 +13,31 @@ class MainPage extends React.Component<{},{}>{
          pageName="strona główna"/>
         <WomenFaceBox>
             <WomenFaceTextSection>
-            <h1>Wybierz zabieg, a my spełnimy <span>Twoje potrzeby</span></h1>
+            <h1>Wybierz zabieg, a My spełnimy <span>Twoje potrzeby</span></h1>
             <button>Więcej</button>
             </WomenFaceTextSection>
 
         </WomenFaceBox>
+        <h2>Witamy serdecznie na stronie kliniki laserowej</h2>
         </MainContainer>
 
         )
     }
 }
+
+const MainContainer = styled.div`
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width:100%;
+
+    h2{
+        text-transform:uppercase;
+        font-size:1.2em;
+
+    }
+
+`
 
 const WomenFaceBox = styled.section`
     display:flex;
@@ -33,7 +48,7 @@ const WomenFaceBox = styled.section`
     background-image:url("${WomenFace}");
     background-repeat:no-repeat;
     background-size: 115% 100%;
-    background-position:-35% 0%;
+    background-position:25px 0%;
     padding-left:110px;
     padding-top:20px;
 
@@ -41,9 +56,11 @@ const WomenFaceBox = styled.section`
 const WomenFaceTextSection = styled.section`
     display:flex;
     flex-direction:column;
-    width:180px;
+    width:190px;
     margin-top:15px;
     h1{
+        letter-spacing:2px;
+        font-family: 'Lato', sans-serif;
         font-size:1.4em;
         margin-bottom:20px;
         span{
@@ -59,15 +76,10 @@ const WomenFaceTextSection = styled.section`
         border-radius:5px;
         align-self:flex-end;
         margin-right:10px;
+        color:#fff;
     }
 `
-const MainContainer = styled.div`
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    width:100%;
 
-`
 
 const mapStateToProps = (state: { randomData: string;}) => {
     return {
