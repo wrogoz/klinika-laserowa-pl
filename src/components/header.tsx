@@ -24,7 +24,7 @@ const StHeader = styled.header`
 
     display:flex;
     align-items:center;
-    justify-content:space-evenly;
+
     height:75px;
     width:100%;
 
@@ -38,6 +38,7 @@ const StHeader = styled.header`
     }
     p:first-of-type{
         margin-left:15px;
+        font-size:1em;
     }
     img{
         margin-left:10px;
