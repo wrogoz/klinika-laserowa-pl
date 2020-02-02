@@ -5,29 +5,29 @@ import Col from 'react-bootstrap/Col';
 export class Footer extends Component<{},{}> {
     render() {
         return (
-            <footer>
+            <FooterContainer>
                 <Row>
                     <Col xs={12}>
                     footerr
                     </Col>
                 </Row>
 
-            </footer>
+            </FooterContainer>
         )
     }
 }
 
 
 const FooterContainer = styled.footer`
-    position:sticky;
-    bottom:0;
+
     background-color:#fff;
     margin-top:auto;
     width:100%;
-    height:50px;
+    height:150px;
     display:flex;
     justify-content:center;
     align-items:center;
-    border:1px solid grey;
+    border-top:1px solid grey;
+    background-color:#f7ad31;
 `
 export default Footer
