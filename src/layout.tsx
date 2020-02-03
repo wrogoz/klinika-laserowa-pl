@@ -29,6 +29,7 @@ export default class Layout extends Component<{}, {}> {
 }
 
 const LayoutContainer = styled.div`
+/* autoprefixer grid: autoplace */
     width:100vw;
     min-width:270px;
     height:100vh;
