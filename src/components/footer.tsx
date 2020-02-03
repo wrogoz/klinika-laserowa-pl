@@ -20,7 +20,7 @@ export class Footer extends Component<{},{}> {
 
 const FooterContainer = styled.footer`
 
-    background-color:#fff;
+    color:#fff;
     margin-top:auto;
     width:100%;
     height:150px;
