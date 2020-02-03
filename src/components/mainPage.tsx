@@ -12,7 +12,7 @@ class MainPage extends React.Component<{}, {}> {
       <MainContainer>
         <Header pageName="strona główna" />
         <BoxWithWomenFace />
-
+        <WelcomeText />
         <SelectLaserIntervetion />
         <LaserPresentation />
       </MainContainer>
@@ -27,15 +27,15 @@ const MainContainer = styled.div`
   justify-content: center;
   width: 100%;
     h2 {
+      display:flex;
         color: grey;
         text-transform: uppercase;
         font-size: 1em;
         text-align: center;
-        min-width: 200px;
+        flex:0 0 200px;
         :last-of-type {
         margin: 0 auto 15px auto;
         border-bottom: 1px solid #204f9f;
-        max-width: 220px;
         padding-bottom: 10px;
         }
   }`
