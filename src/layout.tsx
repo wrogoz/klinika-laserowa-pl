@@ -22,7 +22,7 @@ export default class Layout extends Component<{}, {}> {
             </Route>
           </Switch>
         </Router>
-        <Footer />
+
       </LayoutContainer>
     );
   }
