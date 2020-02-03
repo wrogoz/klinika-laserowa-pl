@@ -1,4 +1,6 @@
 import React from 'react'
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import styled from 'styled-components';
 import WomenFace from '../../images/women-face.png';
 
@@ -6,19 +8,24 @@ import WomenFace from '../../images/women-face.png';
 export default class BoxWithWomenFace extends React.Component<{},{}>{
     render(){
         return(
-
+            <Row>
+            <StyledCol xs={12}>
             <WomenFaceBox>
                 <WomenFaceTextSection>
                     <h1>Wybierz zabieg, a My spełnimy <span>Twoje potrzeby</span></h1>
                     <button>Więcej</button>
                 </WomenFaceTextSection>
             </WomenFaceBox>
-
+            </StyledCol>
+        </Row>
         )
     }
 }
 
-
+const StyledCol = styled(Col)`
+    padding:0;
+    margin:0;
+`
 
 const WomenFaceBox = styled.section`
     display:flex;
