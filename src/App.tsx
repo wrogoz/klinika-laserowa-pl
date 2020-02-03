@@ -1,6 +1,6 @@
 
 import React from 'react';
-import './style.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Layout from './layout';
 import { createGlobalStyle } from 'styled-components'
