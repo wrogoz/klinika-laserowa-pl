@@ -12,8 +12,8 @@ class MainPage extends React.Component<{}, {}> {
       <MainContainer>
         <Header pageName="strona główna" />
         <BoxWithWomenFace />
-        <WelcomeText />
 
+        <SelectLaserIntervetion />
         <LaserPresentation />
       </MainContainer>
     );
