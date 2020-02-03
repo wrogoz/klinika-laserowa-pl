@@ -39,6 +39,7 @@ export default class DescriptionWithImgOnLeft extends React.Component<Descriptio
 
 
     const ImageToLeft = styled.section`
+        display:flex;
         position:relative;
         margin-top:30px;
         div{
@@ -46,7 +47,7 @@ export default class DescriptionWithImgOnLeft extends React.Component<Descriptio
             position:absolute;
             padding:5px 10px 5px 15px;
             bottom:20px;
-            right:37px;
+            right:70px;
             border-radius:5px;
             p{
                 text-transform:uppercase;
@@ -59,22 +60,25 @@ export default class DescriptionWithImgOnLeft extends React.Component<Descriptio
         }
     img{
         position:relative;
-        padding-right:40px;
-        min-height: 340px;
-        width:100%;
+
+        min-height: 260px;
+        width:80%;
 
 
         border-radius:15px;
         }
     `
     const DescriptionBox = styled.div`
-        margin: 20px 40px 20px 10%;
+        display:flex;
+        flex-direction:column;
+        width:77%;
+        padding-left:3%;
     `
 
     const DescriptionH = styled.h3`
     text-transform:uppercase;
     `
     const DescriptionP = styled.p`
-
+        margin:0;
 
     `
