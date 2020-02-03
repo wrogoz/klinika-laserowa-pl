@@ -23,23 +23,23 @@ export default class BoxWithWomenFace extends React.Component<{},{}>{
 const WomenFaceBox = styled.section`
     display:flex;
     justify-content:center;
-    height:190px;
+    padding-bottom:15px;
     width:100%;
     background-image:url("${WomenFace}");
     background-repeat:no-repeat;
-    background-size: 400px 100%;
+    background-size: 100% 100%;
     margin-bottom:15px;
 `
 const WomenFaceTextSection = styled.section`
     display:flex;
     flex-direction:column;
     width:190px;
-    margin:48px 0 0 80px;
+    margin:0 0 0 80px;
     h1{
         letter-spacing:2px;
         font-family: 'Lato', sans-serif;
         font-size:1.4em;
-        margin-bottom:20px;
+        margin-bottom:10px;
         span{
 
             color:#204f9f;
