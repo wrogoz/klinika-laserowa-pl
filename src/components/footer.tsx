@@ -29,7 +29,6 @@ const FooterBox = styled.footer`
     margin-top:15px;
     padding: 15px 0 0 0px;
     width:100%;
-    border-top:1px solid grey;
     border-radius:15px 15px 0 0;
     background-color:#f7ad31;
     p{
