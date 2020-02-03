@@ -48,6 +48,7 @@ const Stroke = styled.div`
 
 `
 <<<<<<< HEAD
+<<<<<<< HEAD
 const PresentationStartTextBox = styled.div`
     display:flex;
     display: -webkit-flexbox;
@@ -58,6 +59,9 @@ const PresentationStartTextBox = styled.div`
         font-size:0.85em;
         text-transform:uppercase;
         padding-left:3px;
+=======
+const ReasonToTryCol = styled(Col)`
+>>>>>>> parent of c2c3406... grid layout changed to flexbox
 =======
 const ReasonToTryCol = styled(Col)`
 >>>>>>> parent of c2c3406... grid layout changed to flexbox

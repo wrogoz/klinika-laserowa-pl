@@ -29,10 +29,15 @@ export class Footer extends Component<{},{}> {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const FooterBox = styled.footer`
     display:flex;
     display: -webkit-flexbox;
     flex-direction:column;
+=======
+const FooterRow = styled(Row)`
+
+>>>>>>> parent of c2c3406... grid layout changed to flexbox
 =======
 const FooterRow = styled(Row)`
 
@@ -47,10 +52,16 @@ const FooterRow = styled(Row)`
 
 `
 <<<<<<< HEAD
+<<<<<<< HEAD
 const SecondRow = styled.div`
     display:flex;
     display: -webkit-flexbox;
     justify-content:space-between;
+=======
+const FooterCol = styled(Col)`
+    padding-bottom: 20px;
+    padding-right:0;
+>>>>>>> parent of c2c3406... grid layout changed to flexbox
 =======
 const FooterCol = styled(Col)`
     padding-bottom: 20px;

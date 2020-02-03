@@ -34,10 +34,13 @@ export default class Header extends Component<HeaderProps,{}> {
 
 const StHeader = styled.header`
 <<<<<<< HEAD
+<<<<<<< HEAD
     display:flex;
     display: -webkit-flexbox;
     align-items:center;
     justify-content:space-between;
+=======
+>>>>>>> parent of c2c3406... grid layout changed to flexbox
 =======
 >>>>>>> parent of c2c3406... grid layout changed to flexbox
     position:sticky;
