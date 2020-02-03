@@ -1,5 +1,4 @@
 import React from 'react'
-import Col from 'react-bootstrap/Col';
 import styled from 'styled-components';
 
 
@@ -13,12 +12,12 @@ export default class DescriptionWithImgOnLeft extends React.Component<Descriptio
         return(
             <>
 
-                <ImageToLeftCol xs={12}>
+                <ImageToLeft>
                     <img src={this.props.imgSrc} alt="cutera_photo"/>
                     <div>
                         <p>{this.props.boxTitle}</p>
                     </div>
-                </ImageToLeftCol>
+                </ImageToLeft>
                 <DescriptionBox>
                     <DescriptionH>
                         Lorem Ipsum Ipsum Ipsum  Ipsum Ipsum Ipsum Ipsum
@@ -39,7 +38,8 @@ export default class DescriptionWithImgOnLeft extends React.Component<Descriptio
 }
 
 
-    const ImageToLeftCol = styled(Col)`
+    const ImageToLeft = styled.section`
+        position:relative;
         margin-top:30px;
         div{
             background-color:#8849a5;
@@ -58,12 +58,9 @@ export default class DescriptionWithImgOnLeft extends React.Component<Descriptio
             }
         }
     img{
-        display:flex;
-        display: -webkit-flexbox;
-
         position:relative;
         padding-right:40px;
-        flex: 0 0 260px;
+        min-height: 340px;
         width:100%;
 
 

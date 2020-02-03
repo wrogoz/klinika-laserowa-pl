@@ -27,20 +27,27 @@ const MainContainer = styled.div`
   justify-content: center;
   width: 100%;
     h2 {
-      display:flex;
-      display: -webkit-flexbox;
         color: grey;
         text-transform: uppercase;
         font-size: 1em;
         text-align: center;
-        flex:0 0 200px;
+        min-width: 200px;
         :last-of-type {
         margin: 0 auto 15px auto;
         border-bottom: 1px solid #204f9f;
+        max-width: 220px;
         padding-bottom: 10px;
         }
-  }`
-
+  }
+  .row {
+    width: 100%;
+    .col {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+    }
+  }
+`;
 
 const mapStateToProps = (state: { randomData: string }) => {
   return {
