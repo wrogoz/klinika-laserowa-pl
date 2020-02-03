@@ -12,15 +12,15 @@ export default class Header extends Component<HeaderProps,{}> {
     render() {
         return (
             <StHeader>
-                <Row>
-                    <Col xs={5}>
+                <Row noGutters={true}>
+                    <Col xs={4}>
                         <Logo src={LogoIm} alt="logo"/>
                      </Col>
-                    <Col xs={5}>
+                    <Col xs={6}>
                         <p>Klinika laserowa - {this.props.pageName}</p>
                     </Col>
                     <Col xs={2}>
-                    <img src={Hamburger} alt="hamburger menu"/>
+                    <HamburgerMenu src={Hamburger} alt="hamburger menu"/>
                     </Col>
                 </Row>
 
@@ -37,16 +37,17 @@ const StHeader = styled.header`
     top:0;
     z-index:1;
     background-color:#fff;
+
     .row{
         align-items:center;
         height:100%;
         padding:0 15px 0 15px;
     }
-    height:75px;
+    height:70px;
     width:100%;
 
     p{
-        font-size:0.5em;
+        font-size:0.55em;
         text-transform:uppercase;
         color:#8849a5;
         font-family: 'Lato', sans-serif;
@@ -54,15 +55,17 @@ const StHeader = styled.header`
 
     }
 
-    img{
-        height:25px;
-    }
+
 
 
 `
 const Logo = styled.img`
 
-
+    padding-right:10px;
     height:80%;
     width:100px;
+`
+
+const HamburgerMenu = styled.img`
+padding-left:20px;
 `
