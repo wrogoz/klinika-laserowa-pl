@@ -47,7 +47,7 @@ export default class DescriptionWithImgOnLeft extends React.Component<Descriptio
             position:absolute;
             padding:5px 10px 5px 15px;
             bottom:20px;
-            right:70px;
+            right:73px;
             border-radius:5px;
             p{
                 text-transform:uppercase;

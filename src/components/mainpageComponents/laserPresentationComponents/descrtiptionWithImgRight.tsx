@@ -49,7 +49,7 @@ export default class DescriptionWithImgOnRight extends React.Component<Descripti
             position:absolute;
             padding:5px 10px 5px 100px;
             bottom:20px;
-            left:70px;
+            left:73px;
             border-radius:5px;
             p{
                 text-transform:uppercase;
