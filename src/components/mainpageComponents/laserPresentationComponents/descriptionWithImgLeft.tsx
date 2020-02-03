@@ -58,9 +58,10 @@ export default class DescriptionWithImgOnLeft extends React.Component<Descriptio
             }
         }
     img{
+        display:flex;
         position:relative;
         padding-right:40px;
-        min-height: 260px;
+        flex: 0 0 260px;
         width:100%;
 
 
