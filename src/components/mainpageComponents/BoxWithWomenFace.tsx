@@ -22,6 +22,7 @@ export default class BoxWithWomenFace extends React.Component<{},{}>{
 
 const WomenFaceBox = styled.section`
     display:flex;
+    display: -webkit-flexbox;
     justify-content:center;
     height:190px;
     width:100%;
@@ -32,6 +33,7 @@ const WomenFaceBox = styled.section`
 `
 const WomenFaceTextSection = styled.section`
     display:flex;
+    display: -webkit-flexbox;
     flex-direction:column;
     width:190px;
     margin:48px 0 0 80px;

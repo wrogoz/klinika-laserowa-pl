@@ -34,6 +34,7 @@ const LayoutContainer = styled.div`
     min-width:270px;
     height:100vh;
     display:flex;
+    display: -webkit-flexbox;
     flex-direction:column;
     align-items:center;
 

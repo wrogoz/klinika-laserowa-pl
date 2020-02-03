@@ -30,6 +30,7 @@ export default class Header extends Component<HeaderProps,{}> {
 
 const StHeader = styled.header`
     display:flex;
+    display: -webkit-flexbox;
     align-items:center;
     justify-content:space-between;
     position:sticky;

@@ -24,6 +24,7 @@ export class Footer extends Component<{},{}> {
 
 const FooterBox = styled.footer`
     display:flex;
+    display: -webkit-flexbox;
     flex-direction:column;
     color:#fff;
     margin-top:auto;
@@ -36,6 +37,7 @@ const FooterBox = styled.footer`
 `
 const SecondRow = styled.div`
     display:flex;
+    display: -webkit-flexbox;
     justify-content:space-between;
 `
 const FooterStroke = styled.div`

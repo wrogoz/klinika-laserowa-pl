@@ -27,6 +27,7 @@ export default class SelectLaserIntervetion extends React.Component<{},{}>{
 
 const SelectSection = styled.section`
     display:flex;
+    display: -webkit-flexbox;
     justify-content:center;
     margin:15px 0 30px 0;
     select{

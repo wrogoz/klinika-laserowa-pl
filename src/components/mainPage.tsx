@@ -28,6 +28,7 @@ const MainContainer = styled.div`
   width: 100%;
     h2 {
       display:flex;
+      display: -webkit-flexbox;
         color: grey;
         text-transform: uppercase;
         font-size: 1em;

@@ -45,6 +45,7 @@ const Stroke = styled.div`
 `
 const PresentationStartTextBox = styled.div`
     display:flex;
+    display: -webkit-flexbox;
     align-items:center;
     flex-wrap:no-wrap;
     color:#204f9f;
