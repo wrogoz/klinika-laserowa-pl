@@ -28,6 +28,7 @@
     "build": "cross-env AUTOPREFIXER_GRID=autoplace react-scripts build",
     "test": "cross-env AUTOPREFIXER_GRID=autoplace react-scripts test",
     "eject": "react-scripts eject"
+
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -47,7 +48,11 @@
   "devDependencies": {
     "@types/react-redux": "^7.1.7",
     "@types/react-router-dom": "^5.1.3",
+<<<<<<< HEAD
     "autoprefixer": "^9.7.4",
     "cross-env": "^7.0.0"
+=======
+    "autoprefixer": "^9.7.4"
+>>>>>>> abab1213de66ae760f41c3ec20793f020d91de18
   }
 }
