@@ -27,12 +27,14 @@ const FooterBox = styled.footer`
     flex-direction:column;
     color:#fff;
     margin-top:15px;
-    padding: 15px 0 0 40px;
+    padding: 15px 0 0 0px;
     width:100%;
     border-top:1px solid grey;
     border-radius:15px 15px 0 0;
     background-color:#f7ad31;
-
+    p{
+        padding-left:20px;
+    }
 `
 const SecondRow = styled.div`
     display:flex;
@@ -41,7 +43,7 @@ const SecondRow = styled.div`
 const FooterStroke = styled.div`
     height:1px;
     background-color:#fff;
-    width:50%;
-    margin-top:10px;
+    width:48%;
+    align-self:center;
 `
 export default Footer
