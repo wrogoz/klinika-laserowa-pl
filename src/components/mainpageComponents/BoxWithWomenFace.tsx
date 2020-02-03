@@ -27,7 +27,7 @@ const WomenFaceBox = styled.section`
     width:100%;
     background-image:url("${WomenFace}");
     background-repeat:no-repeat;
-    background-size: 400px 100%;
+    background-size: 100% 100%;
     margin-bottom:15px;
 `
 const WomenFaceTextSection = styled.section`
