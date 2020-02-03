@@ -31,7 +31,7 @@ export default class Layout extends Component<{}, {}> {
 const LayoutContainer = styled.div`
 
     width:100vw;
-    min-width:270px;
+
     height:100vh;
     display:flex;
     display: -webkit-flexbox;
