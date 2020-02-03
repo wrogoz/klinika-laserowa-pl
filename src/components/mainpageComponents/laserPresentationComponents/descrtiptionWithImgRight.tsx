@@ -60,7 +60,7 @@ export default class DescriptionWithImgOnRight extends React.Component<Descripti
     img{
         position:relative;
         padding-left:40px;
-        min-height: 340px;
+        min-height: 260px;
         width:100%;
 
 
