@@ -13,7 +13,7 @@ class MainPage extends React.Component<{}, {}> {
         <Header pageName="strona główna" />
         <BoxWithWomenFace />
         <WelcomeText />
-        <SelectLaserIntervetion />
+
         <LaserPresentation />
       </MainContainer>
     );
@@ -38,16 +38,8 @@ const MainContainer = styled.div`
         max-width: 220px;
         padding-bottom: 10px;
         }
-  }
-  .row {
-    width: 100%;
-    .col {
-      width: 100%;
-      padding: 0;
-      margin: 0;
-    }
-  }
-`;
+  }`
+
 
 const mapStateToProps = (state: { randomData: string }) => {
   return {
