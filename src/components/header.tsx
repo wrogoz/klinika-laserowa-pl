@@ -45,13 +45,13 @@ const StHeader = styled.header`
         font-size:0.55em;
         text-transform:uppercase;
         color:${props=>props.theme.interViolet};
-        margin-bottom:0;
+        margin:0;
 
     }
 
 `
 const Logo = styled.img`
-
+    padding-top:5px;
     padding-left:20px;
     height:80%;
     width:100px;

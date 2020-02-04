@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import Button from '../globalComponents/button';
-
+import cuteraHead from '../../images/cuteraHead.png';
 export default class TitleSectionComponent extends React.Component<{},{}>{
     render(){
         return(
@@ -28,6 +28,10 @@ export default class TitleSectionComponent extends React.Component<{},{}>{
 const TitleSection = styled.section`
 display:flex;
 flex-direction:column;
+background-image:url("${cuteraHead}");
+background-size:auto;
+background-repeat:no-repeat;
+background-position: 0% 20%;
 `
 
 const TitleBox = styled.section`
