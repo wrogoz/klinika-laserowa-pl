@@ -33,7 +33,7 @@ const WomenFaceBox = styled.section`
     width:100%;
     background-image:url("${WomenFace}");
     background-repeat:no-repeat;
-    background-size: 390px 100%;
+    background-size: auto 100%;
     margin-bottom:15px;
 `
 const WomenFaceTextSection = styled.section`

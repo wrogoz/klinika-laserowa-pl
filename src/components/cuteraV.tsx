@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import Header from "./header";
 import styled from "styled-components";
 import TitleSectionComponent from './cuteraPageComponents/TitleSection';
-import MainSection from './cuteraPageComponents/mainsection';
+import MainSection from './cuteraPageComponents/mainSection';
 class CuteraV extends React.Component<{}, {}> {
   render() {
     return (
