@@ -3,9 +3,12 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import styled from 'styled-components';
 import MainPage from './components/mainPage';
 import CuteraV from './components/cuteraV';
+import { ThemeProvider } from "styled-components";
+import theme from './basicStyles/theme'
 export default class Layout extends Component<{}, {}> {
   render() {
-    return (
+    return (<
+      ThemeProvider theme={theme}>
       <LayoutContainer>
 
         <Router>
@@ -23,6 +26,7 @@ export default class Layout extends Component<{}, {}> {
         </Router>
 
       </LayoutContainer>
+       </ThemeProvider>
     );
   }
 }

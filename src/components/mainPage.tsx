@@ -36,7 +36,7 @@ const MainContainer = styled.div`
         min-width: 200px;
         :last-of-type {
         margin: 0 auto 15px auto;
-        border-bottom: 1px solid #204f9f;
+        border-bottom: 1px solid${props=>props.theme.interBlue};
         max-width: 220px;
         padding-bottom: 10px;
         }

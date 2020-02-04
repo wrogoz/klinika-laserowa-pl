@@ -30,7 +30,7 @@ const FooterBox = styled.footer`
     padding: 15px 0 0 0px;
     width:100%;
     border-radius:15px 15px 0 0;
-    background-color:#f7ad31;
+    background-color:${props=>props.theme.interOrange};
     p{
         padding-left:20px;
     }

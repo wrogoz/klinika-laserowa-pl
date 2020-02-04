@@ -31,7 +31,7 @@ const SelectSection = styled.section`
     margin:15px 0 30px 0;
     select{
         border:none;
-        background-color:#8849a5;
+        background-color:${props=>props.theme.interViolet};
         padding:5px 20px 5px 30px;
         border-radius:5px;
         color:#fff;
@@ -42,7 +42,7 @@ const SelectSection = styled.section`
 
         }
         option:first-of-type{
-            background-color:#8849a5;
+            background-color:${props=>props.theme.interViolet};
             border:none;
         }
     }

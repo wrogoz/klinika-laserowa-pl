@@ -43,7 +43,7 @@ export default class DescriptionWithImgOnLeft extends React.Component<Descriptio
         position:relative;
         margin-top:30px;
         div{
-            background-color:#8849a5;
+            background-color:${props=>props.theme.interViolet};
             position:absolute;
             padding:5px 10px 5px 15px;
             bottom:20px;

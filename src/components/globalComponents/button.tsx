@@ -15,7 +15,7 @@ export default class Button extends React.Component<ButtonProps,{}>{
 }
 const BasicButton = styled.button`
 border:none;
-background:#f7ad31;
+background:${props=>props.theme.interOrange};
 width:80px;
 padding:5px;
 border-radius:5px;

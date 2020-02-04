@@ -39,7 +39,7 @@ const Stroke = styled.div`
 
     height:2px;
     width:30%;
-    background-color:#204f9f;
+    background-color:${props=>props.theme.interBlue};
 
 
 `
@@ -47,7 +47,7 @@ const PresentationStartTextBox = styled.div`
     display:flex;
     align-items:center;
     flex-wrap:no-wrap;
-    color:#204f9f;
+    color:${props=>props.theme.interBlue};
     h3{
         font-size:0.85em;
         text-transform:uppercase;

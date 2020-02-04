@@ -38,7 +38,7 @@ const TitleBox = styled.section`
 `
 const EquipmentName = styled.h1`
   font-size: 2.0em;
-  color: #204f9f;
+  color: ${props=>props.theme.interBlue};
   margin-bottom: 0;
   &&+p{
     font-size: 1.7em;

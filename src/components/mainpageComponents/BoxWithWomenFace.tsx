@@ -48,7 +48,7 @@ const WomenFaceTextSection = styled.section`
         margin-bottom:10px;
         span{
 
-            color:#204f9f;
+            color:${props=>props.theme.interBlue};
         }
     }
 

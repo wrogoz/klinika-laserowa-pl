@@ -44,7 +44,7 @@ const StHeader = styled.header`
     p{
         font-size:0.55em;
         text-transform:uppercase;
-        color:#8849a5;
+        color:${props=>props.theme.interViolet};
         margin-bottom:0;
 
     }
