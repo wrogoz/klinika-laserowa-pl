@@ -47,8 +47,21 @@ const EquipmentName = styled.h1`
 `
 
 const  AdvertismentBox = styled.div`
-
+  margin-top: 100px;
 `
-const  AdvertismentText = styled.div`
-
+const  AdvertismentText = styled.p`
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0 51px;
+  font-size: 1.2em;
+  color: #999;
+  &&:after{
+    content: ' ';
+    display: block;
+    height: 2px;
+    background-color: ${props=>props.theme.interBlue};
+    width: 200px;
+    text-align: center;
+    margin: 10px auto;
+  }
 `
