@@ -45,7 +45,6 @@ const StHeader = styled.header`
         font-size:0.55em;
         text-transform:uppercase;
         color:#8849a5;
-        font-family: 'Lato', sans-serif;
         margin-bottom:0;
 
     }

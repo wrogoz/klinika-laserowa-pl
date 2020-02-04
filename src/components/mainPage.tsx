@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import Header from "./header";
+import Footer from "./footer";
 import styled from "styled-components";
 import BoxWithWomenFace from "./mainpageComponents/BoxWithWomenFace";
 import WelcomeText from "./mainpageComponents/WelcomeText";
@@ -15,6 +16,7 @@ class MainPage extends React.Component<{}, {}> {
         <WelcomeText />
         <SelectLaserIntervetion />
         <LaserPresentation />
+        <Footer/>
       </MainContainer>
     );
   }

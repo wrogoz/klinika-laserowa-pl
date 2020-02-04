@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components';
 import WomenFace from '../../images/women-face.png';
-
+import Button from '../globalComponents/button'
+import {Link} from 'react-router-dom';
 
 export default class BoxWithWomenFace extends React.Component<{},{}>{
     render(){
@@ -10,7 +11,12 @@ export default class BoxWithWomenFace extends React.Component<{},{}>{
             <WomenFaceBox>
                 <WomenFaceTextSection>
                     <h1>Wybierz zabieg, a My spełnimy <span>Twoje potrzeby</span></h1>
-                    <button>Więcej</button>
+                    <StyledLink to='/cutera'>
+                    <Button
+                btnText='Więcej'
+              />
+                    </StyledLink>
+
                 </WomenFaceTextSection>
             </WomenFaceBox>
 
@@ -37,7 +43,7 @@ const WomenFaceTextSection = styled.section`
     margin:0 0 0 80px;
     h1{
         letter-spacing:2px;
-        font-family: 'Lato', sans-serif;
+
         font-size:1.4em;
         margin-bottom:10px;
         span{
@@ -45,14 +51,12 @@ const WomenFaceTextSection = styled.section`
             color:#204f9f;
         }
     }
-    button{
-        border:none;
-        background:#f7ad31;
-        width:80px;
-        padding:5px;
-        border-radius:5px;
-        align-self:flex-end;
-        margin-right:10px;
-        color:#fff;
-    }
+
+`
+
+const StyledLink = styled(Link)`
+padding:5px;
+border-radius:5px;
+align-self:flex-end;
+margin-right:10px;
 `

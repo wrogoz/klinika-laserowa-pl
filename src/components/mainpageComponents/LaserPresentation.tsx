@@ -40,7 +40,7 @@ const Stroke = styled.div`
     height:2px;
     width:30%;
     background-color:#204f9f;
-    margin-bottom:2%;
+
 
 `
 const PresentationStartTextBox = styled.div`

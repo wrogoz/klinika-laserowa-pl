@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-
-import Footer from "./components/footer";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import styled from 'styled-components';
 import MainPage from './components/mainPage';
+import CuteraV from './components/cuteraV';
 export default class Layout extends Component<{}, {}> {
   render() {
     return (
@@ -14,15 +13,15 @@ export default class Layout extends Component<{}, {}> {
             <Route exact path="/">
               <MainPage/>
             </Route>
-            <Route exact path="/second">
-              <div>second page</div>
+            <Route exact path="/cutera">
+              <CuteraV/>
             </Route>
             <Route exact path="/third">
               <div>third page</div>
             </Route>
           </Switch>
         </Router>
-        <Footer />
+
       </LayoutContainer>
     );
   }
@@ -32,9 +31,8 @@ const LayoutContainer = styled.div`
 
     width:100vw;
     min-width:270px;
-
     display:flex;
     flex-direction:column;
     align-items:center;
-
+    font-family:'Roboto', sans-serif;
 `
