@@ -4,6 +4,7 @@ import ChapterTitle from '../globalComponents/chapterTitle';
 import ListWithTitle from './mainSectionComponents/listWithTitle';
 import BoxUnderList from './mainSectionComponents/boxUnderList';
 import laserOnLeft from '../../images/laserOnLeft.png';
+import Paragraph from '../globalComponents/paragraphUnderTitle';
 export default class MainSection extends React.Component<{},{}>{
     render(){
         return(
@@ -12,9 +13,11 @@ export default class MainSection extends React.Component<{},{}>{
               title='Komu i w czym może pomóc Laser Excel V'
             />
             <Indications>Wskazania do zabiegu z użyciem lasera excel V</Indications>
-            <p>Laser excel V uwalnia od zmian skórnych, których obecność
-              powoduje duży dyskomfort
-            </p>
+            <Paragraph
+              text='Laser excel V uwalnia od zmian skórnych, których obecność
+              powoduje duży dyskomfort'
+              />
+
             <Sign>
               +
             </Sign>
@@ -71,6 +74,7 @@ const Indications = styled.h3`
   font-size: 0.8em;
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 0px;
     &&+p{
       width: 250px;
       color: #999;
