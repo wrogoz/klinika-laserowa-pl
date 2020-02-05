@@ -52,13 +52,15 @@ const EquipmentName = styled.h1`
 
 const  AdvertismentBox = styled.div`
   margin-top: 100px;
+  display:flex;
+  justify-content:center;
 `
 const  AdvertismentText = styled.p`
-  text-align: center;
-  text-transform: uppercase;
-  padding: 0 51px;
-  font-size: 1.2em;
-  color: #999;
+text-align: center;
+text-transform: uppercase;
+font-size: 1.2em;
+width: 71%;
+color: #999;
   &&:after{
     content: ' ';
     display: block;

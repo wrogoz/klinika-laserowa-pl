@@ -1,81 +1,93 @@
 import React from 'react'
 import styled from 'styled-components';
-
+import ChapterTitle from '../globalComponents/chapterTitle';
+import ListWithTitle from './mainSectionComponents/listWithTitle';
+import BoxUnderList from './mainSectionComponents/boxUnderList';
+import laserOnLeft from '../../images/laserOnLeft.png';
 export default class MainSection extends React.Component<{},{}>{
     render(){
         return(
-            <main>
-            <div>
-              <div>----</div>
-              <h2>komu i w czym może pomóc laser Excel V ?</h2>
-            </div>
-            <h3>Wskazania do zabiegu z użyciem lasera excel V</h3>
+            <MainBox>
+            <ChapterTitle
+              title='Komu i w czym może pomóc Laser Excel V'
+            />
+            <Indications>Wskazania do zabiegu z użyciem lasera excel V</Indications>
             <p>Laser excel V uwalnia od zmian skórnych, których obecność
               powoduje duży dyskomfort
             </p>
-            <div>
-              + ikona
-            </div>
-            <h3>
-              Jeśli na twoim ciele, obecne są zmiany typu:
-            </h3>
-            <ul>
-              <li>trądzik różowaty</li>
-              <li>pajączki</li>
-              <li>rumień</li>
-              <li>zmiany naczyniowe w nogach</li>
-              <li>naczyniaki</li>
-              <li>znamiona</li>
-              <li>rozproszone zmiany naczyniowe</li>
-              <li>
-                rozproszone zmiany barwnikowe, takie jak plamy posłoneczne
-              </li>
-              <li>
-                blizny będące konsekwencją przebytych urazów
-                lub wykonanych zabiegów chirurgicznych
-              </li>
-            </ul>
-            <div>
-              <p>Możesz to zmienić</p>
-              <p>Nie musisz obawiać się bólu, blizn czy komplikacji po zabiegu</p>
-            </div>
+            <Sign>
+              +
+            </Sign>
+            <ListWithTitle
+            text='Jeśli na twoim ciele, obecne są zmiany typu:'
+            />
+            <BoxUnderList
+              firstLine='Możesz to zmienić'
+              secondLine='Nie musisz obawiać się bólu, blizn czy komplikacji po zabiegu'
+              />
 
-            <div>
-              <div>kreska</div>
-              <h2>Czy każdy może skorzystać z tego, co oferuje laser excel V</h2>
-            </div>
+            <ChapterTitle
+              title='Czy każdy może skorzystać z tego, co oferuje laser excel V'
+            />
 
-            <h3>Przeciwwskazania</h3>
 
-            <div>kreska ---</div>
+            <ContraIndications>Przeciwwskazania</ContraIndications>
+            <Sign>
+              -
+            </Sign>
+            <ListWithTitle
+            text='Do okoliczności, które wykluczają użycie lasera, należą:'
+            />
 
-            <h4>Do okoliczności, które wykluczają użycie lasera, należą:</h4>
+            <BoxUnderList
+              firstLine='Jak przed każdym zabiegiem, tak i tu,'
+              secondLine='ostateczną decyzję podejmuje lekarz'
+            />
 
-            <ul>
-              <li>ciąża</li>
-              <li>świeża opalenizna</li>
-              <li>
-                spożywanie naparu z dziurawca i nagietka - należy je odstawić
-                na 3 tygodnie przed zabiegiem
-              </li>
-              <li>bielactwo</li>
-              <li>łuszczyca</li>
-              <li>skłonność do bliznowców</li>
-              <li>nowotwory skóry</li>
-              <li>otwarte rany</li>
-              <li>okolice tatuażu i permanentnego tatuażu</li>
-              <li>przyjmowanie leków światłouczulających i leków psychotropowych</li>
-            </ul>
 
-            <div>
-              <p>
-                Jak przed każdym zabiegiem, tak i tu,
-                 ostateczną decyzję podejmuje lekarz
-              </p>
-            </div>
-          </main>
+          </MainBox>
 
         )
     }
 }
 
+const MainBox = styled.main`
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  background-image:url("${laserOnLeft}");
+  background-size: auto 120%;
+  background-position: -85px 92px;
+  background-repeat: no-repeat;
+}
+
+
+
+
+`
+const Indications = styled.h3`
+  width:280px;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  text-align: center;
+    &&+p{
+      width: 250px;
+      color: #999;
+      text-align: center;
+      font-size: 0.6em;
+      text-transform: uppercase;
+    }
+`
+const ContraIndications = styled.h3`
+  text-transform: uppercase;
+  color: #999;
+  font-size: 0.9em;
+
+
+`
+const Sign = styled.p`
+  color:${props=>props.theme.interViolet};
+  font-size:3em;
+  margin:0;
+`

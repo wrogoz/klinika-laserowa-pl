@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import Header from "./header";
 import styled from "styled-components";
+import Button from './globalComponents/button';
 import TitleSectionComponent from './cuteraPageComponents/TitleSection';
 import MainSection from './cuteraPageComponents/mainSection';
 class CuteraV extends React.Component<{}, {}> {
@@ -101,7 +102,9 @@ class CuteraV extends React.Component<{}, {}> {
             w zetknięciu ze zmianami na twojej skórze.
           </p>
         </div>
-        <button>Zapisz się</button>
+        <Button
+          btnText="Zapisz się"
+         />
       </section>
 
       </MainContainer>

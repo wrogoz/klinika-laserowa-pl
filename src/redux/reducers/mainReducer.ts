@@ -1,6 +1,12 @@
 
 const initialState = {
-    randomData:'moj store zadziałał'
+  Indications:['moj store zadziałał','2 razy'],
+  ContraIndications:[
+    'ciąża','świeża opalenizna',' spożywanie naparu z dziurawca i nagietka - należy je odstawić na 3 tygodnie przed zabiegiem',
+ 'bielactwo', 'łuszczyca','skłonność do bliznowców','nowotwory skóry',
+ 'otwarte rany','okolice tatuażu i permanentnego tatuażu',
+ 'przyjmowanie leków światłouczulających i leków psychotropowych'
+  ]
 
  }
 
