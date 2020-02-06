@@ -5,7 +5,13 @@ import ListWithTitle from './mainSectionComponents/listWithTitle';
 import BoxUnderList from './mainSectionComponents/boxUnderList';
 import laserOnLeft from '../../images/laserOnLeft.png';
 import Paragraph from '../globalComponents/paragraphUnderTitle';
-export default class MainSection extends React.Component<{},{}>{
+import { connect } from 'react-redux';
+
+interface MainSectionProps{
+  Indications:string[],
+  ContraIndications:string[]
+}
+class MainSection extends React.Component<MainSectionProps,{}>{
     render(){
         return(
             <MainBox>
@@ -23,6 +29,7 @@ export default class MainSection extends React.Component<{},{}>{
             </Sign>
             <ListWithTitle
             text='Jeśli na twoim ciele, obecne są zmiany typu:'
+            array={this.props.Indications}
             />
             <BoxUnderList
               firstLine='Możesz to zmienić'
@@ -40,6 +47,7 @@ export default class MainSection extends React.Component<{},{}>{
             </Sign>
             <ListWithTitle
             text='Do okoliczności, które wykluczają użycie lasera, należą:'
+            array={this.props.ContraIndications}
             />
 
             <BoxUnderList
@@ -95,3 +103,12 @@ const Sign = styled.p`
   font-size:3em;
   margin:0;
 `
+
+const mapStateToProps = (state: { Indications: string[],ContraIndications:string[] }) => {
+  return {
+      Indications: state.Indications,
+      ContraIndications:state.ContraIndications
+  };
+};
+
+export default connect(mapStateToProps)(MainSection);

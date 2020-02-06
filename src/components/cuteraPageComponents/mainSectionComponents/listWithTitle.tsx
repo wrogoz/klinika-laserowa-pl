@@ -1,37 +1,29 @@
 import React from 'react'
 import styled from 'styled-components';
-import { connect } from "react-redux";
+
 
 
 interface ListWithTitleProps{
-    text:string
+    text:string,
+    array:string[]
 }
 
 
-class ListWithTitle extends React.Component<ListWithTitleProps,{}>{
+export default class ListWithTitle extends React.Component<ListWithTitleProps,{}>{
     render(){
+
+      const ListItems = this.props.array.map((el:string,key:number)=>{
+        return <li key={key}>{el}</li>
+      })
         return(
 
                 <UlContainer>
                     <PreUlText>
                         {this.props.text}
                     </PreUlText>
-                    <ul>
-              <li>trądzik różowaty</li>
-              <li>pajączki</li>
-              <li>rumień</li>
-              <li>zmiany naczyniowe w nogach</li>
-              <li>naczyniaki</li>
-              <li>znamiona</li>
-              <li>rozproszone zmiany naczyniowe</li>
-              <li>
-                rozproszone zmiany barwnikowe, takie jak plamy posłoneczne
-              </li>
-              <li>
-                blizny będące konsekwencją przebytych urazów
-                lub wykonanych zabiegów chirurgicznych
-              </li>
-            </ul>
+                    <List>
+                      {ListItems}
+                    </List>
 
 
                 </UlContainer>
@@ -49,17 +41,18 @@ const PreUlText = styled.p`
   text-transform: uppercase;
   font-size: 0.75em;
   font-weight: bold;
+  padding:0 20px;
+  text-align:center;
 
 `
 
+const List = styled.ul`
+  display:flex;
+  flex-direction:column;
+  padding:0 20%;
+  color:#999;
+`
 
-  const mapStateToProps = (state: { Indication: string[] }) => {
-    return {
-        Indications: state.Indication
-    };
-  };
-
-  export default connect(mapStateToProps)(ListWithTitle);
 
 
 
