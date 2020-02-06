@@ -7,7 +7,7 @@ export class Footer extends Component<{},{}> {
 
                 <FooterBox>
 
-                            <p>2020 - Inter-Med</p>
+                            <p>2021 - Inter-Med</p>
                             <SecondRow>
                             <p>Obserwuj nas: I T Fb</p>
                             <FooterStroke/>
