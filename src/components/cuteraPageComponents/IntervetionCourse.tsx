@@ -3,7 +3,18 @@ import styled from 'styled-components';
 import Button from '../globalComponents/button';
 import ChapterTitle from '../globalComponents/chapterTitle';
 import laserOnRight from '../../images/laserOnRight.png';
-export default class IntervetionCourse extends React.Component<{},{}>{
+import { SignInShowHide } from '../../redux/actions/actions';
+import { connect } from 'react-redux';
+
+interface IntervetionCourseProps{
+    dispatch:any
+}
+class IntervetionCourse extends React.Component<IntervetionCourseProps,{}>{
+
+    SignIn=()=>{
+        this.props.dispatch(SignInShowHide());
+    }
+
     render(){
         return(
             <IntervetionCourseBox>
@@ -65,6 +76,7 @@ export default class IntervetionCourse extends React.Component<{},{}>{
                     </IntervetionCourseParagraph>
                 </IntervetionCourseSummaryBox>
                 <Button
+                onClick={this.SignIn}
                 btnText="Zapisz się"
                 />
 
@@ -93,7 +105,7 @@ const OrderList = styled.ol`
     flex-direction:column;
     align-items:center;
     padding: 0 20px 0 35px;
-    font-size: 0.6em;
+    font-size: 0.8em;
     letter-spacing: 1px;
     li{
         margin-bottom:20px;
@@ -109,9 +121,10 @@ const Line = styled.div`
     width: 275px;
     text-align: center;
     margin-bottom:15px;
+    position:relative;
     `
     const IntervetionCourseParagraph = styled.p`
-        font-size:0.55em;
+        font-size:0.8em;
         span{
             font-weight:bold;
         }
@@ -119,5 +132,6 @@ const Line = styled.div`
 
     const IntervetionCourseH4 = styled.h4`
         font-weight:bold;
-        font-size: 0.6em;
+        font-size: 0.8em;
     `
+    export default  connect()(IntervetionCourse);

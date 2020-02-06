@@ -30,7 +30,7 @@ const PresentationStartTextBox = styled.div`
 
     margin:20px 0 10px 0;
     width:100%;
-
+    font-family: 'Oswald', sans-serif;
     display:flex;
     align-items:center;
 

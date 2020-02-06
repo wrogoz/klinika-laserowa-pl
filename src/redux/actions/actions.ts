@@ -3,3 +3,8 @@ export const BurgerShowHide = ()=>{
         type:'BURGERNAVSHOWHIDE'
     }
 }
+export const SignInShowHide = ()=>{
+    return {
+        type:'SIGNINWINDOWSHOWHIDE'
+    }
+}

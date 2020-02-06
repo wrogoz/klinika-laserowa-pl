@@ -4,12 +4,13 @@ import styled from 'styled-components';
 
 interface ButtonProps{
     btnText:string
+    onClick?:any
 }
 
 export default class Button extends React.Component<ButtonProps,{}>{
     render(){
         return(
-            <BasicButton>{this.props.btnText}</BasicButton>
+            <BasicButton onClick={this.props.onClick}>{this.props.btnText}</BasicButton>
         )
     }
 }
@@ -21,4 +22,5 @@ padding:5px;
 border-radius:5px;
 color:#fff;
 font-family: 'Roboto', sans-serif;
+cursor:pointer;
 `

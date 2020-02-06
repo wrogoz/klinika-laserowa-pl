@@ -39,7 +39,7 @@ const UlContainer = styled.section`
 `
 const PreUlText = styled.p`
   text-transform: uppercase;
-  font-size: 0.75em;
+  font-size: 0.8em;
   font-weight: bold;
   padding:0 20px;
   text-align:center;

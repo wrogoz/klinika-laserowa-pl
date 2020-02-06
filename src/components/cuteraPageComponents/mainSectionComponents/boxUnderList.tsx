@@ -31,6 +31,6 @@ const Box = styled.div`
         text-align:center;
         color:#fff;
         margin:0;
-        font-size: 0.7em;
+        font-size: 0.8em;
     }
 `

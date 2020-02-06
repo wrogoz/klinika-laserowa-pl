@@ -7,9 +7,10 @@ import MainSection from './cuteraPageComponents/mainSection';
 import HowItWorks from './cuteraPageComponents/howItWorks';
 import InvervetionCourse from './cuteraPageComponents/IntervetionCourse';
 import BurgerNavigation from "./globalComponents/burgerNavigation";
-
+import SignIn from './cuteraPageComponents/signIn';
 interface CuteraVProps{
   BurgerNavVisible:boolean
+  SignInVisible:boolean
 }
 
 class CuteraV extends React.Component<CuteraVProps, {}> {
@@ -22,6 +23,7 @@ class CuteraV extends React.Component<CuteraVProps, {}> {
         <MainSection/>
         <HowItWorks/>
         <InvervetionCourse/>
+        {this.props.SignInVisible?<SignIn/>:null}
       </MainContainer>
     );
   }
@@ -35,9 +37,10 @@ const MainContainer = styled.div`
   width: 100%;
   `
 
-  const mapStateToProps = (state: { BurgerNavVisible:boolean }) => {
+  const mapStateToProps = (state: { BurgerNavVisible:boolean,SignInVisible:boolean }) => {
     return {
-      BurgerNavVisible: state.BurgerNavVisible
+      BurgerNavVisible: state.BurgerNavVisible,
+      SignInVisible:state.SignInVisible
     };
   };
 

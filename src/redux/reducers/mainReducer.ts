@@ -1,6 +1,7 @@
 
 const initialState = {
   BurgerNavVisible:false,
+  SignInVisible:false,
   Indications:[
     'trądzik różowaty',
      'pajączki',
@@ -28,8 +29,11 @@ const reducer = (state = initialState, action: { type: string })=> {
           ...state,
           BurgerNavVisible:!state.BurgerNavVisible
         }
-      case 'DECREMENT':
-        return state
+      case 'SIGNINWINDOWSHOWHIDE':
+        return {
+          ...state,
+          SignInVisible : !state.SignInVisible
+        }
       default:
         return state
     }
