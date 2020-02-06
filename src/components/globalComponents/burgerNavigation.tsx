@@ -24,7 +24,7 @@ const NavigationBox = styled.div`
 display:flex;
 justify-content:center;
 align-items:center;
-    position: sticky;
+    position: fixed;
     top: 70px;
     right: center;
     z-index: 10;
