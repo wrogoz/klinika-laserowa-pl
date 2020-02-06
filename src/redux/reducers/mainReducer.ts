@@ -1,6 +1,17 @@
 
 const initialState = {
-  Indications:['moj store zadziałał','2 razy'],
+  BurgerNavVisible:false,
+  Indications:[
+    'trądzik różowaty',
+     'pajączki',
+     'rumień',
+     'zmiany naczyniowe w nogach',
+     'naczyniaki',
+     'znamiona',
+     'rozproszone zmiany naczyniowe',
+     'rozproszone zmiany barwnikowe, takie jak plamy posłoneczne',
+     'blizny będące konsekwencją przebytych urazów lub wykonanych zabiegów chirurgicznych'
+   ],
   ContraIndications:[
     'ciąża','świeża opalenizna',' spożywanie naparu z dziurawca i nagietka - należy je odstawić na 3 tygodnie przed zabiegiem',
  'bielactwo', 'łuszczyca','skłonność do bliznowców','nowotwory skóry',
@@ -12,10 +23,10 @@ const initialState = {
 
 const reducer = (state = initialState, action: { type: string })=> {
     switch (action.type) {
-      case 'CHANGEVALUE':
+      case 'BURGERNAVSHOWHIDE':
         return {
           ...state,
-          randomData:"Value Changed to Main Page"
+          BurgerNavVisible:!state.BurgerNavVisible
         }
       case 'DECREMENT':
         return state

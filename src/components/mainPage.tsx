@@ -7,10 +7,18 @@ import BoxWithWomenFace from "./mainpageComponents/BoxWithWomenFace";
 import WelcomeText from "./mainpageComponents/WelcomeText";
 import SelectLaserIntervetion from "./mainpageComponents/selectLaserIntervetion";
 import LaserPresentation from "./mainpageComponents/LaserPresentation";
-class MainPage extends React.Component<{}, {}> {
+import BurgerNavigation from './globalComponents/burgerNavigation';
+
+interface MainPageProps{
+  BurgerNavVisible:boolean
+}
+
+class MainPage extends React.Component<MainPageProps, {}> {
   render() {
+
     return (
       <MainContainer>
+        {this.props.BurgerNavVisible?<BurgerNavigation/>:null}
         <Header pageName="strona główna" />
         <BoxWithWomenFace />
         <WelcomeText />
@@ -51,9 +59,9 @@ const MainContainer = styled.div`
   }
 `;
 
-const mapStateToProps = (state: { randomData: string }) => {
+const mapStateToProps = (state: { BurgerNavVisible:boolean }) => {
   return {
-    randomData: state.randomData
+    BurgerNavVisible: state.BurgerNavVisible
   };
 };
 

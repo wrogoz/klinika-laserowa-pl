@@ -1,5 +1,5 @@
-export const changeValue = ()=>{
+export const BurgerShowHide = ()=>{
     return {
-        type:'CHANGEVALUE'
+        type:'BURGERNAVSHOWHIDE'
     }
 }
