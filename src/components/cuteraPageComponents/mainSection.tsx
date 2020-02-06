@@ -5,6 +5,10 @@ import ListWithTitle from './mainSectionComponents/listWithTitle';
 import BoxUnderList from './mainSectionComponents/boxUnderList';
 import laserOnLeft from '../../images/laserOnLeft.png';
 import Paragraph from '../globalComponents/paragraphUnderTitle';
+import { inject,observer } from 'mobx-react';
+import store from '../../store/store';
+@inject("store")
+@observer
 export default class MainSection extends React.Component<{},{}>{
     render(){
         return(
@@ -23,6 +27,7 @@ export default class MainSection extends React.Component<{},{}>{
             </Sign>
             <ListWithTitle
             text='Jeśli na twoim ciele, obecne są zmiany typu:'
+            arrayType={store.Indications}
             />
             <BoxUnderList
               firstLine='Możesz to zmienić'
@@ -40,6 +45,7 @@ export default class MainSection extends React.Component<{},{}>{
             </Sign>
             <ListWithTitle
             text='Do okoliczności, które wykluczają użycie lasera, należą:'
+            arrayType={store.ContraIndications}
             />
 
             <BoxUnderList

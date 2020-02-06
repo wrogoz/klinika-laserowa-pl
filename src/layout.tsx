@@ -5,6 +5,7 @@ import MainPage from './components/mainPage';
 import CuteraV from './components/cuteraV';
 import { ThemeProvider } from "styled-components";
 import theme from './basicStyles/theme'
+
 export default class Layout extends Component<{}, {}> {
   render() {
     return (<

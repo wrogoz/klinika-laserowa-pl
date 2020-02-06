@@ -30,7 +30,7 @@ const PresentationStartTextBox = styled.div`
 
     margin:20px 0 10px 0;
     width:100%;
-
+    font-family: 'Oswald', sans-serif;
     display:flex;
     align-items:center;
 
@@ -38,12 +38,12 @@ const PresentationStartTextBox = styled.div`
     color:${props=>props.theme.interBlue};
     h3{
     min-width: 57%;
-    font-size: 0.85em;
+    font-size: 0.9em;
     text-transform: uppercase;
     padding-left: 3px;
     margin: 0;
     padding-top: 15px;
-    font-size: 0.8em;
+    padding-right:5px;
     letter-spacing: 2px;
     }
 `

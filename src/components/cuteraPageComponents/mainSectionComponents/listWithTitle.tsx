@@ -1,15 +1,22 @@
 import React from 'react'
 import styled from 'styled-components';
-import { connect } from "react-redux";
+import { inject,observer } from 'mobx-react';
+
 
 
 interface ListWithTitleProps{
-    text:string
+    text:string,
+    arrayType:string[]
 }
-
-
-class ListWithTitle extends React.Component<ListWithTitleProps,{}>{
+@inject("store")
+@observer
+export default class ListWithTitle extends React.Component<ListWithTitleProps,{}>{
     render(){
+
+      const list = this.props.arrayType.map((el:string,key:number)=>{
+        return <ListItem key={key}>{el}</ListItem>
+      })
+
         return(
 
                 <UlContainer>
@@ -17,21 +24,8 @@ class ListWithTitle extends React.Component<ListWithTitleProps,{}>{
                         {this.props.text}
                     </PreUlText>
                     <ul>
-              <li>trądzik różowaty</li>
-              <li>pajączki</li>
-              <li>rumień</li>
-              <li>zmiany naczyniowe w nogach</li>
-              <li>naczyniaki</li>
-              <li>znamiona</li>
-              <li>rozproszone zmiany naczyniowe</li>
-              <li>
-                rozproszone zmiany barwnikowe, takie jak plamy posłoneczne
-              </li>
-              <li>
-                blizny będące konsekwencją przebytych urazów
-                lub wykonanych zabiegów chirurgicznych
-              </li>
-            </ul>
+                        {list}
+                    </ul>
 
 
                 </UlContainer>
@@ -47,19 +41,15 @@ const UlContainer = styled.section`
 `
 const PreUlText = styled.p`
   text-transform: uppercase;
-  font-size: 0.75em;
+  font-size: 0.8em;
   font-weight: bold;
+  padding: 0 15px;
+  text-align:center;
 
 `
 
-
-  const mapStateToProps = (state: { Indication: string[] }) => {
-    return {
-        Indications: state.Indication
-    };
-  };
-
-  export default connect(mapStateToProps)(ListWithTitle);
-
-
+const ListItem = styled.li`
+margin-left:18px;
+color:#999;
+`
 

@@ -1,16 +1,22 @@
 import React from "react";
-import { connect } from "react-redux";
 import Header from "./header";
 import Footer from "./footer";
 import styled from "styled-components";
 import BoxWithWomenFace from "./mainpageComponents/BoxWithWomenFace";
 import WelcomeText from "./mainpageComponents/WelcomeText";
 import SelectLaserIntervetion from "./mainpageComponents/selectLaserIntervetion";
+import BurgerNavigation from './globalComponents/burgerNavigation';
 import LaserPresentation from "./mainpageComponents/LaserPresentation";
-class MainPage extends React.Component<{}, {}> {
+import { observer, inject } from "mobx-react";
+import store from '../store/store';
+@inject("store")
+@observer
+export default class MainPage extends React.Component<any, {}> {
   render() {
+
     return (
       <MainContainer>
+        {store.BurgerNavVisible?<BurgerNavigation/>:null}
         <Header pageName="strona główna" />
         <BoxWithWomenFace />
         <WelcomeText />
@@ -51,10 +57,4 @@ const MainContainer = styled.div`
   }
 `;
 
-const mapStateToProps = (state: { randomData: string }) => {
-  return {
-    randomData: state.randomData
-  };
-};
 
-export default connect(mapStateToProps)(MainPage);
