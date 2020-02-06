@@ -4,7 +4,6 @@ import Footer from "./footer";
 import styled from "styled-components";
 import BoxWithWomenFace from "./mainpageComponents/BoxWithWomenFace";
 import WelcomeText from "./mainpageComponents/WelcomeText";
-import SelectLaserIntervetion from "./mainpageComponents/selectLaserIntervetion";
 import BurgerNavigation from './globalComponents/burgerNavigation';
 import LaserPresentation from "./mainpageComponents/LaserPresentation";
 import { observer, inject } from "mobx-react";
@@ -12,15 +11,20 @@ import store from '../store/store';
 @inject("store")
 @observer
 export default class MainPage extends React.Component<any, {}> {
+
+  componentDidMount(){
+    window.scroll(0,0);
+  }
+
   render() {
 
     return (
       <MainContainer>
-        {store.BurgerNavVisible?<BurgerNavigation/>:null}
+
         <Header pageName="strona główna" />
+        {store.BurgerNavVisible?<BurgerNavigation/>:null}
         <BoxWithWomenFace />
         <WelcomeText />
-        <SelectLaserIntervetion />
         <LaserPresentation />
         <Footer/>
       </MainContainer>
@@ -29,11 +33,13 @@ export default class MainPage extends React.Component<any, {}> {
 }
 
 const MainContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: 100%;
+height:100%;
+
     h2 {
         color: grey;
         text-transform: uppercase;
@@ -47,14 +53,7 @@ const MainContainer = styled.div`
         padding-bottom: 10px;
         }
   }
-  .row {
-    width: 100%;
-    .col {
-      width: 100%;
-      padding: 0;
-      margin: 0;
-    }
-  }
+
 `;
 
 

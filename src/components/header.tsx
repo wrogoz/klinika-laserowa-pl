@@ -2,20 +2,16 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import LogoIm from '../images/logo-im.png';
 import Hamburger from '../images/menu-24px.svg';
-import { observer, inject } from 'mobx-react';
-import store from '../store/store';
+
 
 interface HeaderProps{
     pageName:string;
 }
 
-@inject("store")
-@observer
 export default class Header extends Component<HeaderProps,{}> {
 
 showHideBurgerNav = ()=>{
-
-    store.BurgerNavVisible=!store.BurgerNavVisible;
+    console.log('klik')
 
 }
 
