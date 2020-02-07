@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components';
+import styled,{keyframes} from 'styled-components';
 
 
 
@@ -9,7 +9,7 @@ export default class BurgerNavigation extends React.Component<{},{}>{
 
                 <NavigationBox>
                     <NavList>
-                        <NavItem>laser 1</NavItem>
+                        <NavItem>Cutera</NavItem>
                         <NavItem>laser 2</NavItem>
                         <NavItem>laser 3</NavItem>
                         <NavItem>laser 4</NavItem>
@@ -19,6 +19,16 @@ export default class BurgerNavigation extends React.Component<{},{}>{
     }
 }
 
+const animationBurgerNav = keyframes`
+0%{
+right:-100%;
+}
+
+100%{
+
+right:10%;
+}
+`;
 
 const NavigationBox = styled.div`
 display:flex;
@@ -30,20 +40,29 @@ align-items:center;
     z-index: 10;
     height: 80vh;
     width: 80vw;
-    background-color: rgba(0,0,0,.8);
+    background-color: #f5f5f5de;
+
+    animation:0.3s ${animationBurgerNav} ease;
 `
 const NavList = styled.ul`
     list-style:none;
     display:flex;
     flex-direction:column;
     align-items:center;
+    justify-content:space-evenly;
+    height:100%;
     margin:0;
     padding:0;
 `
 
 const NavItem = styled.li`
-    color:#fff;
-    font-size:2em;
-    text-transform:uppercase;
-    font-weight:bold;
+
+font-size: 1.8em;
+text-transform: uppercase;
+font-weight: bold;
+border: 2px solid #000;
+padding: 14px;
+letter-spacing: 5px;
+background-color:#fff;
+
 `
