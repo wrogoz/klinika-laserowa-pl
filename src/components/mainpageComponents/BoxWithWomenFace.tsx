@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components';
+import styled,{keyframes} from 'styled-components';
 import WomenFace from '../../images/women-face.png';
 import Button from '../globalComponents/button'
 import {Link} from 'react-router-dom';
@@ -10,7 +10,7 @@ export default class BoxWithWomenFace extends React.Component<{},{}>{
 
             <WomenFaceBox>
                 <WomenFaceTextSection>
-                    <h1>Wybierz zabieg, a My spełnimy <span>Twoje potrzeby</span></h1>
+                    <h1><span>Wybierz zabieg, a My spełnimy</span> <span>Twoje potrzeby</span></h1>
                     <StyledLink to='/cutera'>
                     <Button
                 btnText='Więcej'
@@ -24,7 +24,14 @@ export default class BoxWithWomenFace extends React.Component<{},{}>{
     }
 }
 
-
+const fadeInText = keyframes`
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:100%;
+    }
+`
 
 const WomenFaceBox = styled.section`
     display:flex;
@@ -46,7 +53,10 @@ const WomenFaceTextSection = styled.section`
 
         font-size:1.4em;
         margin-bottom:10px;
-        span{
+        span:first-of-type{
+            animation: 4s ${fadeInText} ease-out;
+        }
+        span:last-of-type{
 
             color:${props=>props.theme.interBlue};
         }
