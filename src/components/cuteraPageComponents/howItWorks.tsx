@@ -61,9 +61,8 @@ const LaserLengthSection = styled.div`
 
 const LaserLengthDescription = styled.p`
     width: 290px;
-    font-size: 0.6em;
+    font-size: 0.8em;
     text-align: center;
-    font-weight: bold;
     letter-spacing: 1px;
 `
 
