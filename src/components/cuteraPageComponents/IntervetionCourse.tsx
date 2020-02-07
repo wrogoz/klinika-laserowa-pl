@@ -3,17 +3,11 @@ import styled from 'styled-components';
 import Button from '../globalComponents/button';
 import ChapterTitle from '../globalComponents/chapterTitle';
 import laserOnRight from '../../images/laserOnRight.png';
-import { SignInShowHide } from '../../redux/actions/actions';
 import { connect } from 'react-redux';
 
-interface IntervetionCourseProps{
-    dispatch:any
-}
-class IntervetionCourse extends React.Component<IntervetionCourseProps,{}>{
 
-    SignIn=()=>{
-        this.props.dispatch(SignInShowHide());
-    }
+class IntervetionCourse extends React.Component<{},{}>{
+
 
     render(){
         return(
@@ -75,11 +69,12 @@ class IntervetionCourse extends React.Component<IntervetionCourseProps,{}>{
                         w zetknięciu ze zmianami na twojej skórze.
                     </IntervetionCourseParagraph>
                 </IntervetionCourseSummaryBox>
-                <Button
-                onClick={this.SignIn}
-                btnText="Zapisz się"
-                />
+                <a href="tel:+48601197666">
+                    <Button
 
+                    btnText="Zapisz się"
+                    />
+                </a>
             </IntervetionCourseBox>
         )
     }
