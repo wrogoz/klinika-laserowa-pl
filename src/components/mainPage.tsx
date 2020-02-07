@@ -45,6 +45,9 @@ const MainContainer = styled.div`
         border-bottom: 1px solid${props=>props.theme.interBlue};
         max-width: 220px;
         padding-bottom: 10px;
+        @media(min-width:700px){
+          max-width:300px;
+        }
         }
   }
   .row {

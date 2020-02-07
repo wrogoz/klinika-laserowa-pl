@@ -36,21 +36,28 @@ const fadeInText = keyframes`
 const WomenFaceBox = styled.section`
     display:flex;
     justify-content:center;
+    align-items:center;
     padding-bottom:15px;
     width:100%;
+    height: 30vh;
     background-image:url("${WomenFace}");
     background-repeat:no-repeat;
     background-size: auto 100%;
-    margin-bottom:15px;
+    margin-bottom:5%;
 `
 const WomenFaceTextSection = styled.section`
     display:flex;
     flex-direction:column;
-    width:190px;
-    margin:0 0 0 80px;
+    width:200px;
+    margin: 5% 0 0 28%;
+    @media(min-width:540px){
+        width:300px;
+    }
+    @media(min-width:750px){
+        width:400px;
+    }
     h1{
         letter-spacing:2px;
-
         font-size:1.4em;
         margin-bottom:10px;
         span:first-of-type{
@@ -60,6 +67,13 @@ const WomenFaceTextSection = styled.section`
         span:last-of-type{
 
             color:${props=>props.theme.interBlue};
+        }
+        @media(min-width:540px){
+            font-size:2.2em;
+        }
+        @media(min-width:750px){
+            font-size:2.8em;
+            margin-bottom:20px;
         }
     }
 

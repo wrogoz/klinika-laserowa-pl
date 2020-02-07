@@ -38,7 +38,7 @@ const ReasonToTryRow = styled.section`
 const Stroke = styled.div`
 
     height:2px;
-    width:30%;
+    width: 100%;
     background-color:${props=>props.theme.interBlue};
 
 
@@ -46,12 +46,24 @@ const Stroke = styled.div`
 const PresentationStartTextBox = styled.div`
     display:flex;
     align-items:center;
-    flex-wrap:no-wrap;
+
     color:${props=>props.theme.interBlue};
     h3{
+        font-family:'Oswald',sans-serif;
         font-size:0.85em;
         text-transform:uppercase;
         padding-left:3px;
+        min-width: 250px;
+        @media(min-width:600px){
+            font-size: 1.2em;
+            min-width: 365px;
+         }
+         @media(min-width:700px){
+            font-size: 1.8em;
+         min-width: 500px;
+         }
+
+
 
     }
 `

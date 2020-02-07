@@ -23,4 +23,9 @@ border-radius:5px;
 color:#fff;
 font-family: 'Roboto', sans-serif;
 cursor:pointer;
+@media(min-width:750px){
+    padding: 10px;
+    font-size: 1.1em;
+    width:120px;
+}
 `

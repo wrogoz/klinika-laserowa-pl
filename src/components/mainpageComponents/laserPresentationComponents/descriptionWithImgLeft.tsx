@@ -47,7 +47,8 @@ export default class DescriptionWithImgOnLeft extends React.Component<Descriptio
             position:absolute;
             padding:5px 10px 5px 15px;
             bottom:20px;
-            right:73px;
+            height:5%;
+            right:14.5%;
             border-radius:5px;
             p{
                 text-transform:uppercase;
@@ -60,11 +61,9 @@ export default class DescriptionWithImgOnLeft extends React.Component<Descriptio
         }
     img{
         position:relative;
-
-        height: 260px;
-        width:80%;
-
-
+        height: auto;
+        width: 85%;
+        border-radius:15px;
         border-radius:15px;
         }
     `
@@ -72,7 +71,10 @@ export default class DescriptionWithImgOnLeft extends React.Component<Descriptio
         display:flex;
         flex-direction:column;
         width:77%;
-        padding-left:3%;
+        padding-left:10%;
+        @media(min-width:600px ){
+            font-size:1.4em;
+        }
     `
 
     const DescriptionH = styled.h3`
