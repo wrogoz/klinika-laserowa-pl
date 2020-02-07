@@ -54,7 +54,8 @@ const WomenFaceTextSection = styled.section`
         font-size:1.4em;
         margin-bottom:10px;
         span:first-of-type{
-            animation: 4s ${fadeInText} ease-out;
+
+            animation: 5s ${fadeInText} ease-out ;
         }
         span:last-of-type{
 
