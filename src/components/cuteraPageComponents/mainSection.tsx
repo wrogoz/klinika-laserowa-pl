@@ -71,6 +71,7 @@ const MainBox = styled.main`
   background-size: auto 120%;
   background-position: -85px 92px;
   background-repeat: no-repeat;
+  width:100%;
 }
 
 

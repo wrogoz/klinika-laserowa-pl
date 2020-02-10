@@ -32,6 +32,7 @@ background-image:url("${cuteraHead}");
 background-size:auto;
 background-repeat:no-repeat;
 background-position: 0% 20%;
+width:100%;
 `
 
 const TitleBox = styled.section`
