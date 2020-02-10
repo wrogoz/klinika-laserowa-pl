@@ -33,6 +33,9 @@ background-size:auto;
 background-repeat:no-repeat;
 background-position: 0% 20%;
 width:100%;
+@media(min-width:600px){
+  background-position: 100% 20%;
+}
 `
 
 const TitleBox = styled.section`

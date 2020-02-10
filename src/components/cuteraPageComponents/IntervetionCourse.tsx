@@ -91,6 +91,9 @@ const IntervetionCourseBox = styled.section`
     background-position: 50% 40px;
     background-repeat: no-repeat;
     padding-bottom:15px;
+    @media(min-width:700px){
+        background-position: 100% 40px;
+      }
 
 
 `
