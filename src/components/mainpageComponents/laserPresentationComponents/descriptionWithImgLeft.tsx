@@ -10,7 +10,7 @@ interface DescriptionWithImgOnLeftProps{
 export default class DescriptionWithImgOnLeft extends React.Component<DescriptionWithImgOnLeftProps,{}>{
     render(){
         return(
-            <>
+            <DescriptionWithImgBox>
 
                 <ImageToLeft>
                     <img src={this.props.imgSrc} alt="cutera_photo"/>
@@ -31,13 +31,16 @@ export default class DescriptionWithImgOnLeft extends React.Component<Descriptio
                     </DescriptionP>
                 </DescriptionBox>
 
-            </>
+            </DescriptionWithImgBox>
 
         )
     }
 }
 
-
+const DescriptionWithImgBox = styled.div`
+    display:flex;
+    flex-direction:column;
+`
     const ImageToLeft = styled.section`
         display:flex;
         position:relative;

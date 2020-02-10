@@ -44,6 +44,9 @@ const WomenFaceBox = styled.section`
     background-repeat:no-repeat;
     background-size: auto 100%;
     margin-bottom:5%;
+    @media(min-width:801px){
+        height:60vh;
+    }
 `
 const WomenFaceTextSection = styled.section`
     display:flex;
@@ -55,6 +58,10 @@ const WomenFaceTextSection = styled.section`
     }
     @media(min-width:750px){
         width:400px;
+    }
+    @media(min-width:801px){
+     margin:0;
+     width:46%;
     }
     h1{
         letter-spacing:2px;
@@ -75,6 +82,9 @@ const WomenFaceTextSection = styled.section`
             font-size:2.8em;
             margin-bottom:20px;
         }
+        @media(min-width:801px){
+            font-size:5em;
+           }
     }
 
 `

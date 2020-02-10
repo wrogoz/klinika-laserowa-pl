@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import LogoIm from "../images/logo-im.png";
-import Hamburger from "../images/menu-24px.svg";
+
 import { connect } from "react-redux";
 import { BurgerShowHide } from "../redux/actions/actions";
-
+import MobileNav from './globalComponents/mobileNav';
 interface HeaderProps {
   pageName: string;
   dispatch: any;
@@ -20,14 +20,10 @@ class Header extends Component<HeaderProps, {}> {
         <div>
           <Logo src={LogoIm} alt="logo" />
         </div>
-
-        <p>Klinika laserowa - {this.props.pageName}</p>
-
-        <HamburgerMenu
-          onClick={this.ShowHideNav}
-          src={Hamburger}
-          alt="hamburger menu"
+        <MobileNav
+          pageName={this.props.pageName}
         />
+
       </StHeader>
     );
   }
@@ -81,17 +77,6 @@ const Logo = styled.img`
 }
 `;
 
-const HamburgerMenu = styled.img`
-  padding-right: 4%;
-  @media(min-width:465px){
-    height:30px;
-    width:30px;
-}
-@media(min-width:600px){
-    height:40px;
-    width:40px;
-    padding-right: 6%;
-   }
-`;
+
 
 export default connect()(Header);
