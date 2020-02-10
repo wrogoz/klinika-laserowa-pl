@@ -45,7 +45,7 @@ export default class DescriptionWithImgOnLeft extends React.Component<Descriptio
         div{
             background-color:${props=>props.theme.interViolet};
             position:absolute;
-            padding:5px 10px 5px 15px;
+            padding:5px 10px 7px 15px;
             bottom:20px;
             height:5%;
             right:14.5%;
@@ -81,7 +81,7 @@ export default class DescriptionWithImgOnLeft extends React.Component<Descriptio
         padding-left:10%;
         @media(min-width:600px ){
             font-size:1.4em;
-            padding-left:1%;
+            padding-left: 8%;
         }
     `
 

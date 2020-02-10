@@ -20,8 +20,9 @@ export default class ChapterTitle extends React.Component<ChapterTitleProps,{}>{
 
 const Stroke = styled.div`
 
-    height:2px;
-    width:100%;
+    height: 2px;
+    width: 100%;
+    margin-top: 15px;
     background-color:${props=>props.theme.interViolet};
 
 
@@ -37,13 +38,17 @@ const PresentationStartTextBox = styled.div`
     flex-wrap:no-wrap;
     color:${props=>props.theme.interBlue};
     h3{
-    min-width: 57%;
-    font-size: 0.85em;
-    text-transform: uppercase;
-    padding-left: 3px;
-    margin: 0;
-    padding-top: 15px;
-    font-size: 0.8em;
-    letter-spacing: 2px;
+        min-width: 38%;
+        font-size: 0.85em;
+        text-transform: uppercase;
+        padding-left: 3px;
+        margin: 0;
+        padding-top: 15px;
+        font-size: 0.8em;
+        letter-spacing: 2px;
+        @media(min-width:600px){
+            min-width: 18%;
+        }
+
     }
 `

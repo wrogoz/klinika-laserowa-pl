@@ -48,7 +48,7 @@ export default class DescriptionWithImgOnRight extends React.Component<Descripti
         div{
             background-color:${props=>props.theme.interOrange};
             position:absolute;
-            padding:5px 10px 5px 100px;
+            padding:5px 10px 10px 100px;
             bottom:20px;
             height:5%;
             left:14.5%;

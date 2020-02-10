@@ -2,7 +2,10 @@ import React from 'react'
 import styled from 'styled-components';
 import ChapterTitle from '../globalComponents/chapterTitle';
 import Paragraph from '../globalComponents/paragraphUnderTitle';
-import laserIcon from '../../images/laserIcon.svg';
+
+import laserBlue from '../../images/laser_blue.png';
+import laserYellow from '../../images/laser_yellow.png';
+
 export default class HowItWorks extends React.Component<{},{}>{
     render(){
         return(
@@ -18,7 +21,7 @@ export default class HowItWorks extends React.Component<{},{}>{
                 />
 
                 <LaserLengthSection>
-                    <IconImg/>
+                    <IconImg src={laserBlue} alt='blue icon laser'/>
 
                     <p>fala 532nm</p>
                     <LaserLengthDescription>
@@ -26,7 +29,7 @@ export default class HowItWorks extends React.Component<{},{}>{
                         zaczerwienienie rozproszone, PWS, poikilodermia oraz zmian pigmentacyjnych
                     </LaserLengthDescription>
 
-                    <IconImg/>
+                    <IconImg src={laserYellow} alt='blue icon laser'/>
                     <p>fala 1064nm</p>
                     <LaserLengthDescription>
                         Leczenie zmian naczyniowych, a dokładnie pękniętych naczyń,
@@ -46,13 +49,14 @@ const HowItWorksBox = styled.section`
     width:100%;
 `
 
-const IconImg = styled.i`
-    background: url("${laserIcon}");
-    height: 40px;
-    width: 40px;
+const IconImg = styled.img`
+
+    height: 35px;
+    width: 45px;
     display: block;
 }
 `
+
 const LaserLengthSection = styled.div`
     display:flex;
     flex-direction:column;
