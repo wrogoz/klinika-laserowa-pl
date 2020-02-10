@@ -4,7 +4,8 @@ import LogoIm from "../images/logo-im.png";
 
 import { connect } from "react-redux";
 import { BurgerShowHide } from "../redux/actions/actions";
-import MobileNav from './globalComponents/mobileNav';
+
+import DesktopNav from './globalComponents/desktopNavigation';
 interface HeaderProps {
   pageName: string;
   dispatch: any;
@@ -20,10 +21,10 @@ class Header extends Component<HeaderProps, {}> {
         <div>
           <Logo src={LogoIm} alt="logo" />
         </div>
-        <MobileNav
-          pageName={this.props.pageName}
-        />
 
+        <DesktopNav
+          pageName='Strona główna'
+        />
       </StHeader>
     );
   }
@@ -59,6 +60,10 @@ const StHeader = styled.header`
     @media(min-width:750px){
         font-size:1.1em;
     }
+    @media(min-width:801px){
+      font-size:1.6em;
+      color:#333;
+  }
   }
 `;
 const Logo = styled.img`
