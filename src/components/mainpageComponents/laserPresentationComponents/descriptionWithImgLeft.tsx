@@ -59,15 +59,19 @@ export default class DescriptionWithImgOnLeft extends React.Component<Descriptio
 
             }
         }
-    img{
-        position:relative;
-        height: auto;
-        width: 85%;
-        border-radius:15px;
-        border-radius:15px;
-        max-height:500px;
-        }
-    `
+        img{
+            position:relative;
+            height: auto;
+            width: 85%;
+            border-radius:15px;
+            max-height:282px;
+
+            }
+            @media(min-width:600px ){
+                max-height: 470px;
+                max-width:  700px;
+            }
+        `
     const DescriptionBox = styled.div`
         display:flex;
         flex-direction:column;

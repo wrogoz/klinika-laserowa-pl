@@ -67,7 +67,7 @@ export default class DescriptionWithImgOnRight extends React.Component<Descripti
         width: 85%;
         border-radius:15px;
         max-height:282px;
-        max-width:331px;
+
         }
         @media(min-width:600px ){
             max-height: 470px;
