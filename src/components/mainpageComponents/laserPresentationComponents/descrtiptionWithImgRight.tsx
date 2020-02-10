@@ -66,7 +66,12 @@ export default class DescriptionWithImgOnRight extends React.Component<Descripti
         height: auto;
         width: 85%;
         border-radius:15px;
-        max-height:500px;
+        max-height:282px;
+        max-width:331px;
+        }
+        @media(min-width:600px ){
+            max-height: 470px;
+            max-width:  700px;
         }
     `
     const DescriptionBox = styled.div`
