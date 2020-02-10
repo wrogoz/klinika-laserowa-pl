@@ -65,7 +65,7 @@ export default class DescriptionWithImgOnLeft extends React.Component<Descriptio
             height: auto;
             width: 85%;
             border-radius:15px;
-            max-height:282px;
+
 
             }
             @media(min-width:700px ){
