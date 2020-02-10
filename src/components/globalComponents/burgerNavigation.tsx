@@ -36,7 +36,7 @@ justify-content:center;
 align-items:center;
     position: fixed;
     top: 70px;
-    right: center;
+    right: 10%;
     z-index: 10;
     height: 80vh;
     width: 80vw;
