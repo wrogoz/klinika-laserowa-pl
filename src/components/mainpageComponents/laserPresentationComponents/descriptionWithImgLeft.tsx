@@ -50,6 +50,7 @@ export default class DescriptionWithImgOnLeft extends React.Component<Descriptio
             height:5%;
             right:14.5%;
             border-radius:5px;
+
             p{
                 text-transform:uppercase;
                 padding:0;
@@ -67,9 +68,9 @@ export default class DescriptionWithImgOnLeft extends React.Component<Descriptio
             max-height:282px;
 
             }
-            @media(min-width:600px ){
-                max-height: 380px;
-                max-width:  700px;
+            @media(min-width:700px ){
+                max-height: 370px;
+
             }
         `
     const DescriptionBox = styled.div`
@@ -80,6 +81,7 @@ export default class DescriptionWithImgOnLeft extends React.Component<Descriptio
         padding-left:10%;
         @media(min-width:600px ){
             font-size:1.4em;
+            padding-left:1%;
         }
     `
 
