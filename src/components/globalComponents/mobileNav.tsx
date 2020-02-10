@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
-import Hamburger from "../../images/close-24px.svg";
+import Hamburger from "../../images/menu-24px.svg";
 import { connect } from "react-redux";
 import { BurgerShowHide } from "../../redux/actions/actions";
 
