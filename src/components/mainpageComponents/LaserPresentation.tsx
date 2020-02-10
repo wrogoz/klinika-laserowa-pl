@@ -34,6 +34,7 @@ export default class LaserPresentation extends React.Component<{},{}>{
 
 const ReasonToTryRow = styled.section`
     align-items:center;
+    max-width:100%;
 `
 const Stroke = styled.div`
 
