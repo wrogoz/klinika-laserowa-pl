@@ -102,7 +102,7 @@ const OrderList = styled.ol`
     padding: 0 20px 0 35px;
     font-size: 0.8em;
     letter-spacing: 1px;
-
+    width:100%;
     li{
         width:100%;
         margin-bottom:20px;
