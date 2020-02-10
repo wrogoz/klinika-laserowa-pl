@@ -65,6 +65,7 @@ export default class DescriptionWithImgOnLeft extends React.Component<Descriptio
         width: 85%;
         border-radius:15px;
         border-radius:15px;
+        max-height:500px;
         }
     `
     const DescriptionBox = styled.div`
