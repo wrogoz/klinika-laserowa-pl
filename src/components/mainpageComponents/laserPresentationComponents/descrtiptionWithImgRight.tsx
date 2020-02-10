@@ -77,7 +77,7 @@ export default class DescriptionWithImgOnRight extends React.Component<Descripti
     const DescriptionBox = styled.div`
     display:flex;
     flex-direction:column;
-    align-items:flex-end;
+
     width:77%;
     padding-left:15%;
     @media(min-width:600px ){
