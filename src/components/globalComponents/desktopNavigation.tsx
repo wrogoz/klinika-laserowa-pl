@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { connect } from "react-redux";
 import {Link} from 'react-router-dom';
+import arrow from '../../images/menu_arrow.svg';
 interface MobileNavProps {
   pageName: string;
   dispatch: any;
@@ -16,7 +17,7 @@ class DesktopNav extends Component<MobileNavProps, {}> {
           <p>Klinika Laserowa</p>
         <NavUl>
             <ActivePage>{this.props.pageName}</ActivePage>
-            <li>Zabiegi
+            <li>Zabiegi<MenuArrow src={arrow} alt='arrow menu'/>
                <ul>
                    <li><StyledLink to='/cutera'>Laser Cutera Excel V</StyledLink> </li>
                    <li><StyledLink to='/cutera'>Laser Cutera Excel V</StyledLink></li>
@@ -88,7 +89,10 @@ const NavUl = styled.ul`
 const ActivePage = styled.li`
     border-bottom:1px solid ${props=>props.theme.interViolet};
 `
-
+const MenuArrow = styled.img`
+    height:20px;
+    width:20px;
+`
 const StyledLink = styled(Link)`
     color:#333;
     text-decoration:none;

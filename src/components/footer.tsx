@@ -3,8 +3,13 @@ import styled from 'styled-components';
 import instagram from '../images/instagram.png';
 import twitter from '../images/twitterLogo.png';
 import facebook from '../images/facebook.png';
+import { connect } from 'react-redux';
 
-export class Footer extends Component<{},{}> {
+
+interface FooterProps{
+    WindowWidth:number;
+}
+class Footer extends Component<FooterProps,{}> {
     render() {
         return (
 
@@ -16,7 +21,7 @@ export class Footer extends Component<{},{}> {
                             <Social src={instagram} alt="instragram"/>
                             <Social src={twitter} alt="twitter"/>
                             <Social src={facebook} alt="facebook"/>
-                            <FooterStroke/>
+                           {this.props.WindowWidth<1240? <FooterStroke/> : null}
                             </SecondRow>
 
 
@@ -47,6 +52,13 @@ const FooterBox = styled.footer`
             font-size:1.4em;
             padding: 15px 5px 5px 20px;
         }
+        @media(min-width:1240px){
+            text-align: center;
+            font-size: 1.8em;
+
+        }
+
+    }
 
     }
 
@@ -56,12 +68,18 @@ const SecondRow = styled.div`
     justify-content:space-between;
     align-items:center;
     width:100%;
+    @media(min-width:1240px){
+        justify-content:center;
+    }
 `
 const FooterStroke = styled.div`
     height:1px;
     background-color:#fff;
     width:44%;
     align-self:center;
+    @media(min-width:1240px){
+        width: 68%;
+    }
 `
 const Social = styled.img`
 height: 15px;
@@ -71,5 +89,15 @@ margin: 0 5px;
     height: 30px;
     width: 30px;
 }
+@media(min-width:1240px){
+    margin: 10px 20px 0px 20px;
+}
 `
-export default Footer
+const mapStateToProps = (state: {WindowWidth:number  }) => {
+    return {
+
+      WindowWidth:state.WindowWidth
+    };
+  };
+
+  export default connect(mapStateToProps)(Footer);
