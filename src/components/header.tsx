@@ -39,7 +39,7 @@ const StHeader = styled.header`
   justify-content: space-between;
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 99;
   background-color: #fff;
   height: 70px;
   width: 100%;

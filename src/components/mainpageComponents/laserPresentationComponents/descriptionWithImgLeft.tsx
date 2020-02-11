@@ -55,7 +55,7 @@ const DescriptionWithImgBox = styled.div`
         div{
             background-color:${props=>props.theme.interViolet};
             position:absolute;
-            z-index:5;
+            z-index:1;
             padding:5px 10px 7px 15px;
             bottom:20px;
             height:5%;
