@@ -61,8 +61,14 @@ const WomenFaceTextSection = styled.section`
     }
     @media(min-width:801px){
      margin:0;
-     width:46%;
+     width:500px;
+     padding-left:45%;
     }
+    @media(min-width:1050px){
+        padding-left:18%;
+        width:650px;
+
+       }
     h1{
         letter-spacing:2px;
         font-size:1.4em;

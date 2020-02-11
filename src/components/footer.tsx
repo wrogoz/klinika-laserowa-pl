@@ -15,7 +15,7 @@ class Footer extends Component<FooterProps,{}> {
 
                 <FooterBox>
 
-                            <p>2020 - Inter-Med</p>
+        <p>2020 - Inter-Med - szerokość okna: {this.props.WindowWidth} px </p>
                             <SecondRow>
                             <p>Obserwuj nas:</p>
                             <Social src={instagram} alt="instragram"/>

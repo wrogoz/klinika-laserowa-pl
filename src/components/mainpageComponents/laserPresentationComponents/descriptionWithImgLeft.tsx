@@ -61,6 +61,10 @@ const DescriptionWithImgBox = styled.div`
             height:5%;
             right:14.5%;
             border-radius:5px;
+            @media(min-width:500px ){
+
+                right:24.5%;
+            }
             @media(min-width:1240px){
                 height: 6%;
                 right: -0.5%;
@@ -75,16 +79,21 @@ const DescriptionWithImgBox = styled.div`
             }
         }
         img{
-            order:2;
+
             position:relative;
             height: auto;
             width: 85%;
             border-radius:15px;
             max-height:282px;
+            @media(min-width:500px ){
+                width: 75%;
+
+            }
             @media(min-width:700px ){
                 max-height: 370px;
 
             }
+
             @media(min-width:1240px){
                 width:520px;
                 height:392px;
@@ -98,9 +107,13 @@ const DescriptionWithImgBox = styled.div`
         text-align:justify;
         width:77%;
         padding-left:10%;
+        @media(min-width:500px ){
+        padding-left: 3%;
+        width: 72%;
+        }
         @media(min-width:600px ){
             font-size:1.4em;
-            padding-left: 8%;
+
         }
         @media(min-width:1240px){
             justify-content:center;

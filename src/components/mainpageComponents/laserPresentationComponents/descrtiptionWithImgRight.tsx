@@ -62,6 +62,9 @@ const DescriptionWithImgBox = styled.div`
             height:5%;
             left:14.5%;
             border-radius:5px;
+            @media(min-width:500px){
+                left:24.5%;
+            }
             @media(min-width:1240px){
                 height: 5%;
                 left: -1%;
@@ -80,6 +83,9 @@ const DescriptionWithImgBox = styled.div`
         width: 85%;
         border-radius:15px;
         max-height:282px;
+        @media(min-width:500px){
+            width: 75%;
+        }
             @media(min-width:700px ){
                 max-height: 370px;
             }
@@ -96,6 +102,10 @@ const DescriptionWithImgBox = styled.div`
     text-align:justify;
     width:77%;
     padding-left:15%;
+    @media(min-width:500px){
+        width: 72%;
+        padding-left: 25%;
+    }
     @media(min-width:600px ){
         font-size:1.4em;
     }
