@@ -20,6 +20,9 @@ const WelcomeTextBox = styled.div`
     font-size:1.8em;
 
  }
+ @media(min-width:1240px){
+    font-size:2.5em;
 
  }
+
 `

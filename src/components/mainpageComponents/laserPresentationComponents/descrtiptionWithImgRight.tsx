@@ -11,7 +11,7 @@ interface DescriptionWithImgOnRightProps{
 export default class DescriptionWithImgOnRight extends React.Component<DescriptionWithImgOnRightProps,{}>{
     render(){
         return(
-            <>
+            <DescriptionWithImgBox>
 
                 <ImageToRight>
                     <img src={this.props.imgSrc} alt="cutera_photo"/>
@@ -32,12 +32,20 @@ export default class DescriptionWithImgOnRight extends React.Component<Descripti
                     </DescriptionP>
                 </DescriptionBox>
 
-            </>
+            </DescriptionWithImgBox>
 
         )
     }
 }
-
+const DescriptionWithImgBox = styled.div`
+    display:flex;
+    flex-direction:column;
+    @media(min-width:1240px){
+        flex-direction:row-reverse;
+        width:70%;
+        margin-bottom:40px;
+    }
+`
 
     const ImageToRight = styled.section`
 
@@ -53,6 +61,10 @@ export default class DescriptionWithImgOnRight extends React.Component<Descripti
             height:5%;
             left:14.5%;
             border-radius:5px;
+            @media(min-width:1240px){
+                height: 5%;
+                left: -1%;
+            }
             p{
                 text-transform:uppercase;
                 padding:0;
@@ -70,6 +82,10 @@ export default class DescriptionWithImgOnRight extends React.Component<Descripti
             @media(min-width:700px ){
                 max-height: 370px;
             }
+            @media(min-width:1240px){
+                width:520px;
+                height:392px;
+            }
         }
 
     `
@@ -81,6 +97,10 @@ export default class DescriptionWithImgOnRight extends React.Component<Descripti
     padding-left:15%;
     @media(min-width:600px ){
         font-size:1.4em;
+    }
+    @media(min-width:1240px){
+        justify-content:center;
+        padding: 0 4% 0 0;
     }
     `
 

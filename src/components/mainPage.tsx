@@ -29,10 +29,13 @@ class MainPage extends React.Component<MainPageProps, {}> {
       <MainContainer>
         {this.props.BurgerNavVisible?<BurgerNavigation/>:null}
         <Header pageName="strona główna" />
-        <p>{this.props.WindowWidth}</p>
         <BoxWithWomenFace />
         <WelcomeText />
-        <LaserPresentationDesktop />
+
+        {this.props.WindowWidth>1240?<LaserPresentationDesktop />:
+        <LaserPresentation/>}
+
+
         <Footer/>
 
         {window.addEventListener('resize',this.windowResize)}
@@ -61,6 +64,10 @@ const MainContainer = styled.div`
         @media(min-width:700px){
           max-width:300px;
         }
+        @media(min-width:1000px){
+
+          max-width: 430px;
+       }
         }
   }
   .row {
