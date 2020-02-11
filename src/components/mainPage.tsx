@@ -6,23 +6,36 @@ import styled from "styled-components";
 import BoxWithWomenFace from "./mainpageComponents/BoxWithWomenFace";
 import WelcomeText from "./mainpageComponents/WelcomeText";
 import LaserPresentation from "./mainpageComponents/LaserPresentation";
+import LaserPresentationDesktop from './mainpageComponents/laserPresentationDesktop';
 import BurgerNavigation from './globalComponents/burgerNavigation';
+import { ChangingWindowWidth } from "../redux/actions/actions";
 
 interface MainPageProps{
   BurgerNavVisible:boolean
+  dispatch:any
+  WindowWidth:string | number
 }
 
 class MainPage extends React.Component<MainPageProps, {}> {
+
+  windowResize = ()=>{
+    this.props.dispatch(ChangingWindowWidth(window.innerWidth))
+
+  }
+
   render() {
 
     return (
       <MainContainer>
         {this.props.BurgerNavVisible?<BurgerNavigation/>:null}
         <Header pageName="strona główna" />
+        <p>{this.props.WindowWidth}</p>
         <BoxWithWomenFace />
         <WelcomeText />
-        <LaserPresentation />
+        <LaserPresentationDesktop />
         <Footer/>
+
+        {window.addEventListener('resize',this.windowResize)}
       </MainContainer>
     );
   }
@@ -60,9 +73,10 @@ const MainContainer = styled.div`
   }
 `;
 
-const mapStateToProps = (state: { BurgerNavVisible:boolean }) => {
+const mapStateToProps = (state: { BurgerNavVisible:boolean,WindowWidth:number | string }) => {
   return {
-    BurgerNavVisible: state.BurgerNavVisible
+    BurgerNavVisible: state.BurgerNavVisible,
+    WindowWidth:state.WindowWidth
   };
 };
 

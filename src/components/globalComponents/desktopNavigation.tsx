@@ -37,19 +37,22 @@ const DesktopNavBox = styled.div`
     display:flex;
     justify-content:space-between;
     align-items:center;
-    width:80%;
+    width:100%;
+    padding-left:40px;
 
 `
 
 const NavUl = styled.ul`
     display:flex;
-    justify-content:space-evenly;
+    justify-content:flex-end;
+
     font-size:1.6em;
     text-transform:uppercase;
     width:60%;
     color:#333;
+
     li{
-        margin:0;
+        margin:0 40px 0 0;
         padding:0;
         list-style:none;
     }
@@ -63,18 +66,18 @@ const NavUl = styled.ul`
         display:block;
         text-align:center;
         font-size:0.7em;
-        background-color:#fff;
+        background-color:#f5f5f5de;
         z-index:22;
         position:absolute;
         top:30px;
-        left:-115px;
+        left:-90px;
         width:240px;
         color:#333;
     }
     li:hover ul li{
         padding:10px 0;
         cursor:pointer;
-        background-color:#fff;
+
 
     }
     li:hover ul li:hover{

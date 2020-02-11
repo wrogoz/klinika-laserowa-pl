@@ -2,6 +2,7 @@
 const initialState = {
   BurgerNavVisible:false,
   SignInVisible:false,
+  WindowWidth:window.innerWidth,
   Indications:[
     'trądzik różowaty',
      'pajączki',
@@ -22,7 +23,7 @@ const initialState = {
 
  }
 
-const reducer = (state = initialState, action: { type: string })=> {
+const reducer = (state = initialState, action: { type: string,width:number })=> {
     switch (action.type) {
       case 'BURGERNAVSHOWHIDE':
         return {
@@ -33,6 +34,11 @@ const reducer = (state = initialState, action: { type: string })=> {
         return {
           ...state,
           SignInVisible : !state.SignInVisible
+        }
+      case 'CHANGEWINDOWWIDTH':
+        return{
+          ...state,
+          WindowWidth:action.width
         }
       default:
         return state

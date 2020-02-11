@@ -8,3 +8,9 @@ export const SignInShowHide = ()=>{
         type:'SIGNINWINDOWSHOWHIDE'
     }
 }
+export const ChangingWindowWidth = (width:number )=>{
+    return {
+        type:'CHANGEWINDOWWIDTH',
+        width
+    }
+}

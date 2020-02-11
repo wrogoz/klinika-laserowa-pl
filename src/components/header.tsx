@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import LogoIm from "../images/logo-im.png";
-
+import MobileNav from './globalComponents/mobileNav';
 import { connect } from "react-redux";
 import { BurgerShowHide } from "../redux/actions/actions";
 
@@ -9,6 +9,7 @@ import DesktopNav from './globalComponents/desktopNavigation';
 interface HeaderProps {
   pageName: string;
   dispatch: any;
+  WindowWidth:number
 }
 
 class Header extends Component<HeaderProps, {}> {
@@ -22,9 +23,11 @@ class Header extends Component<HeaderProps, {}> {
           <Logo src={LogoIm} alt="logo" />
         </div>
 
-        <DesktopNav
-          pageName='Strona główna'
-        />
+        {this.props.WindowWidth>1240?<DesktopNav
+                              pageName={this.props.pageName} />
+                              :<MobileNav pageName={this.props.pageName}/> }
+
+
       </StHeader>
     );
   }
@@ -80,8 +83,16 @@ const Logo = styled.img`
 @media(min-width:750px){
     width:200px;
 }
+@media(min-width:801px){
+  padding-left:40px;
+}
 `;
 
+const mapStateToProps = (state: {WindowWidth:number  }) => {
+  return {
 
+    WindowWidth:state.WindowWidth
+  };
+};
 
-export default connect()(Header);
+export default connect(mapStateToProps)(Header);
