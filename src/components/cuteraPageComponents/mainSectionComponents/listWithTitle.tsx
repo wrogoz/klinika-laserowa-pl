@@ -43,6 +43,9 @@ const PreUlText = styled.p`
   font-weight: bold;
   padding:0 20px;
   text-align:center;
+  @media(min-width:900px){
+    font-size:1em;
+  }
 
 `
 

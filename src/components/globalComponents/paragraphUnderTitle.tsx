@@ -19,5 +19,8 @@ color: #999;
 text-align: center;
 font-size: 0.8em;
 text-transform: uppercase;
+@media(min-width:900px){
+
+
 }
 `

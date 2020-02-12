@@ -8,7 +8,7 @@ export default class TitleSectionComponent extends React.Component<{},{}>{
             <TitleSection>
             <TitleBox>
               <EquipmentName>Laser Excel V</EquipmentName>
-              <p>- przełom w leczeniu zmian naczyniowych i pigmentacyjnych</p>
+              <p>- przełom w leczeniu zmian naczyniowych <br/> i pigmentacyjnych</p>
               <Button
                 btnText='Więcej'
               />
@@ -36,6 +36,12 @@ width:100%;
 @media(min-width:600px){
   background-position: 100% 20%;
 }
+@media(min-width:900px){
+
+    flex-basis: 54vh;
+    background-size: 81% auto;
+    background-position: 100% 120px;
+}
 `
 
 const TitleBox = styled.section`
@@ -43,6 +49,12 @@ const TitleBox = styled.section`
   flex-direction:column;
   width: 70%;
   padding-left:30px;
+  @media(min-width:900px){
+    width: 50%;
+    max-width:500px;
+    padding-left: 22%;
+
+  }
 `
 const EquipmentName = styled.h1`
   font-size: 2.0em;
@@ -52,12 +64,23 @@ const EquipmentName = styled.h1`
     font-size: 1.7em;
     margin-top: 0;
   }
+  @media(min-width:900px){
+    font-size: 3em;
+    &&+p{
+      font-size:2.3em;
+      letter-spacing: 4px;
+    }
+  }
 `
 
 const  AdvertismentBox = styled.div`
   margin-top: 100px;
   display:flex;
   justify-content:center;
+  @media(min-width:900px){
+
+    paddin:0 8%;
+  }
 `
 const  AdvertismentText = styled.p`
 text-align: center;
@@ -73,5 +96,10 @@ color: #999;
     width: 200px;
     text-align: center;
     margin: 10px auto;
+  }
+  @media(min-width:900px){
+    margin-top: 15%;
+    font-size:1.7em;
+    width: 650px;
   }
 `

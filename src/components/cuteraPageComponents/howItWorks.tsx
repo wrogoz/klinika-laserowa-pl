@@ -5,8 +5,9 @@ import Paragraph from '../globalComponents/paragraphUnderTitle';
 
 import laserBlue from '../../images/laser_blue.png';
 import laserYellow from '../../images/laser_yellow.png';
+import { connect } from 'react-redux';
 
-export default class HowItWorks extends React.Component<{},{}>{
+class HowItWorks extends React.Component<{},{}>{
     render(){
         return(
             <HowItWorksBox>
@@ -70,3 +71,11 @@ const LaserLengthDescription = styled.p`
     letter-spacing: 1px;
 `
 
+const mapStateToProps = (state: { WindowWidth:number }) => {
+    return {
+
+        WindowWidth:state.WindowWidth
+    };
+  };
+
+  export default connect(mapStateToProps)(HowItWorks);

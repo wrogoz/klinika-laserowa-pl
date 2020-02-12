@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import ChapterTitle from '../globalComponents/chapterTitle';
+import ChapterTitleDesktop from '../globalComponents/chapterTitleDesktop';
 import ListWithTitle from './mainSectionComponents/listWithTitle';
 import BoxUnderList from './mainSectionComponents/boxUnderList';
 import laserOnLeft from '../../images/laserOnLeft.png';
@@ -9,15 +10,21 @@ import { connect } from 'react-redux';
 
 interface MainSectionProps{
   Indications:string[],
-  ContraIndications:string[]
+  ContraIndications:string[],
+  WindowWidth:number
 }
 class MainSection extends React.Component<MainSectionProps,{}>{
     render(){
         return(
             <MainBox>
-            <ChapterTitle
-              title='Komu i w czym może pomóc Laser Excel V'
-            />
+              {this.props.WindowWidth<900?
+               <ChapterTitle
+              title='Komu i w czym może pomóc Laser Excel V?'
+            /> :
+            <ChapterTitleDesktop
+            title='Komu i w czym może pomóc Laser Excel V?'
+          />}
+
             <Indications>Wskazania do zabiegu z użyciem lasera excel V</Indications>
             <Paragraph
               text='Laser excel V uwalnia od zmian skórnych, których obecność
@@ -35,10 +42,12 @@ class MainSection extends React.Component<MainSectionProps,{}>{
               firstLine='Możesz to zmienić'
               secondLine='Nie musisz obawiać się bólu, blizn czy komplikacji po zabiegu'
               />
-
-            <ChapterTitle
+            {this.props.WindowWidth<900? <ChapterTitle
               title='Czy każdy może skorzystać z tego, co oferuje laser excel V'
-            />
+            />: <ChapterTitleDesktop
+            title='Czy każdy może skorzystać z tego, co oferuje laser excel V'
+          />}
+
 
 
             <ContraIndications>Przeciwwskazania</ContraIndications>
@@ -96,11 +105,22 @@ const Indications = styled.h3`
       font-size: 0.6em;
       text-transform: uppercase;
     }
+    @media(min-width:900px){
+      font-size: 1.4em;
+      width: 400px;
+      &&+p{
+        font-size:1.4em;
+        width:600px;
+      }
+  }
 `
 const ContraIndications = styled.h3`
   text-transform: uppercase;
   color: #999;
   font-size: 0.9em;
+  @media(min-width:900px){
+    font-size:1.4em
+  }
 
 
 `
@@ -110,10 +130,11 @@ const Sign = styled.p`
   margin:0;
 `
 
-const mapStateToProps = (state: { Indications: string[],ContraIndications:string[] }) => {
+const mapStateToProps = (state: { Indications: string[],ContraIndications:string[],WindowWidth:number }) => {
   return {
       Indications: state.Indications,
-      ContraIndications:state.ContraIndications
+      ContraIndications:state.ContraIndications,
+      WindowWidth:state.WindowWidth
   };
 };
 

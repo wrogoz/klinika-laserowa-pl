@@ -50,10 +50,12 @@ const ChapterTitle = styled.h3`
     margin: 0;
     display:flex;
     flex-wrap:nowrap;
-    font-size: 1.6em;
+    font-size: 1.2em;
     letter-spacing: 2px;
     min-width: 37%;
     letter-spacing:4px;
+    text-align:center;
+
 
 
 `
