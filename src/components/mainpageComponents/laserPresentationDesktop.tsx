@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import Cutera1 from '../../images/cutera1.png';
+import backgroundLaserImg from '../../images/background_deskt.png';
 import DescriptionWithImgRight from './laserPresentationComponents/descrtiptionWithImgRight';
 import DescriptionWithImgLeft from './laserPresentationComponents/descriptionWithImgLeft';
 import ChapterTitleDesktop from '../globalComponents/chapterTitleDesktop';
@@ -34,5 +35,9 @@ const LaserPresentationBox = styled.section`
     flex-direction:column;
     align-items:center;
     width:100%;
+    background-image:url('${backgroundLaserImg}');
+    background-repeat:no-repeat;
+    background-size: 100% 82%;
+    background-position: -1px -283px;
 
 `

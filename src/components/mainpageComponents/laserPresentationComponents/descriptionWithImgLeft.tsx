@@ -93,7 +93,13 @@ const DescriptionWithImgBox = styled.div`
                 max-height: 370px;
 
             }
+            @media(min-width:845px ){
+                max-height: 475px;
 
+            }
+            @media(min-width:1050px ){
+                max-height: 535px;
+            }
             @media(min-width:1240px){
                 width:520px;
                 height:392px;

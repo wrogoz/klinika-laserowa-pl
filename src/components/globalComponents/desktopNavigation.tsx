@@ -78,11 +78,14 @@ const NavUl = styled.ul`
     li:hover ul li{
         padding:10px 0;
         cursor:pointer;
+        border-bottom:1px solid #fff;
+
 
 
     }
     li:hover ul li:hover{
-        border-bottom:1px solid ${props=>props.theme.interViolet}
+        border-bottom:1px solid ${props=>props.theme.interViolet};
+
     }
 
 `

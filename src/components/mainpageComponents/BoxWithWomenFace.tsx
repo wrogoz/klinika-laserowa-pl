@@ -1,6 +1,7 @@
 import React from 'react'
 import styled,{keyframes} from 'styled-components';
-import WomenFace from '../../images/women-face.png';
+
+import WomenFace from '../../images/WomenFace.png'
 import Button from '../globalComponents/button'
 import {Link} from 'react-router-dom';
 
