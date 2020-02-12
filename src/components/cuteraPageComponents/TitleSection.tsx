@@ -38,9 +38,15 @@ width:100%;
 }
 @media(min-width:900px){
 
-    flex-basis: 54vh;
-    background-size: 81% auto;
-    background-position: 100% 120px;
+
+    background-size: 67% auto;
+    background-position: 100% 65px;
+}
+@media(min-width:1200px){
+
+    background-size: 86% auto;
+    background-position: 100% -55px;
+
 }
 `
 
@@ -55,6 +61,12 @@ const TitleBox = styled.section`
     padding-left: 22%;
 
   }
+  @media(min-width:1200px){
+    width:45%;
+    max-width: 80%;
+    padding-left: 22%;
+
+}
 `
 const EquipmentName = styled.h1`
   font-size: 2.0em;
@@ -71,6 +83,18 @@ const EquipmentName = styled.h1`
       letter-spacing: 4px;
     }
   }
+  @media(min-width:1200px){
+    font-size: 5em;
+    margin-top: 10%;
+    &&+p{
+      font-size:2em;
+      letter-spacing: 4px;
+    }
+  }
+  }
+
+
+
 `
 
 const  AdvertismentBox = styled.div`
@@ -78,8 +102,21 @@ const  AdvertismentBox = styled.div`
   display:flex;
   justify-content:center;
   @media(min-width:900px){
+    margin-top: 0;
 
-    paddin:0 8%;
+  }
+  @media(min-width:1200px){
+    margin-top: 8%;
+
+  }
+
+  @media(min-width:1400px){
+    margin-top: 10%;
+
+  }
+  @media(min-width:1600px){
+    margin-top: 15%;
+
   }
 `
 const  AdvertismentText = styled.p`
@@ -98,7 +135,7 @@ color: #999;
     margin: 10px auto;
   }
   @media(min-width:900px){
-    margin-top: 15%;
+    margin-top: 12%;
     font-size:1.7em;
     width: 650px;
   }

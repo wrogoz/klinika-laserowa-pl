@@ -2,18 +2,25 @@ import React from 'react'
 import styled from 'styled-components';
 import ChapterTitle from '../globalComponents/chapterTitle';
 import Paragraph from '../globalComponents/paragraphUnderTitle';
-
+import ChapterTitleDesktop from '../globalComponents/chapterTitleDesktop';
 import laserBlue from '../../images/laser_blue.png';
 import laserYellow from '../../images/laser_yellow.png';
 import { connect } from 'react-redux';
 
-class HowItWorks extends React.Component<{},{}>{
+interface HowItWorksProps{
+    WindowWidth:number
+}
+class HowItWorks extends React.Component<HowItWorksProps,{}>{
     render(){
         return(
             <HowItWorksBox>
+                 {this.props.WindowWidth<900?
                 <ChapterTitle
                 title='Jak działa excel V'
-                />
+                /> :
+                <ChapterTitleDesktop
+                title='Jak działa excel V'
+                />}
                 <Paragraph
                     text='Laser excel V Cutera to urządzenie,
                     które emituje wiązkę laserową o dwóch róznych
