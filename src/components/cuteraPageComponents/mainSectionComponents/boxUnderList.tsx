@@ -30,6 +30,8 @@ const Box = styled.div`
 
     @media(min-width:900px){
         margin-top:40px;
+        width: 35%;
+
     }
     p{
         text-align:center;
