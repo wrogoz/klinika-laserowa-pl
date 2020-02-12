@@ -6,6 +6,8 @@ import ListWithTitle from './mainSectionComponents/listWithTitle';
 import BoxUnderList from './mainSectionComponents/boxUnderList';
 import laserOnLeft from '../../images/laserOnLeft.png';
 import Paragraph from '../globalComponents/paragraphUnderTitle';
+import plusIcon from '../../images/plus.png';
+import minusIcon from '../../images/minus.png';
 import { connect } from 'react-redux';
 
 interface MainSectionProps{
@@ -31,9 +33,8 @@ class MainSection extends React.Component<MainSectionProps,{}>{
               powoduje duży dyskomfort'
               />
 
-            <Sign>
-              +
-            </Sign>
+            <Sign src={plusIcon}/>
+
             <ListWithTitle
             text='Jeśli na twoim ciele, obecne są zmiany typu:'
             array={this.props.Indications}
@@ -51,9 +52,8 @@ class MainSection extends React.Component<MainSectionProps,{}>{
 
 
             <ContraIndications>Przeciwwskazania</ContraIndications>
-            <Sign>
-              -
-            </Sign>
+            <Sign src={minusIcon}/>
+
             <ListWithTitle
             text='Do okoliczności, które wykluczają użycie lasera, należą:'
             array={this.props.ContraIndications}
@@ -124,10 +124,9 @@ const ContraIndications = styled.h3`
 
 
 `
-const Sign = styled.p`
-  color:${props=>props.theme.interViolet};
-  font-size:3em;
-  margin:0;
+const Sign = styled.img`
+  height:40px;
+  width:40px;
 `
 
 const mapStateToProps = (state: { Indications: string[],ContraIndications:string[],WindowWidth:number }) => {
