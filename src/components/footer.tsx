@@ -101,9 +101,12 @@ const FooterStroke = styled.div`
     height:1px;
     background-color:#fff;
 
-    width:100%;
+    width:60%;
     align-self:center;
     margin-left:5px;
+    @media(min-width:450px){
+        width: 70%;
+    }
     @media(min-width:1240px){
         width: 68%;
     }
