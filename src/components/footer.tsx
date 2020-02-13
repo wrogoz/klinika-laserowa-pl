@@ -4,7 +4,7 @@ import instagram from '../images/instagram.png';
 import twitter from '../images/twitterLogo.png';
 import facebook from '../images/facebook.png';
 import { connect } from 'react-redux';
-
+import phone from '../images/phone.svg';
 
 
 interface FooterProps{
@@ -16,11 +16,9 @@ class Footer extends Component<FooterProps,{}> {
 
                 <FooterBox>
                             <FirstRow>
-                                <a href="tel:+48601197666">
-                                    <FooterBtn>
-                                        Zapisz się
-                                    </FooterBtn>
-                                </a>
+                            <a href="tel:+48601197666">
+                                <img src={phone} alt='sef'/>
+                            </a>
                             </FirstRow>
                             <SecondRow>
                             <p>Obserwuj nas:</p>
@@ -50,15 +48,25 @@ const FooterBox = styled.footer`
     padding:10px 0 5px 0;
     width:100%;
     border-radius:15px 15px 0 0;
+    a{
+        display:flex;
+        align-items:center;
+        text-decoration:none;
+        color:#fff;
+        border:1px solid #fff;
+        border-radius:100%;
+        padding: 8px;
+        background:#fff;
+        img{
+            color:#fff;
+            height: 19px;
+        }
+        p{margin:2px;}
+    }
     background-color:${props=>props.theme.interOrange};
     @media(min-width:700px){
         padding:30px 0;
     }
-
-
-
-
-
 
 `
 const FirstRow=styled.div`
@@ -125,12 +133,14 @@ margin: 0 5px;
 `
 
 const FooterBtn = styled.button`
-    border:none;
-    background:${props=>props.theme.interBlue};
+    border:1px solid #fff;
+    background:${props=>props.theme.interOrange};
     width:80px;
     padding:5px;
     border-radius:10px;
     color:#fff;
+    text-transform:uppercase;
+    font-weight:bold;
     font-family: 'Roboto', sans-serif;
     cursor:pointer;
     @media(min-width:750px){
