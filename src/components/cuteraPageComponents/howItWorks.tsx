@@ -76,6 +76,10 @@ const LaserLengthDescription = styled.p`
     font-size: 0.8em;
     text-align: center;
     letter-spacing: 1px;
+    @media(min-width:1000px){
+        width: 450px;
+        font-size: 1em;
+    }
 `
 
 const mapStateToProps = (state: { WindowWidth:number }) => {

@@ -115,6 +115,10 @@ const OrderList = styled.ol`
     width: 100%;
     margin-bottom: 20px;
   }
+  @media(min-width:900px){
+    width:50%;
+    font-size:1em;
+  }
 `;
 const Line = styled.div`
   width: 50%;
@@ -141,11 +145,14 @@ const IntervetionCourseParagraph = styled.p`
   span {
     font-weight: bold;
   }
+  @media(min-width:900px){
+    font-size:1em;
+  }
 `;
 
 const IntervetionCourseH4 = styled.h4`
   font-weight: bold;
-  font-size: 0.8em;
+
   @media(min-width:900px){
     font-size:1.05em;
   }
