@@ -6,6 +6,7 @@ import facebook from '../images/facebook.png';
 import { connect } from 'react-redux';
 
 
+
 interface FooterProps{
     WindowWidth:number;
 }
@@ -15,7 +16,11 @@ class Footer extends Component<FooterProps,{}> {
 
                 <FooterBox>
 
-        <p>2020 - Inter-Med - szerokość okna: {this.props.WindowWidth} px </p>
+                            <FirstRow>
+                                <FooterBtn>
+                                    Zapisz się
+                                </FooterBtn>
+                            </FirstRow>
                             <SecondRow>
                             <p>Obserwuj nas:</p>
                             <Social src={instagram} alt="instragram"/>
@@ -23,6 +28,9 @@ class Footer extends Component<FooterProps,{}> {
                             <Social src={facebook} alt="facebook"/>
                            {this.props.WindowWidth<1240? <FooterStroke/> : null}
                             </SecondRow>
+                            <ThirdRow>
+                                <p>Inter-Med 2020</p>
+                            </ThirdRow>
 
 
                 </FooterBox>
@@ -36,46 +44,60 @@ class Footer extends Component<FooterProps,{}> {
 const FooterBox = styled.footer`
     display:flex;
     flex-direction:column;
+    align-items:center;
+    justify-content:center;
     color:#fff;
     margin-top:5%;
-    padding:10px 0;
+    padding:10px 0 5px 0;
     width:100%;
     border-radius:15px 15px 0 0;
     background-color:${props=>props.theme.interOrange};
     @media(min-width:700px){
         padding:30px 0;
     }
-    p{
-        margin:0;
-        padding: 5px 5px 5px 20px;
-        @media(min-width:700px){
-            font-size:1.4em;
-            padding: 15px 5px 5px 20px;
-        }
-        @media(min-width:1240px){
-            text-align: center;
-            font-size: 1.8em;
 
-        }
 
-    }
 
-    }
+
+
 
 `
+const FirstRow=styled.div`
+width:100%;
+display:flex;
+justify-content:center;
+`
+
 const SecondRow = styled.div`
     display:flex;
-    justify-content:space-between;
-    align-items:center;
+    justify-content:center;
     width:100%;
+    margin:10px 0 0 0;
+
+    p{
+        padding:0 0 0 5px;
+        margin: 0;
+    }
     @media(min-width:1240px){
         justify-content:center;
     }
 `
+const ThirdRow = styled.div`
+    width:100%;
+    display:flex;
+    justify-content:center;
+    font-size:0.6em;
+    p{
+        padding-bottom:0;
+        margin-bottom: 0;
+        letter-spacing:3px;
+    }
+
+`
 const FooterStroke = styled.div`
     height:1px;
     background-color:#fff;
-    width:44%;
+    width: 50%;
     align-self:center;
     @media(min-width:1240px){
         width: 68%;
@@ -93,6 +115,24 @@ margin: 0 5px;
     margin: 10px 20px 0px 20px;
 }
 `
+
+const FooterBtn = styled.button`
+    border:none;
+    background:${props=>props.theme.interBlue};
+    width:80px;
+    padding:5px;
+    border-radius:5px;
+    color:#fff;
+    font-family: 'Roboto', sans-serif;
+    cursor:pointer;
+    @media(min-width:750px){
+        padding: 10px;
+        font-size: 1.1em;
+        width:120px;
+    }
+
+`
+
 const mapStateToProps = (state: {WindowWidth:number  }) => {
     return {
 

@@ -38,7 +38,7 @@ const PresentationStartTextBox = styled.div`
     flex-wrap:no-wrap;
     color:${props=>props.theme.interBlue};
     h3{
-        min-width: 38%;
+        min-width: 40%;
         font-size: 0.85em;
         text-transform: uppercase;
         padding-left: 3px;
