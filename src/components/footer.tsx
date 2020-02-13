@@ -15,11 +15,12 @@ class Footer extends Component<FooterProps,{}> {
         return (
 
                 <FooterBox>
-
                             <FirstRow>
-                                <FooterBtn>
-                                    Zapisz się
-                                </FooterBtn>
+                                <a href="tel:+48601197666">
+                                    <FooterBtn>
+                                        Zapisz się
+                                    </FooterBtn>
+                                </a>
                             </FirstRow>
                             <SecondRow>
                             <p>Obserwuj nas:</p>
@@ -31,8 +32,6 @@ class Footer extends Component<FooterProps,{}> {
                             <ThirdRow>
                                 <p>Inter-Med 2020</p>
                             </ThirdRow>
-
-
                 </FooterBox>
 
 
@@ -121,7 +120,7 @@ const FooterBtn = styled.button`
     background:${props=>props.theme.interBlue};
     width:80px;
     padding:5px;
-    border-radius:5px;
+    border-radius:10px;
     color:#fff;
     font-family: 'Roboto', sans-serif;
     cursor:pointer;
