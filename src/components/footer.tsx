@@ -77,8 +77,9 @@ const SecondRow = styled.div`
 
     p{
         padding:0 0 0 5px;
-        margin: 0 auto;
+        margin: 0 5px 0 10px;
         font-size: 0.8em;
+        white-space: nowrap;
     }
     @media(min-width:1240px){
         justify-content:center;
@@ -99,9 +100,10 @@ const ThirdRow = styled.div`
 const FooterStroke = styled.div`
     height:1px;
     background-color:#fff;
-    width: 50%;
+
+    width:100%;
     align-self:center;
-    margin-left:10px;
+    margin-left:5px;
     @media(min-width:1240px){
         width: 68%;
     }
