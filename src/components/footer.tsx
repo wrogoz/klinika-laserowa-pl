@@ -70,12 +70,15 @@ justify-content:center;
 const SecondRow = styled.div`
     display:flex;
     justify-content:center;
+    align-items:center;
     width:100%;
     margin:10px 0 0 0;
 
+
     p{
         padding:0 0 0 5px;
-        margin: 0;
+        margin: 0 auto;
+        font-size: 0.8em;
     }
     @media(min-width:1240px){
         justify-content:center;
@@ -98,6 +101,7 @@ const FooterStroke = styled.div`
     background-color:#fff;
     width: 50%;
     align-self:center;
+    margin-left:10px;
     @media(min-width:1240px){
         width: 68%;
     }
