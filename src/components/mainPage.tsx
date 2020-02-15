@@ -9,7 +9,7 @@ import LaserPresentation from "./mainpageComponents/LaserPresentation";
 import LaserPresentationDesktop from './mainpageComponents/laserPresentationDesktop';
 import BurgerNavigation from './globalComponents/burgerNavigation';
 import { ChangingWindowWidth } from "../redux/actions/actions";
-
+import SelectIntervetion from './mainpageComponents/selectIntervetion';
 interface MainPageProps{
   BurgerNavVisible:boolean
   dispatch:any
@@ -31,7 +31,7 @@ class MainPage extends React.Component<MainPageProps, {}> {
         <Header pageName="strona główna" />
         <BoxWithWomenFace />
         <WelcomeText />
-
+        <SelectIntervetion/>
         {this.props.WindowWidth>1240?<LaserPresentationDesktop />:
         <LaserPresentation/>}
 

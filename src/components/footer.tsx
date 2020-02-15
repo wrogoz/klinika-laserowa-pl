@@ -55,7 +55,7 @@ const FooterBox = styled.footer`
         color:#fff;
         border:1px solid #fff;
         border-radius:100%;
-        padding: 8px;
+        padding: 9px;
         background:#fff;
         img{
             color:#fff;

@@ -19,13 +19,10 @@ class MainSection extends React.Component<MainSectionProps,{}>{
     render(){
         return(
             <MainBox>
-              {this.props.WindowWidth<900?
-               <ChapterTitle
-              title='Komu i w czym może pomóc Laser Excel V?'
-            /> :
+
             <ChapterTitleDesktop
             title='Komu i w czym może pomóc Laser Excel V?'
-          />}
+          />
 
             <Indications>Wskazania do zabiegu z użyciem lasera excel V</Indications>
             <Paragraph
@@ -43,11 +40,9 @@ class MainSection extends React.Component<MainSectionProps,{}>{
               firstLine='Możesz to zmienić'
               secondLine='Nie musisz obawiać się bólu, blizn czy komplikacji po zabiegu'
               />
-            {this.props.WindowWidth<900? <ChapterTitle
-              title='Czy każdy może skorzystać z tego, co oferuje laser excel V'
-            />: <ChapterTitleDesktop
+             <ChapterTitleDesktop
             title='Czy każdy może skorzystać z tego, co oferuje laser excel V'
-          />}
+          />
 
 
 
@@ -117,7 +112,7 @@ const Indications = styled.h3`
 `
 const ContraIndications = styled.h3`
   text-transform: uppercase;
-  color: #999;
+  color: #000;
   font-size: 0.9em;
   @media(min-width:900px){
     font-size:1.4em

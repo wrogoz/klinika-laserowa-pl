@@ -14,13 +14,10 @@ class HowItWorks extends React.Component<HowItWorksProps,{}>{
     render(){
         return(
             <HowItWorksBox>
-                 {this.props.WindowWidth<900?
-                <ChapterTitle
-                title='Jak działa excel V'
-                /> :
+
                 <ChapterTitleDesktop
                 title='Jak działa excel V'
-                />}
+                />
                 <Paragraph
                     text='Laser excel V Cutera to urządzenie,
                     które emituje wiązkę laserową o dwóch róznych
@@ -76,6 +73,7 @@ const LaserLengthDescription = styled.p`
     font-size: 0.8em;
     text-align: center;
     letter-spacing: 1px;
+    color:#999;
     @media(min-width:1000px){
         width: 450px;
         font-size: 1em;

@@ -19,14 +19,16 @@ export default class ChapterTitleDesktop extends React.Component<ChapterTitleDes
 }
 const ChapterTitleBox = styled.div`
 
-    margin:80px 0 80px 0;
+    margin:40px 0 40px 0;
     width:100%;
     font-family: 'Oswald', sans-serif;
     display:flex;
     justify-content:center;
     align-items:center;
-
     flex-wrap:nowrap;
+    @media(min-width:1000px){
+        margin:80px 0 80px 0;
+    }
 `
 
 const StrokeLeft = styled.div`
@@ -50,12 +52,16 @@ const ChapterTitle = styled.h3`
     margin: 0;
     display:flex;
     flex-wrap:nowrap;
-    font-size: 1.2em;
-    letter-spacing: 2px;
-    min-width: 37%;
-    letter-spacing:4px;
     text-align:center;
-
+    letter-spacing:2px;
+    font-size: 1em;
+    font-weight:normal;
+    min-width: 50%;
+    @media(min-width:1000px){
+        letter-spacing:4px;
+    font-size: 1.2em;
+    min-width: 37%;
+    }
 
 
 `

@@ -4,16 +4,15 @@ import Cutera1 from '../../images/cutera1.png';
 import Womens from '../../images/womens.png';
 import DescriptionWithImgRight from './laserPresentationComponents/descrtiptionWithImgRight';
 import DescriptionWithImgLeft from './laserPresentationComponents/descriptionWithImgLeft';
-
+import ChapterTitleDesktop from '../globalComponents/chapterTitleDesktop';
 
 export default class LaserPresentation extends React.Component<{},{}>{
     render(){
         return(
             <ReasonToTryRow>
-                <PresentationStartTextBox>
-                    <Stroke/>
-                    <h3>Dlaczego warto skorzystać</h3>
-                </PresentationStartTextBox>
+                <ChapterTitleDesktop
+                title='dlaczego warto skorzystać?'
+                />
                 <DescriptionWithImgRight
                     imgSrc={Cutera1}
                     boxTitle = 'Profity'

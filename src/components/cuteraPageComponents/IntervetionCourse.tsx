@@ -14,11 +14,9 @@ class IntervetionCourse extends React.Component<IntervetionCourseProps, {}> {
   render() {
     return (
       <IntervetionCourseBox>
-        {this.props.WindowWidth < 900 ? (
-          <ChapterTitle title="Przebieg zabiegu" />
-        ) : (
+
           <ChapterTitleDesktop title="Przebieg zabiegu" />
-        )}
+
 
         <OrderList>
           <li>
@@ -111,6 +109,7 @@ const OrderList = styled.ol`
   font-size: 0.8em;
   letter-spacing: 1px;
   width: 70%;
+  color:#999;
   li {
     width: 100%;
     margin-bottom: 20px;
