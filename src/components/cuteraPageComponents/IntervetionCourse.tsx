@@ -128,18 +128,21 @@ const OrderList = styled.ol`
 
 
 const IntervetionCourseSummaryBox = styled.div`
-  width: 275px;
+
   text-align: center;
   margin-bottom: 15px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   @media(min-width:900px){
-    width:600px;
     text-align:left;
   }
 `;
 const IntervetionCourseParagraph = styled.p`
   font-size: 0.8em;
   color:#999;
+  width:70%;
 
   @media(min-width:900px){
     font-size:1em;

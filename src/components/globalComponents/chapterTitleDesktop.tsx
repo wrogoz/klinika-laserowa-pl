@@ -56,7 +56,7 @@ const ChapterTitle = styled.h3`
     letter-spacing:2px;
     font-size: 1em;
     font-weight:normal;
-    min-width: 50%;
+    min-width: 58%;
     @media(min-width:1000px){
         letter-spacing:4px;
     font-size: 1.2em;

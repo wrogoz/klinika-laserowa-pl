@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import cutera1 from '../../../images/cutera1.png';
+import cutera1 from '../../images/cutera1.png';
 
 
 

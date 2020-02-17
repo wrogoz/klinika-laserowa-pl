@@ -9,7 +9,7 @@ export default class SelectIntervetion extends React.Component<{},{}>{
 
                 <SelectIntervetionBox>
                     <ChapterTitleDesktop
-                    title='wybierz zabieg'
+                    title='wybierz rodzaj zabiegu'
                     />
                     <CuteraBox>
                         <CuteraImg src={cutera1} alt='cutera1'/>
@@ -17,6 +17,20 @@ export default class SelectIntervetion extends React.Component<{},{}>{
                             <p>Cutera</p>
                         </LaserTitleBox>
                     </CuteraBox>
+                    <OtherLasersBox>
+                        <LaserBox>
+                            <LaserImg src={cutera1} alt='laser img'/>
+                            <p>laser name</p>
+                        </LaserBox>
+                        <LaserBox>
+                            <LaserImg src={cutera1} alt='laser img'/>
+                            <p>laser name</p>
+                        </LaserBox>
+                        <LaserBox>
+                            <LaserImg src={cutera1} alt='laser img'/>
+                            <p>laser name</p>
+                        </LaserBox>
+                    </OtherLasersBox>
 
                 </SelectIntervetionBox>
         )
@@ -34,11 +48,39 @@ const SelectIntervetionBox = styled.section`
 const CuteraBox = styled.div`
     display:flex;
     flex-direction:column;
+    width:60%;
+    justify-content: center;
+    align-items: center;
 
 `
 const CuteraImg = styled.img`
-    height:150px;
+    width:100%;
+    height:auto;
+`
+const LaserBox = styled.div`
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width:100%;
+    &:nth-of-type(2){
+        margin:0 10px;
+    }
+    p{
+        text-align:center;
+    }
+`
+const LaserImg = styled.img`
+width: 100%;
+height:auto;
+
 `
 const LaserTitleBox = styled.div`
     display:flex
+
+`
+const OtherLasersBox = styled.div`
+    display:flex;
+    width:60%;
+    justify-content:space-evenly;
+    align-items:center;
 `
