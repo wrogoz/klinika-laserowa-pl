@@ -3,15 +3,24 @@ import styled from "styled-components";
 import { connect } from "react-redux";
 import {Link} from 'react-router-dom';
 import arrow from '../../images/menu_arrow.svg';
-interface MobileNavProps {
+interface DesktopNavProps {
   pageName: string;
-  dispatch: any;
+  LaserTypes:string[]
 }
 
-class DesktopNav extends Component<MobileNavProps, {}> {
+class DesktopNav extends Component<DesktopNavProps, {}> {
 
 
   render() {
+      const laserLinks = this.props.LaserTypes.map((el,key)=>{
+        return(
+            <li
+            key={key}>
+                <StyledLink to={el.replace(/ /g,'')}>{el}</StyledLink>
+            </li>
+        )
+      })
+      console.log(this.props.LaserTypes)
     return (
       <DesktopNavBox>
           <p>Klinika Laserowa</p>
@@ -19,12 +28,8 @@ class DesktopNav extends Component<MobileNavProps, {}> {
             <ActivePage>{this.props.pageName}</ActivePage>
             <li>Zabiegi<MenuArrow src={arrow} alt='arrow menu'/>
                <ul>
-                   <li><StyledLink to='/cutera'>Klinika laserowa</StyledLink> </li>
-                   <li><StyledLink to='/cutera'>Laser Cutera Excel V</StyledLink></li>
-                   <li><StyledLink to='/cutera'>Laser Cutera Excel V</StyledLink></li>
-                   <li><StyledLink to='/cutera'>Lasotronix</StyledLink></li>
-                   <li><StyledLink to='/cutera'>Laser C02</StyledLink></li>
-                   <li><StyledLink to='/cutera'>Optoslt m</StyledLink></li>
+                   <li><StyledLink to='/'>Klinika laserowa</StyledLink> </li>
+                   {laserLinks}
                </ul>
             </li>
             <li>Kontakt</li>
@@ -102,4 +107,11 @@ const StyledLink = styled(Link)`
     color:#333;
     text-decoration:none;
 `
-export default connect()(DesktopNav);
+
+const mapStateToProps = (state: { LaserTypes:string[]}) => {
+    return {
+
+      LaserTypes:state.LaserTypes
+    };
+  };
+export default connect(mapStateToProps )(DesktopNav);

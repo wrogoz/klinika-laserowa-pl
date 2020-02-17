@@ -3,6 +3,11 @@ export const BurgerShowHide = ()=>{
         type:'BURGERNAVSHOWHIDE'
     }
 }
+export const HideMenu = ()=>{
+    return {
+        type:'HIDEMENU'
+    }
+}
 export const SignInShowHide = ()=>{
     return {
         type:'SIGNINWINDOWSHOWHIDE'

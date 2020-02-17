@@ -3,6 +3,13 @@ const initialState = {
   BurgerNavVisible:false,
   SignInVisible:false,
   WindowWidth:window.innerWidth,
+  LaserTypes:[
+    'Cutera Excel V',
+    'Lasotronix',
+    'Laser CO2',
+    'OPTOSLT M',
+
+  ],
   Indications:[
     'trądzik różowaty',
      'pajączki',
@@ -29,6 +36,11 @@ const reducer = (state = initialState, action: { type: string,width:number })=> 
         return {
           ...state,
           BurgerNavVisible:!state.BurgerNavVisible
+        }
+        case 'HIDEMENU':
+        return {
+          ...state,
+          BurgerNavVisible:false
         }
       case 'SIGNINWINDOWSHOWHIDE':
         return {

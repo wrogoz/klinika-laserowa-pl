@@ -1,20 +1,47 @@
 import React from 'react'
 import styled,{keyframes} from 'styled-components';
+import {StyledLink} from '../../basicStyles/theme';
+import { connect } from 'react-redux';
+import { HideMenu } from '../../redux/actions/actions';
 
+interface BurgerNavigationProps{
+    LaserTypes:string[],
+    dispatch:any
+}
+class BurgerNavigation extends React.Component<BurgerNavigationProps,{}>{
 
+    hideMenu=()=>{
+        this.props.dispatch(HideMenu())
+    }
 
-export default class BurgerNavigation extends React.Component<{},{}>{
     render(){
+         const lasers =this.props.LaserTypes.map((el,key)=>{
+            return(
+
+                // eslint-disable-next-line no-useless-escape
+                <NavItem
+                 onClick={this.hideMenu}
+                 key={key}>
+                    <StyledLink
+                     to={el.replace(/ /g,'')}>
+                         {el}
+                    </StyledLink>
+                </NavItem>
+            )
+         })
         return(
 
                 <NavigationBox>
                     <NavList>
-                        <NavItem>Klinika laserowa </NavItem>
-                        <NavItem>Cutera Excel V</NavItem>
-                        <NavItem>Lasotronix</NavItem>
-                        <NavItem>Laser CO2</NavItem>
-                        <NavItem>Optoslt m</NavItem>
-                        <NavItem>Kontakt</NavItem>
+                        <NavItem
+                        onClick={this.hideMenu}>
+                            <StyledLink to='/'>Klinika laserowa</StyledLink>
+                        </NavItem>
+                        {lasers}
+                        <NavItem
+                        onClick={this.hideMenu}>
+                            <StyledLink to='/kontakt'>Kontakt</StyledLink>
+                        </NavItem>
                     </NavList>
                 </NavigationBox>
         )
@@ -86,3 +113,12 @@ letter-spacing: 2px;
     border-bottom:none;
 }
 `
+
+const mapStateToProps = (state: { BurgerNavVisible:boolean,LaserTypes:string[]}) => {
+    return {
+      BurgerNavVisible: state.BurgerNavVisible,
+      LaserTypes:state.LaserTypes
+    };
+  };
+
+  export default connect(mapStateToProps)(BurgerNavigation);

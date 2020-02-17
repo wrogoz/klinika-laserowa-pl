@@ -1,6 +1,5 @@
 import React from 'react'
 import styled,{keyframes} from 'styled-components';
-
 import WomenFace from '../../images/WomenFace.png'
 import Button from '../globalComponents/button'
 import {Link} from 'react-router-dom';
@@ -12,7 +11,7 @@ export default class BoxWithWomenFace extends React.Component<{},{}>{
             <WomenFaceBox>
                 <WomenFaceTextSection>
                     <h1><span>Wybierz zabieg, a My spełnimy</span> <span>Twoje potrzeby</span></h1>
-                    <StyledLink to='/cutera'>
+                    <StyledLink to='/cuteraExcelV'>
                     <Button
                 btnText='Więcej'
               />

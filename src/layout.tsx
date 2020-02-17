@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import MainPage from './components/mainPage';
 import CuteraV from './components/cuteraV';
 import { ThemeProvider } from "styled-components";
-import theme from './basicStyles/theme'
+import {theme} from './basicStyles/theme'
 export default class Layout extends Component<{}, {}> {
   render() {
     return (<
@@ -16,11 +16,20 @@ export default class Layout extends Component<{}, {}> {
             <Route exact path="/">
               <MainPage/>
             </Route>
-            <Route exact path="/cutera">
+            <Route exact path="/cuteraexcelV">
               <CuteraV/>
             </Route>
-            <Route exact path="/third">
-              <div>third page</div>
+            <Route exact path="/lasotronix">
+              <div>lasotronix page</div>
+            </Route>
+            <Route exact path="/laserco2">
+              <div>laser co2 page</div>
+            </Route>
+            <Route exact path="/optoslt">
+              <div>optoslt page</div>
+            </Route>
+            <Route exact path="/kontakt">
+              <div>kontakt page</div>
             </Route>
           </Switch>
         </Router>
