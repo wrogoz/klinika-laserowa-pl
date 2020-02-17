@@ -19,10 +19,12 @@ class DesktopNav extends Component<MobileNavProps, {}> {
             <ActivePage>{this.props.pageName}</ActivePage>
             <li>Zabiegi<MenuArrow src={arrow} alt='arrow menu'/>
                <ul>
-                   <li><StyledLink to='/cutera'>Laser Cutera Excel V</StyledLink> </li>
+                   <li><StyledLink to='/cutera'>Klinika laserowa</StyledLink> </li>
                    <li><StyledLink to='/cutera'>Laser Cutera Excel V</StyledLink></li>
                    <li><StyledLink to='/cutera'>Laser Cutera Excel V</StyledLink></li>
-                   <li><StyledLink to='/cutera'>Laser Cutera Excel V</StyledLink></li>
+                   <li><StyledLink to='/cutera'>Lasotronix</StyledLink></li>
+                   <li><StyledLink to='/cutera'>Laser C02</StyledLink></li>
+                   <li><StyledLink to='/cutera'>Optoslt m</StyledLink></li>
                </ul>
             </li>
             <li>Kontakt</li>

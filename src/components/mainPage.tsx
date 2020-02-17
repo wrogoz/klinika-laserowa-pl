@@ -10,7 +10,7 @@ import LaserPresentationDesktop from './mainpageComponents/laserPresentationDesk
 import BurgerNavigation from './globalComponents/burgerNavigation';
 import { ChangingWindowWidth } from "../redux/actions/actions";
 import SelectIntervetion from './mainpageComponents/selectIntervetion';
-import SelectLaser from './mainpageComponents/selectLaser';
+
 
 interface MainPageProps{
   BurgerNavVisible:boolean
