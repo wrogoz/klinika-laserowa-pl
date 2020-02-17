@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Button from "../globalComponents/button";
-import ChapterTitle from "../globalComponents/chapterTitle";
+
 import ChapterTitleDesktop from "../globalComponents/chapterTitleDesktop";
 import laserOnRight from "../../images/laserOnRight.png";
 
@@ -39,11 +39,14 @@ class IntervetionCourse extends React.Component<IntervetionCourseProps, {}> {
             uszkodzenie naczy, przywracając skórze normalny odcień i kolor
           </li>
         </OrderList>
-        <Line></Line>
+
 
         <IntervetionCourseSummaryBox>
+        <ChapterTitleDesktop
+          title='chłodzenie kontaktowe'
+          />
           <IntervetionCourseH4>
-            Chłodzenie kontaktowe - jeszcze większy komfort podczas zabiegu.
+            Jeszcze większy komfort podczas zabiegu.
           </IntervetionCourseH4>
           <IntervetionCourseParagraph>
             Jak już wiesz, wiązki lasera powodują podgrzanie naczynek na skórze.
@@ -56,17 +59,20 @@ class IntervetionCourse extends React.Component<IntervetionCourseProps, {}> {
           </IntervetionCourseParagraph>
         </IntervetionCourseSummaryBox>
 
+
+        <ChapterTitleDesktop
+          title='Konsultacja lekarska zrób pierwszy krok'
+          />
         <IntervetionCourseSummaryBox>
-          <IntervetionCourseH4>
-            Konsultacja lekarska - zrób pierwszy krok.
-          </IntervetionCourseH4>
+
+
           <IntervetionCourseParagraph>
             Wiesz już, czym jest, jak działa i w czym może pomóc laser Excel V.
             Następnym krokiem jest uzyskanie informacji, czy zmiany, które
             chcesz usunąć, mogą być poddane działaniu lasera
           </IntervetionCourseParagraph>
           <IntervetionCourseParagraph>
-            By to zrobić <span>umów się na konsultację</span> w naszym Centrum
+            By to zrobić umów się na konsultacjęw naszym Centrum
             Medycznym Inter Med.
           </IntervetionCourseParagraph>
           <IntervetionCourseParagraph>
@@ -119,15 +125,7 @@ const OrderList = styled.ol`
     font-size:1em;
   }
 `;
-const Line = styled.div`
-  width: 50%;
-  height: 2px;
-  background-color: ${props => props.theme.interBlue};
-  @media(min-width:900px){
-    width:36%;
-    margin-top:40px;
-  }
-`;
+
 
 const IntervetionCourseSummaryBox = styled.div`
   width: 275px;
@@ -141,16 +139,18 @@ const IntervetionCourseSummaryBox = styled.div`
 `;
 const IntervetionCourseParagraph = styled.p`
   font-size: 0.8em;
-  span {
-    font-weight: bold;
-  }
+  color:#999;
+
   @media(min-width:900px){
     font-size:1em;
   }
 `;
 
 const IntervetionCourseH4 = styled.h4`
-  font-weight: bold;
+
+  font-size:1em;
+  font-weight:normal;
+  text-transform:uppercase;
 
   @media(min-width:900px){
     font-size:1.05em;

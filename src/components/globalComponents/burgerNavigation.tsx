@@ -9,10 +9,12 @@ export default class BurgerNavigation extends React.Component<{},{}>{
 
                 <NavigationBox>
                     <NavList>
-                        <NavItem>Cutera</NavItem>
-                        <NavItem>laser 2</NavItem>
-                        <NavItem>laser 3</NavItem>
-                        <NavItem>laser 4</NavItem>
+                        <NavItem>Klinika laserowa </NavItem>
+                        <NavItem>Cutera Excel V</NavItem>
+                        <NavItem>Lasotronix</NavItem>
+                        <NavItem>Laser CO2</NavItem>
+                        <NavItem>Optoslt m</NavItem>
+                        <NavItem>Kontakt</NavItem>
                     </NavList>
                 </NavigationBox>
         )
@@ -21,12 +23,22 @@ export default class BurgerNavigation extends React.Component<{},{}>{
 
 const animationBurgerNav = keyframes`
 0%{
-right:-100%;
+top:-100%;
 }
 
 100%{
 
-right:10%;
+top:70px;
+}
+@media(min-width:600px){
+    0%{
+        top:-100%;
+        }
+
+        100%{
+
+        top:120px;
+        }
 }
 `;
 
@@ -36,33 +48,41 @@ justify-content:center;
 align-items:center;
     position: fixed;
     top: 70px;
-    right: 10%;
     z-index: 10;
-    height: 80vh;
-    width: 80vw;
-    background-color: #f5f5f5de;
+    height: 290px;
+    border-radius: 0 0 25px 25px;
+    width: 87%;
+    background-color: ${props=>props.theme.interOrange};
 
     animation:0.3s ${animationBurgerNav} ease;
+    @media(min-width:600px){
+        top: 120px;
+    }
 `
 const NavList = styled.ul`
     list-style:none;
     display:flex;
     flex-direction:column;
     align-items:center;
-    justify-content:space-evenly;
     height:100%;
     margin:0;
     padding:0;
+    padding-top: 5%;
+}
 `
 
 const NavItem = styled.li`
-
-font-size: 1.8em;
+color:#fff;
+font-size: 0.8em;
 text-transform: uppercase;
+width:100%;
+text-align:center;
 font-weight: bold;
-border: 2px solid #000;
-padding: 14px;
-letter-spacing: 5px;
-background-color:#fff;
+border-bottom:1px solid #fff;
+padding: 14px 0;
+letter-spacing: 2px;
 
+&:last-of-type{
+    border-bottom:none;
+}
 `
