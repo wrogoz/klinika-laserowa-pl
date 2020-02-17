@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-import ChapterTitle from '../globalComponents/chapterTitle';
+
 import Paragraph from '../globalComponents/paragraphUnderTitle';
 import ChapterTitleDesktop from '../globalComponents/chapterTitleDesktop';
 import laserBlue from '../../images/laser_blue.png';

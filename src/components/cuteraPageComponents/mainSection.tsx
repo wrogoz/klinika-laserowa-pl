@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-import ChapterTitle from '../globalComponents/chapterTitle';
+
 import ChapterTitleDesktop from '../globalComponents/chapterTitleDesktop';
 import ListWithTitle from './mainSectionComponents/listWithTitle';
 import BoxUnderList from './mainSectionComponents/boxUnderList';

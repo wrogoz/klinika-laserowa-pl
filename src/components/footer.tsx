@@ -144,23 +144,23 @@ const Social = styled.img`
 
 `;
 
-const FooterBtn = styled.button`
-  border: 1px solid #fff;
-  background: ${props => props.theme.interOrange};
-  width: 80px;
-  padding: 5px;
-  border-radius: 10px;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-family: "Roboto", sans-serif;
-  cursor: pointer;
-  @media (min-width: 750px) {
-    padding: 10px;
-    font-size: 1.1em;
-    width: 120px;
-  }
-`;
+// const FooterBtn = styled.button`
+//   border: 1px solid #fff;
+//   background: ${props => props.theme.interOrange};
+//   width: 80px;
+//   padding: 5px;
+//   border-radius: 10px;
+//   color: #fff;
+//   text-transform: uppercase;
+//   font-weight: bold;
+//   font-family: "Roboto", sans-serif;
+//   cursor: pointer;
+//   @media (min-width: 750px) {
+//     padding: 10px;
+//     font-size: 1.1em;
+//     width: 120px;
+//   }
+// `;
 
 const mapStateToProps = (state: { WindowWidth: number }) => {
   return {

@@ -35,11 +35,4 @@ const ReasonToTryRow = styled.section`
     align-items:center;
     max-width:100%;
 `
-const Stroke = styled.div`
 
-    height:2px;
-    width: 100%;
-    background-color:${props=>props.theme.interBlue};
-
-
-`
