@@ -13,12 +13,19 @@ class DesktopNav extends Component<DesktopNavProps, {}> {
 
   render() {
       const laserLinks = this.props.LaserTypes.map((el,key)=>{
-        return(
-            <li
-            key={key}>
-                <StyledLink to={el.replace(/ /g,'')}>{el}</StyledLink>
-            </li>
-        )
+          if(key<1){
+            return(
+                <li
+                key={key}>
+                    <StyledLink to={el.replace(/ /g,'')}>{el}</StyledLink>
+                </li>
+            )
+          }else{
+              return (
+                  <NonWorkinLink key={key} >{el} - wkrótce </NonWorkinLink>
+              )
+          }
+
       })
       console.log(this.props.LaserTypes)
     return (
@@ -32,7 +39,7 @@ class DesktopNav extends Component<DesktopNavProps, {}> {
                    {laserLinks}
                </ul>
             </li>
-            <li>Kontakt</li>
+            <li><StyledLink to='/kontakt'>Kontakt</StyledLink></li>
         </NavUl>
 
 
@@ -106,6 +113,10 @@ const MenuArrow = styled.img`
 const StyledLink = styled(Link)`
     color:#333;
     text-decoration:none;
+`
+
+const NonWorkinLink = styled.li`
+    color:#999;
 `
 
 const mapStateToProps = (state: { LaserTypes:string[]}) => {

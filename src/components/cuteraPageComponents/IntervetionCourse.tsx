@@ -72,7 +72,7 @@ class IntervetionCourse extends React.Component<IntervetionCourseProps, {}> {
             chcesz usunąć, mogą być poddane działaniu lasera
           </IntervetionCourseParagraph>
           <IntervetionCourseParagraph>
-            By to zrobić umów się na konsultacjęw naszym Centrum
+            By to zrobić umów się na konsultację w naszym Centrum
             Medycznym Inter Med.
           </IntervetionCourseParagraph>
           <IntervetionCourseParagraph>

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import styled from 'styled-components';
 import MainPage from './components/mainPage';
 import CuteraV from './components/cuteraV';
+import Contact from './components/contact';
 import { ThemeProvider } from "styled-components";
 import {theme} from './basicStyles/theme'
 export default class Layout extends Component<{}, {}> {
@@ -29,7 +30,7 @@ export default class Layout extends Component<{}, {}> {
               <div>optoslt page</div>
             </Route>
             <Route exact path="/kontakt">
-              <div>kontakt page</div>
+              <Contact/>
             </Route>
           </Switch>
         </Router>
