@@ -16,6 +16,8 @@ class BurgerNavigation extends React.Component<BurgerNavigationProps,{}>{
 
     render(){
          const lasers =this.props.LaserTypes.map((el,key)=>{
+
+           if(key<1){
             return(
 
                 // eslint-disable-next-line no-useless-escape
@@ -28,6 +30,18 @@ class BurgerNavigation extends React.Component<BurgerNavigationProps,{}>{
                     </StyledLink>
                 </NavItem>
             )
+           }else{
+               return(
+                <NavItem
+
+                key={key}>
+                   <DisabledLink>
+                        {el} - Wkrótce
+                   </DisabledLink>
+               </NavItem>
+               )
+           }
+
          })
         return(
 
@@ -112,6 +126,10 @@ letter-spacing: 2px;
 &:last-of-type{
     border-bottom:none;
 }
+`
+
+const DisabledLink = styled.li`
+    color:#999;
 `
 
 const mapStateToProps = (state: { BurgerNavVisible:boolean,LaserTypes:string[]}) => {
