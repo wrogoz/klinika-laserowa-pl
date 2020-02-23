@@ -54,7 +54,7 @@ const NavUl = styled.ul`
     display:flex;
     justify-content:flex-end;
 
-    font-size:1.6em;
+    font-size:0.9em;
     text-transform:uppercase;
     width:60%;
     color:#333;
@@ -77,7 +77,7 @@ const NavUl = styled.ul`
         background-color:#f5f5f5de;
         z-index:22;
         position:absolute;
-        top:30px;
+        top:18px;
         left:-90px;
         width:240px;
         color:#333;
@@ -100,8 +100,8 @@ const ActivePage = styled.li`
     border-bottom:1px solid ${props=>props.theme.interViolet};
 `
 const MenuArrow = styled.img`
-    height:20px;
-    width:20px;
+    height:13px;
+    width:13px;
 `
 const StyledLink = styled(Link)`
     color:#333;

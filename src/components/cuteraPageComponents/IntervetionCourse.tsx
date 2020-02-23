@@ -137,6 +137,7 @@ const IntervetionCourseSummaryBox = styled.div`
   align-items: center;
   @media(min-width:900px){
     text-align:left;
+    width:100%;
   }
 `;
 const IntervetionCourseParagraph = styled.p`
@@ -146,6 +147,7 @@ const IntervetionCourseParagraph = styled.p`
 
   @media(min-width:900px){
     font-size:1em;
+    width:54%;
   }
 `;
 

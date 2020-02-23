@@ -61,10 +61,10 @@ const StHeader = styled.header`
      font-size:0.9em;
     }
     @media(min-width:750px){
-        font-size:1.1em;
+        font-size:1em;
     }
     @media(min-width:801px){
-      font-size:1.6em;
+
       color:#333;
   }
   }

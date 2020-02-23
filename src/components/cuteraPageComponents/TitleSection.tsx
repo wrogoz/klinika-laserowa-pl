@@ -9,9 +9,7 @@ export default class TitleSectionComponent extends React.Component<{},{}>{
             <TitleBox>
               <EquipmentName>Laser Excel V</EquipmentName>
               <p>- przełom w leczeniu zmian naczyniowych <br/> i pigmentacyjnych</p>
-              <Button
-                btnText='Więcej'
-              />
+
             </TitleBox>
 
             <AdvertismentBox>
@@ -31,7 +29,7 @@ flex-direction:column;
 background-image:url("${cuteraHead}");
 background-size:auto;
 background-repeat:no-repeat;
-background-position: 0% 20%;
+background-position: 0% 40%;
 width:100%;
 @media(min-width:600px){
   background-position: 100% 20%;

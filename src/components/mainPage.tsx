@@ -33,7 +33,7 @@ class MainPage extends React.Component<MainPageProps, {}> {
         <Header pageName="strona główna" />
         <BoxWithWomenFace />
         <WelcomeText />
-        <SelectIntervetion/>
+
         {this.props.WindowWidth>1240?<LaserPresentationDesktop />:
         <LaserPresentation/>}
 
