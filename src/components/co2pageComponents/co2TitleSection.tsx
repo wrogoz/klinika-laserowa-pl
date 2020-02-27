@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-import cuteraHead from '../../images/cuteraHead.png';
+import co2Img from '../../images/co2imgs/laserTop.jpg';
 export default class TitleSectionComponent extends React.Component<{},{}>{
     render(){
         return(
@@ -26,10 +26,11 @@ export default class TitleSectionComponent extends React.Component<{},{}>{
 const TitleSection = styled.section`
 display:flex;
 flex-direction:column;
-background-image:url("${cuteraHead}");
-background-size:auto;
-background-repeat:no-repeat;
-background-position: 0% 40%;
+background-image:url("${co2Img}");
+
+background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: 100% 0%;
 width:100%;
 @media(min-width:600px){
   background-position: 100% 20%;
@@ -51,8 +52,9 @@ width:100%;
 const TitleBox = styled.section`
   display:flex;
   flex-direction:column;
-  width: 70%;
-  padding-left:30px;
+  width: 60%;
+  margin-top: 40px;
+  padding-left: 15px;
   @media(min-width:900px){
     width: 50%;
     max-width:500px;
@@ -67,11 +69,11 @@ const TitleBox = styled.section`
 }
 `
 const EquipmentName = styled.h1`
-  font-size: 2.0em;
+  font-size: 1.2em;
   color: ${props=>props.theme.interBlue};
   margin-bottom: 0;
   &&+p{
-    font-size: 1.7em;
+    font-size: 1.2em;
     margin-top: 0;
   }
   @media(min-width:900px){

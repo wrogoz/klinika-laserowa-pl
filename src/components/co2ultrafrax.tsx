@@ -6,9 +6,10 @@ import Co2TitleSectionComponent from './co2pageComponents/co2TitleSection';
 import EffectOfCo2Laser from './co2pageComponents/effectsOfCo2Laser';
 import Co2MainSection from './co2pageComponents/co2mainSection';
 import Co2HowItWorks from './co2pageComponents/co2HowItWorks';
-import InvervetionCourse from './cuteraPageComponents/IntervetionCourse';
+import Testimonials from './co2pageComponents/testimonials';
 import BurgerNavigation from "./globalComponents/burgerNavigation";
-import SignIn from './cuteraPageComponents/signIn';
+import Contact from './globalComponents/contactComponent';
+import SignIn from './globalComponents/signIn';
 
 import { ChangingWindowWidth } from "../redux/actions/actions";
 interface CuteraVProps{
@@ -32,7 +33,10 @@ class Co2Ultrafrax extends React.Component<CuteraVProps, {}> {
         <Co2HowItWorks/>
         <EffectOfCo2Laser/>
 
-        <InvervetionCourse/>
+        <SummaryBox>
+          <Testimonials/>
+          <Contact/>
+        </SummaryBox>
         {this.props.SignInVisible?<SignIn/>:null}
 
 
@@ -48,6 +52,13 @@ const MainContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
+  `
+  const SummaryBox = styled.div`
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
   `
 
   const mapStateToProps = (state: { BurgerNavVisible:boolean,SignInVisible:boolean,WindowWidth:number }) => {

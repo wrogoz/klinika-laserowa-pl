@@ -94,9 +94,6 @@ const MainBox = styled.main`
 
 }
 
-
-
-
 `
 const Indications = styled.h3`
   width:280px;
