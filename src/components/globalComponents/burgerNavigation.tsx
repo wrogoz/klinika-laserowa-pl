@@ -32,13 +32,13 @@ class BurgerNavigation extends React.Component<BurgerNavigationProps,{}>{
             )
            }else{
                return(
-                <NavItem
 
-                key={key}>
-                   <DisabledLink>
+
+
+                   <DisabledLink key={key}>
                         {el} - Wkrótce
                    </DisabledLink>
-               </NavItem>
+
                )
            }
 
@@ -129,7 +129,17 @@ letter-spacing: 2px;
 `
 
 const DisabledLink = styled.li`
-    color:#999;
+color:#999;
+font-size: 0.8em;
+text-transform: uppercase;
+width:100%;
+text-align:center;
+font-weight: bold;
+border-bottom:1px solid #fff;
+padding: 14px 0;
+letter-spacing: 2px;
+
+
 `
 
 const mapStateToProps = (state: { BurgerNavVisible:boolean,LaserTypes:string[]}) => {
