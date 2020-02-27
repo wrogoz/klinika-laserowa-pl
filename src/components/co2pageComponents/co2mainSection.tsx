@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import ChapterTitleDesktop from '../globalComponents/chapterTitleDesktop';
 import ListWithTitle from '../globalComponents/listWithTitle';
 import BoxUnderList from '../globalComponents/boxUnderList';
-import laserOnLeft from '../../images/laserOnLeft.png';
+import laser2 from '../../images/co2imgs/laser2.jpg';
 
 import plusIcon from '../../images/plus.png';
 import minusIcon from '../../images/minus.png';
@@ -81,9 +81,9 @@ const MainBox = styled.main`
   flex-direction:column;
   align-items:center;
   justify-content:center;
-  background-image:url("${laserOnLeft}");
-  background-size: auto 120%;
-  background-position: -85px 92px;
+  background-image:url("${laser2}");
+  background-size: auto 64%;
+    background-position: -30px -46px;
   background-repeat: no-repeat;
   width:100%;
   @media(min-width:600px){
@@ -100,7 +100,7 @@ const Indications = styled.h3`
   font-size: 0.8em;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 0px;
+  margin-bottom: 15px;
     &&+p{
       width: 250px;
       color: #999;

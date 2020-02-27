@@ -10,6 +10,7 @@ import Testimonials from './co2pageComponents/testimonials';
 import BurgerNavigation from "./globalComponents/burgerNavigation";
 import Contact from './globalComponents/contactComponent';
 import SignIn from './globalComponents/signIn';
+import womenFace from '../images/co2imgs/womenBottom.jpg'
 
 import { ChangingWindowWidth } from "../redux/actions/actions";
 interface CuteraVProps{
@@ -58,6 +59,11 @@ const MainContainer = styled.div`
     display:flex;
     flex-direction:column;
     align-items:center;
+    background-image:url('${womenFace}');
+    background-size: 160% auto;
+    background-repeat: no-repeat;
+    background-position: 12% 26%;
+
 
   `
 
