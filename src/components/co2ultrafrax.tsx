@@ -3,11 +3,13 @@ import { connect } from "react-redux";
 import Header from "./header";
 import styled from "styled-components";
 import Co2TitleSectionComponent from './co2pageComponents/co2TitleSection';
+import EffectOfCo2Laser from './co2pageComponents/effectsOfCo2Laser';
 import Co2MainSection from './co2pageComponents/co2mainSection';
 import Co2HowItWorks from './co2pageComponents/co2HowItWorks';
 import InvervetionCourse from './cuteraPageComponents/IntervetionCourse';
 import BurgerNavigation from "./globalComponents/burgerNavigation";
 import SignIn from './cuteraPageComponents/signIn';
+
 import { ChangingWindowWidth } from "../redux/actions/actions";
 interface CuteraVProps{
   BurgerNavVisible:boolean
@@ -28,6 +30,8 @@ class Co2Ultrafrax extends React.Component<CuteraVProps, {}> {
         <Co2TitleSectionComponent/>
         <Co2MainSection/>
         <Co2HowItWorks/>
+        <EffectOfCo2Laser/>
+
         <InvervetionCourse/>
         {this.props.SignInVisible?<SignIn/>:null}
 

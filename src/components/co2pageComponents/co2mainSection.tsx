@@ -46,16 +46,15 @@ class Co2MainSection extends React.Component<CoMainSectionProps,{}>{
               secondLine='Zarówno dla lekarza, jak i dla pacjenta.'
               />
              <ChapterTitleDesktop
-            title='Czy każdy może skorzystać z tego, co oferuje laser excel V'
+            title='Kiedy nie możesz skorzystać z zabiegu z użyciem lasera co2'
           />
-
-
 
             <ContraIndications>Przeciwwskazania</ContraIndications>
             <Sign src={minusIcon}/>
 
             <ListWithTitle
-            text='Do okoliczności, które wykluczają użycie lasera, należą:'
+            text='Mimo, iż samo działanie lasera jest bardzo bezpieczne, są sytuacje, w których
+            jego użycie jest niewskazane,a nawet wręcz zabronione'
             array={[
               'zażywanie leków przeciwkrzepliwych',
               'okres ciąży i karmienia piersią',
@@ -65,7 +64,6 @@ class Co2MainSection extends React.Component<CoMainSectionProps,{}>{
               'zażywanie izotretynoiny w ciągu ostatniego pół roku'
             ]}
             />
-
             <BoxUnderList
               firstLine='Jak przed każdym zabiegiem, tak i tu,'
               secondLine='ostateczną decyzję podejmuje lekarz'

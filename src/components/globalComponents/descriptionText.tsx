@@ -23,10 +23,9 @@ export class DescriptionText extends Component<DescriptionTextProps,{}> {
 const DescriptionBox = styled.div`
 
   text-align: center;
-  margin-bottom: 15px;
+  justify-content:center;
   position: relative;
   display: flex;
-  flex-direction: column;
   align-items: center;
   @media(min-width:900px){
     text-align:left;
@@ -49,7 +48,9 @@ const DescriptionParagraph = styled.p`
   font-size: 0.8em;
   color:#999;
   width:70%;
-
+  margin:0;
+  text-align:center;
+  letter-spacing:1px;
   @media(min-width:900px){
     font-size:1em;
     width:54%;
