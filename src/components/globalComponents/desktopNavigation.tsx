@@ -13,7 +13,8 @@ class DesktopNav extends Component<DesktopNavProps, {}> {
 
   render() {
       const laserLinks = this.props.LaserTypes.map((el,key)=>{
-          if(key<1){
+            // disable other lasers
+            if(key<1 || key ===2){
             return(
                 <li
                 key={key}>

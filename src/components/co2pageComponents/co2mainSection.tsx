@@ -5,40 +5,45 @@ import ChapterTitleDesktop from '../globalComponents/chapterTitleDesktop';
 import ListWithTitle from '../globalComponents/listWithTitle';
 import BoxUnderList from '../globalComponents/boxUnderList';
 import laserOnLeft from '../../images/laserOnLeft.png';
-import Paragraph from '../globalComponents/paragraphUnderTitle';
+
 import plusIcon from '../../images/plus.png';
 import minusIcon from '../../images/minus.png';
 import { connect } from 'react-redux';
 
-interface MainSectionProps{
+interface CoMainSectionProps{
   Indications:string[],
   ContraIndications:string[],
   WindowWidth:number
 }
-class MainSection extends React.Component<MainSectionProps,{}>{
+class Co2MainSection extends React.Component<CoMainSectionProps,{}>{
     render(){
         return(
             <MainBox>
 
             <ChapterTitleDesktop
-            title='Komu i w czym może pomóc Laser Excel V?'
+            title='Komu i w czym może pomóc Laser Ultrafrax Reborn?'
           />
 
-            <Indications>Wskazania do zabiegu z użyciem lasera excel V</Indications>
-            <Paragraph
-              text='Laser excel V uwalnia od zmian skórnych, których obecność
-              powoduje duży dyskomfort'
-              />
+            <Indications>Wskazania</Indications>
+
 
             <Sign src={plusIcon}/>
 
             <ListWithTitle
-            text='Jeśli na twoim ciele, obecne są zmiany typu:'
-            array={this.props.Indications}
+            text='Zadbana i jędrna skóra, nie musi być domeną jedynie osób
+            w młodym wieku.O to,w czym może Ci pomóc zabieg z użyciem lasera co2 ultrafrax reborn:'
+            array={[
+              'rozstępy',
+              'rozszerzone pory',
+              'blizny po oparzeniach, zarówno te przerosłe jak i zanikowe',
+              'blizny potrądzikowe',
+              'włókniaki miękkie, brodawki łojotokowe, znamiona brodawkujące i zmiany przerostowe na skórze'
+
+            ]}
             />
             <BoxUnderList
-              firstLine='Możesz to zmienić'
-              secondLine='Nie musisz obawiać się bólu, blizn czy komplikacji po zabiegu'
+              firstLine='Spełniając najwyższe standardy, Laser CO2 Ultrafrax jest bezpieczny'
+              secondLine='Zarówno dla lekarza, jak i dla pacjenta.'
               />
              <ChapterTitleDesktop
             title='Czy każdy może skorzystać z tego, co oferuje laser excel V'
@@ -51,7 +56,14 @@ class MainSection extends React.Component<MainSectionProps,{}>{
 
             <ListWithTitle
             text='Do okoliczności, które wykluczają użycie lasera, należą:'
-            array={this.props.ContraIndications}
+            array={[
+              'zażywanie leków przeciwkrzepliwych',
+              'okres ciąży i karmienia piersią',
+              'aktywna opryszczka',
+              'zastosowanie samoopalaczy w okresie ostatnich 2 tygodni',
+              'przyjmowanie leków fotouczulających',
+              'zażywanie izotretynoiny w ciągu ostatniego pół roku'
+            ]}
             />
 
             <BoxUnderList
@@ -133,4 +145,4 @@ const mapStateToProps = (state: { CuteraIndications: string[],CuteraContraIndica
   };
 };
 
-export default connect(mapStateToProps)(MainSection);
+export default connect(mapStateToProps)(Co2MainSection);

@@ -16,8 +16,8 @@ class BurgerNavigation extends React.Component<BurgerNavigationProps,{}>{
 
     render(){
          const lasers =this.props.LaserTypes.map((el,key)=>{
-
-           if(key<1){
+            // disable other lasers
+           if(key<1 || key ===2){
             return(
 
                 // eslint-disable-next-line no-useless-escape

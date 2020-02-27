@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import styled from 'styled-components';
 import MainPage from './components/mainPage';
 import CuteraV from './components/cuteraV';
+import Co2ultrafrax from './components/co2ultrafrax';
 import Contact from './components/contact';
 import { ThemeProvider } from "styled-components";
 import {theme} from './basicStyles/theme'
@@ -24,7 +25,7 @@ export default class Layout extends Component<{}, {}> {
               <div>lasotronix page</div>
             </Route>
             <Route exact path="/laserco2">
-              <div>laser co2 page</div>
+             <Co2ultrafrax/>
             </Route>
             <Route exact path="/optoslt">
               <div>optoslt page</div>

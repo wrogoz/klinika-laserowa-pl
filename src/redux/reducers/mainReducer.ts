@@ -10,7 +10,7 @@ const initialState = {
     'OPTOSLT M',
 
   ],
-  Indications:[
+  CuteraIndications:[
     'trądzik różowaty',
      'pajączki',
      'rumień',
@@ -21,7 +21,7 @@ const initialState = {
      'rozproszone zmiany barwnikowe, takie jak plamy posłoneczne',
      'blizny będące konsekwencją przebytych urazów lub wykonanych zabiegów chirurgicznych'
    ],
-  ContraIndications:[
+  CuteraContraIndications:[
     'ciąża','świeża opalenizna',' spożywanie naparu z dziurawca i nagietka - należy je odstawić na 3 tygodnie przed zabiegiem',
  'bielactwo', 'łuszczyca','skłonność do bliznowców','nowotwory skóry',
  'otwarte rany','okolice tatuażu i permanentnego tatuażu',

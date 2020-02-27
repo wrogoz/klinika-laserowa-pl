@@ -6,15 +6,16 @@ export default class TitleSectionComponent extends React.Component<{},{}>{
         return(
             <TitleSection>
             <TitleBox>
-              <EquipmentName>Laser Excel V</EquipmentName>
+              <EquipmentName>Co2 ultrafrax reborn</EquipmentName>
               <p>- przełom w leczeniu zmian naczyniowych <br/> i pigmentacyjnych</p>
 
             </TitleBox>
 
             <AdvertismentBox>
               <AdvertismentText>
-                to nie hasło reklamowe to rzeczywistość, która
-                teraz jest na wyciągnięcie Twojej ręki
+              A wszystko to, za sprawą najnowocześniejszego frakcjonującego lasera ablacyjnego CO2.
+               Zabieg z jego użyciem, może być stosowany jako jedyny, ale też doskonale sprawdza się,
+               jako baza dla innych terapii, na które zdecydujesz się w przyszłości.
               </AdvertismentText>
             </AdvertismentBox>
           </TitleSection>
