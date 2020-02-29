@@ -3,24 +3,26 @@ import styled from "styled-components";
 import co2Img from "../../images/co2imgs/laserTop.jpg";
 export default class TitleSectionComponent extends React.Component<{}, {}> {
   render() {
-    return (
+    return (<>
       <TitleSection>
         <TitleBox>
           <EquipmentName>Co2 ultrafrax reborn</EquipmentName>
           <p>
-            - przełom w leczeniu zmian naczyniowych <br /> i pigmentacyjnych
+            - przywrócenie harmonii skórze, nigdy dotąd nie było tak proste i skuteczne
           </p>
         </TitleBox>
 
-        <AdvertismentBox>
-          <AdvertismentText>
-            A wszystko to, za sprawą najnowocześniejszego frakcjonującego lasera
-            ablacyjnego CO2. Zabieg z jego użyciem, może być stosowany jako
-            jedyny, ale też doskonale sprawdza się, jako baza dla innych
-            terapii, na które zdecydujesz się w przyszłości.
-          </AdvertismentText>
-        </AdvertismentBox>
+
       </TitleSection>
+      <AdvertismentBox>
+      <AdvertismentText>
+        A wszystko to, za sprawą najnowocześniejszego frakcjonującego lasera
+        ablacyjnego CO2. Zabieg z jego użyciem, może być stosowany jako
+        jedyny, ale też doskonale sprawdza się, jako baza dla innych
+        terapii, na które zdecydujesz się w przyszłości.
+      </AdvertismentText>
+    </AdvertismentBox>
+    </>
     );
   }
 }
@@ -30,51 +32,73 @@ display:flex;
 flex-direction:column;
 background-image:url("${co2Img}");
 
-background-size: 50%;
+background-size: contain;
     background-repeat: no-repeat;
     background-position: 100% 0%;
 width:100%;
-@media(min-width:600px){
-  background-position: 100% 20%;
-}
-@media(min-width:900px){
+  @media(min-width:400px){
+    align-items:center;
+    padding-right:10%;
+  }
+  @media(min-width:750px){
+    height:400px;
+    justify-content:center;
+  }
+  @media(min-width:900px){
+    justify-content:flex-start;
+    background-position:85%;
+  }
+  @media(min-width:1200px){
+    height:590px;
+    background-position:93%;
+  }
+  @media(min-width:1400px){
 
-
-    background-size: 67% auto;
-    background-position: 100% 65px;
-}
-@media(min-width:1200px){
-
-    background-size: 86% auto;
-    background-position: 100% -55px;
-
-}
+    background-position:85%;
+  }
 `;
 
 const TitleBox = styled.section`
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 50%;
   margin-top: 40px;
   padding-left: 15px;
+  min-height:260px;
+  @media (min-width: 400px) {
+    width:60%;
+    padding-right:25%;
+    padding-bottom:15%;
+
+  }
+  @media(min-width:750px){
+    padding:0 5% 10% 15%;
+  }
   @media (min-width: 900px) {
     width: 50%;
     max-width: 500px;
-    padding-left: 22%;
+    padding-left:0;
   }
   @media (min-width: 1200px) {
     width: 45%;
     max-width: 80%;
-    padding-left: 22%;
+
   }
 `;
 const EquipmentName = styled.h1`
   font-size: 1.2em;
+  text-transform:uppercase;
   color: ${props => props.theme.interBlue};
   margin-bottom: 0;
   &&+p{
     font-size: 1.2em;
     margin-top: 0;
+  }
+  @media(min-width:400px){
+    font-size:2em;
+    &&+p{
+      font-size:1.4em;
+    }
   }
   @media(min-width:900px){
     font-size: 3em;
@@ -102,36 +126,12 @@ const AdvertismentBox = styled.div`
   display: flex;
   justify-content: center;
 
-  @media (min-width: 294px) {
-    margin-top: 100px;
-  }
-  @media (min-width: 356px) {
-    margin-top: 150px;
-  }
-  @media (min-width: 425px) {
-    margin-top: 200px;
-  }
-  @media (min-width: 495px) {
-    margin-top: 270px;
-  }
-  @media (min-width: 900px) {
-    margin-top: 0;
-  }
-  @media (min-width: 1200px) {
-    margin-top: 8%;
-  }
 
-  @media (min-width: 1400px) {
-    margin-top: 10%;
-  }
-  @media (min-width: 1600px) {
-    margin-top: 15%;
-  }
 `;
 const AdvertismentText = styled.p`
   text-align: center;
   text-transform: uppercase;
-  font-size: 1em;
+  font-size: 0.6em;
   letter-spacing: 1px;
   width: 72%;
   color: #999;
@@ -143,10 +143,21 @@ const AdvertismentText = styled.p`
     width: 200px;
     text-align: center;
     margin: 10px auto;
+  }@media (min-width: 400px) {
+
+    font-size: 0.8em;
+
   }
+}@media (min-width: 750px) {
+  width: 55%;
+  font-size: 1em;
+  line-height:24px;
+
+}
   @media (min-width: 900px) {
     margin-top: 12%;
     font-size: 1.7em;
     width: 650px;
+    line-height:35px;
   }
 `;

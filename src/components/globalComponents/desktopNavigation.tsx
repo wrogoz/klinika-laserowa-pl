@@ -28,7 +28,7 @@ class DesktopNav extends Component<DesktopNavProps, {}> {
           }
 
       })
-      console.log(this.props.LaserTypes)
+
     return (
       <DesktopNavBox>
           <p>Klinika Laserowa</p>

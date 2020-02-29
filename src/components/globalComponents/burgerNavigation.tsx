@@ -128,17 +128,8 @@ letter-spacing: 2px;
 }
 `
 
-const DisabledLink = styled.li`
+const DisabledLink = styled(NavItem)`
 color:#999;
-font-size: 0.8em;
-text-transform: uppercase;
-width:100%;
-text-align:center;
-font-weight: bold;
-border-bottom:1px solid #fff;
-padding: 14px 0;
-letter-spacing: 2px;
-
 
 `
 
