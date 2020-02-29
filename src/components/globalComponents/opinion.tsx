@@ -34,8 +34,8 @@ const Opinion = styled.div`
     }
     img{
 
-        height:70px;
-        width:70px;
+        height:71px;
+        width:71px;
         border-radius:25%;
 
         @media(min-width:750px){
