@@ -18,17 +18,43 @@ export class EffectsOfCo2Laser extends Component {
           descriptionText="Po zabiegu, należy stosować tak zwaną fotoprotekcję, która polega na używaniu kremów z filtrem, natomiast opalanie, musisz odłożyć na 6 tygodni.
           Uzyskany efekt, podlega normalnym procesom starzenia i nie ustępuje nagle, jak to ma miejsce w przypadku użycia toksyny botulinowej. "
         />
+        <BeforeAfterBox>
+          <p>przed</p>
         <Temporarydiv/>
+        <Temporarydiv/>
+        <p>po</p>
+        <p>przed</p>
+        <Temporarydiv/>
+        <Temporarydiv/>
+        <p>po</p>
+        </BeforeAfterBox>
+
 
       </>
     );
   }
 }
-const Temporarydiv = styled.div`
+const BeforeAfterBox = styled.div`
 
-    width:100px;
-    height:100px;;
-    background-color:blue;
-    margin:50px auto ;
+margin-top:30px;
+  display:flex;
+  justify-content:space-evenly;
+  align-items:space-evenly;
+  width:90%;
+  flex-wrap:wrap;
+  p{
+    width:10%;
+    font-size:0.7em;
+    align-self:center;
+    text-transform:uppercase;
+  }
+
+`
+const Temporarydiv = styled.div`
+    border-radius:20%;
+    width:30%;
+    height:100px;
+    background-color:${props=>props.theme.interBlue};
+    margin:5%;
 `
 export default EffectsOfCo2Laser;

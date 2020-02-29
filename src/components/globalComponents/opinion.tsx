@@ -49,6 +49,7 @@ const OpinionTxt = styled.p`
     font-size:0.8em;
     letter-spacing:1px;
     margin-left:10px;
+    width: 80%;
     @media(min-width:750px){
         margin-left:25px;
     }
