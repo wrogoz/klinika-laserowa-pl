@@ -49,7 +49,8 @@ const DescriptionParagraph = styled.p`
   color:#999;
   width:70%;
   margin:0;
-  text-align:center;
+  text-align:left;
+  padding-left:4%;
   letter-spacing:1px;
   @media(min-width:900px){
     font-size:1em;

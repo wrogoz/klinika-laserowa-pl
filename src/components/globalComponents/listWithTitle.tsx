@@ -36,6 +36,7 @@ const UlContainer = styled.section`
     flex-direction:column;
     align-items:center;
 
+
 `
 const PreUlText = styled.p`
   text-transform: uppercase;
@@ -45,6 +46,8 @@ const PreUlText = styled.p`
   text-align:center;
   @media(min-width:900px){
     font-size:1em;
+    width:55%;
+
   }
 
 `

@@ -26,17 +26,31 @@ const Opinion = styled.div`
     justify-content:space-between;
     align-items:center;
     margin-bottom:20px;
+    @media(min-width:750px){
+        width:60%;
+    }
+    @media(min-width:1000px){
+        width:45%;
+    }
     img{
 
         height:70px;
-
-        width:30%;
+        width:70px;
         border-radius:25%;
+
+        @media(min-width:750px){
+            height:110px;
+            width:110px;
+        }
     }
+
 `
 const OpinionTxt = styled.p`
     font-size:0.8em;
     letter-spacing:1px;
     margin-left:10px;
+    @media(min-width:750px){
+        margin-left:25px;
+    }
 `
 export default OpinionComponent;

@@ -131,7 +131,7 @@ const AdvertismentBox = styled.div`
 const AdvertismentText = styled.p`
   text-align: center;
   text-transform: uppercase;
-  font-size: 0.6em;
+  font-size: 0.7em;
   letter-spacing: 1px;
   width: 72%;
   color: #999;
