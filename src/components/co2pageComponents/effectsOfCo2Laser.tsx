@@ -40,7 +40,7 @@ margin-top:30px;
   display:flex;
   justify-content:space-evenly;
   align-items:space-evenly;
-  width:90%;
+  width:330px;
   flex-wrap:wrap;
   p{
     width:10%;
@@ -52,8 +52,8 @@ margin-top:30px;
 `
 const Temporarydiv = styled.div`
     border-radius:20%;
-    width:30%;
-    height:100px;
+    width:90px;
+    height:90px;
     background-color:${props=>props.theme.interBlue};
     margin:5%;
 `
