@@ -31,7 +31,13 @@ class Co2Ultrafrax extends React.Component<Co2UltrafraxProps, {}> {
         <Co2MainSection/>
         <Co2HowItWorks/>
         <SummaryBox>
-          <Contact/>
+          <Contact
+            title="zabiegi z użyciem lasera co2 ultrafrax reborn gdzie można z nich skorzystać"
+            descriptionText="Zabiegi wykonywane są w Szpitalu Jednego Dnia w Będzinie.
+            Skorzystaj z rejestracji telefonicznej, która czynna jest od poniedziałku do piątku, w godzinach od 8:00 do 19:00 i umów się na konsultację.
+            Otrzymasz wówczas wyczerpujące informacje na temat zabiegu i dowiesz się,
+             czy oraz kiedy, może być wykonany."
+          />
         </SummaryBox>
 
 

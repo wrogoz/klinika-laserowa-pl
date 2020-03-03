@@ -38,23 +38,30 @@ width:100%;
   @media(min-width:400px){
     align-items:center;
     padding-right:10%;
+    background-size: auto 80%;
   }
   @media(min-width:750px){
-    height:400px;
+    height:300px;
     justify-content:center;
+    background-size: auto 65%;
+    background-position: 74% 115%;
   }
   @media(min-width:900px){
-    justify-content:flex-start;
-    background-position:85%;
+
+    height:390px;
+    background-position:93%;
+    padding:0;
+    background-position: 74% 115%;
   }
   @media(min-width:1200px){
-    height:590px;
+    justify-content:flex-start;
+    height:490px;
     background-position:93%;
-  }
-  @media(min-width:1400px){
+    padding:0;
+    background-position: 74% 115%;
 
-    background-position:85%;
   }
+
 `;
 
 const TitleBox = styled.section`
@@ -70,16 +77,17 @@ const TitleBox = styled.section`
     padding-bottom: 15%;
   }
   @media (min-width: 750px) {
-    padding: 0 5% 10% 15%;
+    padding: 0 5% 20% 15%;
   }
   @media (min-width: 900px) {
-    width: 50%;
-    max-width: 500px;
-    padding-left: 0;
+    width: 72%;
+    max-width: 72%;
+    padding-bottom: 20%;
+
   }
   @media (min-width: 1200px) {
-    width: 45%;
-    max-width: 80%;
+
+    padding: 0;
   }
 `;
 const EquipmentName = styled.h1`
@@ -106,7 +114,7 @@ const EquipmentName = styled.h1`
   }
   @media(min-width:1200px){
     font-size: 5em;
-    margin-top: 10%;
+    margin-top: 2%;
     &&+p{
       font-size:2em;
       letter-spacing: 4px;

@@ -7,23 +7,18 @@ import Button from '../globalComponents/button';
 
 interface ContactComponentProps{
     WindowWidth:string | number
+    title:string
+    descriptionText:string
 }
 class ContactComponent extends Component<ContactComponentProps,{}> {
     render() {
         return (
             <>
             <ChapterTitleDesktop
-                title='zabiegi z użyciem lasera co2 ultrafrax reborn gdzie można z nich skorzystać'
+                title={this.props.title}
             />
             <DescriptionText
-                descriptionText="Zabiegi z użyciem lasera CO2 UltraFrax Reborn - gdzie można z nich
-                skorzystać
-                Jeśli chcesz zadbać o swoją skórę, uwolnić ją od zmarszczek, blizn, przebarwień, czy
-                rozstępów, przywracając jej jednocześnie zdrowy wygląd, umów się na konsultację w
-                Centrum Medycznym INTER-MED.
-                Po wstępnej analizie zmian, które mają zostać poddane działaniu promieni lasera
-                frakcyjnego CO2, będziesz mógł podjąć decyzję o skorzystaniu z zabiegu, w ustalonym
-                przez lekarza terminie."
+                descriptionText={this.props.descriptionText}
                 />
                 <Address>
                     {this.props.WindowWidth<1240?<Button btnText='Zapisz się'/>:<><p>Centrum Medyczne INTER-MED</p>
