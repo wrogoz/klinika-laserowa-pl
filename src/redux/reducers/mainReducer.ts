@@ -5,7 +5,7 @@ const initialState = {
   WindowWidth:window.innerWidth,
   LaserTypes:[
     'Cutera Excel V',
-    'Lasotronix',
+    'Smart M EVLT',
     'Laser CO2',
     'OPTOSLT M',
 

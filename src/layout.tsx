@@ -7,6 +7,7 @@ import Co2ultrafrax from './components/co2ultrafrax';
 import Contact from './components/contact';
 import { ThemeProvider } from "styled-components";
 import {theme} from './basicStyles/theme'
+import SmartM from './components/SmartM';
 export default class Layout extends Component<{}, {}> {
   render() {
     return (<
@@ -21,8 +22,8 @@ export default class Layout extends Component<{}, {}> {
             <Route exact path="/cuteraexcelV">
               <CuteraV/>
             </Route>
-            <Route exact path="/lasotronix">
-              <div>lasotronix page</div>
+            <Route exact path="/SmartMEVLT">
+              <SmartM/>
             </Route>
             <Route exact path="/laserco2">
              <Co2ultrafrax/>

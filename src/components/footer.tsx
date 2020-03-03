@@ -56,7 +56,8 @@ const FooterBox = styled.footer`
   }
   @media(min-width:1240px){
 
-    padding: 24px 0 10px 0;
+    padding: 10px 0 10px 0;
+
   }
 `;
 const FirstRow = styled.div`
@@ -120,12 +121,12 @@ const Social = styled.img`
   width: 15px;
   margin: 0 5px;
   @media (min-width: 700px) {
-    height: 30px;
-    width: 30px;
+    height: 15px;
+    width: 15px;
   }
 
     @media(min-width:1240px){
-        margin: 0px 20px 0px 20px;
+        margin: 0px 10px 0px 10px;
       }
 
 `;
