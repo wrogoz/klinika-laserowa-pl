@@ -7,7 +7,7 @@ import MainSection from './cuteraPageComponents/mainSection';
 import HowItWorks from './cuteraPageComponents/howItWorks';
 import InvervetionCourse from './cuteraPageComponents/IntervetionCourse';
 import BurgerNavigation from "./globalComponents/burgerNavigation";
-import SignIn from './globalComponents/signIn';
+
 import { ChangingWindowWidth } from "../redux/actions/actions";
 interface CuteraVProps{
   BurgerNavVisible:boolean
@@ -29,7 +29,7 @@ class CuteraV extends React.Component<CuteraVProps, {}> {
         <MainSection/>
         <HowItWorks/>
         <InvervetionCourse/>
-        {this.props.SignInVisible?<SignIn/>:null}
+
 
 
         {window.addEventListener('resize',this.windowResize)}

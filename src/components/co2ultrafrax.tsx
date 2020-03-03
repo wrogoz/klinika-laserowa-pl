@@ -3,28 +3,26 @@ import { connect } from "react-redux";
 import Header from "./header";
 import styled from "styled-components";
 import Co2TitleSectionComponent from './co2pageComponents/co2TitleSection';
-import EffectOfCo2Laser from './co2pageComponents/effectsOfCo2Laser';
 import Co2MainSection from './co2pageComponents/co2mainSection';
 import Co2HowItWorks from './co2pageComponents/co2HowItWorks';
-import Testimonials from './co2pageComponents/testimonials';
 import BurgerNavigation from "./globalComponents/burgerNavigation";
 import Contact from './globalComponents/contactComponent';
-import SignIn from './globalComponents/signIn';
 import womenFace from '../images/co2imgs/womenBottom.jpg'
 
 import { ChangingWindowWidth } from "../redux/actions/actions";
-interface CuteraVProps{
+interface Co2UltrafraxProps{
   BurgerNavVisible:boolean
-  SignInVisible:boolean
   dispatch:any
+  WindowWidth:number | string
 }
 
-class Co2Ultrafrax extends React.Component<CuteraVProps, {}> {
+class Co2Ultrafrax extends React.Component<Co2UltrafraxProps, {}> {
   windowResize = ()=>{
     this.props.dispatch(ChangingWindowWidth(window.innerWidth))
 
   }
   render() {
+
     return (
       <MainContainer>
         {this.props.BurgerNavVisible?<BurgerNavigation/>:null}
@@ -32,13 +30,10 @@ class Co2Ultrafrax extends React.Component<CuteraVProps, {}> {
         <Co2TitleSectionComponent/>
         <Co2MainSection/>
         <Co2HowItWorks/>
-        <EffectOfCo2Laser/>
-
         <SummaryBox>
-          <Testimonials/>
           <Contact/>
         </SummaryBox>
-        {this.props.SignInVisible?<SignIn/>:null}
+
 
 
         {window.addEventListener('resize',this.windowResize)}
@@ -60,18 +55,17 @@ const MainContainer = styled.div`
     flex-direction:column;
     align-items:center;
     background-image:url('${womenFace}');
-    background-size: 160% auto;
+    background-size: 50% auto;
     background-repeat: no-repeat;
-    background-position: 12% 26%;
+    background-position: 3px 0%;
 
 
   `
 
-  const mapStateToProps = (state: { BurgerNavVisible:boolean,SignInVisible:boolean,WindowWidth:number }) => {
+  const mapStateToProps = (state: { BurgerNavVisible:boolean, WindowWidth:number | string }) => {
     return {
       BurgerNavVisible: state.BurgerNavVisible,
-      SignInVisible:state.SignInVisible,
-      WIndowWidth:state.WindowWidth
+      WindowWidth:state.WindowWidth
     };
   };
 

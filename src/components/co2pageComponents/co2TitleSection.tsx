@@ -155,7 +155,7 @@ const AdvertismentText = styled.p`
 
 }
   @media (min-width: 900px) {
-    margin-top: 12%;
+    margin-top: 5%;
     font-size: 1.7em;
     width: 650px;
     line-height:35px;

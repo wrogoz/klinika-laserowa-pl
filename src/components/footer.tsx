@@ -4,7 +4,8 @@ import instagram from "../images/instagram.png";
 import twitter from "../images/twitterLogo.png";
 import facebook from "../images/facebook.png";
 import { connect } from "react-redux";
-import phone from "../images/phone.svg";
+
+import CallforAction from './globalComponents/callForAction';
 
 interface FooterProps {
   WindowWidth: number;
@@ -15,9 +16,7 @@ class Footer extends Component<FooterProps, {}> {
       <FooterBox>
         {this.props.WindowWidth < 1240 ? (
           <FirstRow>
-            <a href="tel:+48601197666">
-              <img src={phone} alt="sef" />
-            </a>
+            <CallforAction/>
           </FirstRow>
         ) : null}
 
@@ -46,20 +45,7 @@ const FooterBox = styled.footer`
   padding: 10px 0 5px 0;
   width: 100%;
   border-radius: 15px 15px 0 0;
-  a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #fff;
-    border: 1px solid #fff;
-    border-radius: 100%;
-    padding: 9px;
-    background: #fff;
-    img {
-      color: #fff;
-      height: 19px;
 
-    }
     p {
       margin: 2px;
     }

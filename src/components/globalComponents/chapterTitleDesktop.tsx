@@ -19,7 +19,7 @@ export default class ChapterTitleDesktop extends React.Component<ChapterTitleDes
 }
 const ChapterTitleBox = styled.div`
 
-    margin:40px 0 40px 0;
+    margin: 35px 0 25px 0;
     width:100%;
     font-family: 'Oswald', sans-serif;
     display:flex;
@@ -27,7 +27,7 @@ const ChapterTitleBox = styled.div`
     align-items:center;
     flex-wrap:nowrap;
     @media(min-width:1000px){
-        margin:80px 0 80px 0;
+        margin:80px 0 40px 0;
     }
 `
 

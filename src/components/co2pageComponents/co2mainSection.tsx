@@ -87,8 +87,8 @@ const MainBox = styled.main`
   background-repeat: no-repeat;
   width:100%;
   @media(min-width:600px){
-    background-size: auto 150%;
-    background-position: 0% 0%;
+    background-size: auto 77%;
+    background-position: 0% -5%;
   }
 
 

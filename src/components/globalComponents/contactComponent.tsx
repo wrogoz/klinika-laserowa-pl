@@ -2,13 +2,18 @@ import React, { Component } from 'react'
 import ChapterTitleDesktop from './chapterTitleDesktop';
 import DescriptionText from './descriptionText';
 import styled from 'styled-components';
+import { connect } from "react-redux";
+import Button from '../globalComponents/button';
 
-export class contactComponent extends Component<{},{}> {
+interface ContactComponentProps{
+    WindowWidth:string | number
+}
+class ContactComponent extends Component<ContactComponentProps,{}> {
     render() {
         return (
             <>
             <ChapterTitleDesktop
-                title='zabiegi z użyciem lasera co2 ultrafrax reborn gdzie możn z nich skorzystać'
+                title='zabiegi z użyciem lasera co2 ultrafrax reborn gdzie można z nich skorzystać'
             />
             <DescriptionText
                 descriptionText="Zabiegi z użyciem lasera CO2 UltraFrax Reborn - gdzie można z nich
@@ -21,8 +26,9 @@ export class contactComponent extends Component<{},{}> {
                 przez lekarza terminie."
                 />
                 <Address>
-                <p>Centrum Medyczne INTER-MED</p>
-                <p>Rejestracja telefoniczna:</p>
+                    {this.props.WindowWidth<1240?<Button btnText='Zapisz się'/>:<><p>Centrum Medyczne INTER-MED</p>
+                <p>Rejestracja telefoniczna: (32) 360 10 30</p></>}
+
 
                 </Address>
 
@@ -31,11 +37,23 @@ export class contactComponent extends Component<{},{}> {
     }
 }
 const Address = styled.div`
+display:flex;
+justify-content:center;
 width: 60%;
-padding-right: 20%;
+padding-top:15px;
+padding-bottom:20px;
 font-size: 0.9em;
     p:last-of-type{
         color: #999;
+        margin-left:10px;
     }
 `
-export default contactComponent
+
+const mapStateToProps = (state: {WindowWidth:number | string }) => {
+    return {
+
+      WindowWidth:state.WindowWidth
+    };
+  };
+
+  export default connect(mapStateToProps)(ContactComponent);

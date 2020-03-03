@@ -43,6 +43,9 @@ const PreUlText = styled.p`
   font-size: 0.8em;
   font-weight: bold;
   padding:0 20px;
+@media(min-width:450px){
+  width:60%;
+}
   text-align:center;
   @media(min-width:900px){
     font-size:1em;

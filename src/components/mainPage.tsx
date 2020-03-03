@@ -9,7 +9,7 @@ import LaserPresentation from "./mainpageComponents/LaserPresentation";
 import LaserPresentationDesktop from './mainpageComponents/laserPresentationDesktop';
 import BurgerNavigation from './globalComponents/burgerNavigation';
 import { ChangingWindowWidth } from "../redux/actions/actions";
-import SelectIntervetion from './mainpageComponents/selectIntervetion';
+
 
 
 interface MainPageProps{
@@ -82,7 +82,7 @@ const MainContainer = styled.div`
   }
 `;
 
-const mapStateToProps = (state: { BurgerNavVisible:boolean,WindowWidth:number | string }) => {
+const mapStateToProps = (state: { BurgerNavVisible:boolean, WindowWidth:number | string }) => {
   return {
     BurgerNavVisible: state.BurgerNavVisible,
     WindowWidth:state.WindowWidth
