@@ -35,8 +35,8 @@ const Address = styled.div`
 display:flex;
 justify-content:center;
 width: 60%;
-padding-top:15px;
-padding-bottom:20px;
+padding-top: 25px;
+padding-bottom: 10px;
 font-size: 0.9em;
     p:last-of-type{
         color: #999;

@@ -33,7 +33,7 @@ class SmartM extends React.Component<SmartMProps, {}> {
         <SmartOverall/>
         <SmartMainSection/>
         <SmartMAdventages/>
-        <Co2HowItWorks/>
+
         <SmartMSummary/>
 
         {window.addEventListener('resize',this.windowResize)}

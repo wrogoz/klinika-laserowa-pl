@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import styled from "styled-components";
 import Contact from '../globalComponents/contactComponent';
 import { ChangingWindowWidth } from "../../redux/actions/actions";
+import smartM3 from '../../images/lasotronixImgs/laser4.jpg';
 interface SmartMSummaryProps{
   dispatch:any
   WindowWidth:number | string
@@ -27,6 +28,7 @@ class SmartMSummary extends React.Component<SmartMSummaryProps, {}> {
                czy oraz kiedy,
             może być wykonany."
           />
+          <img src={smartM3} alt='laser' />
         </SummaryBox>
 
 
@@ -42,8 +44,13 @@ class SmartMSummary extends React.Component<SmartMSummaryProps, {}> {
     display:flex;
     flex-direction:column;
     align-items:center;
+  img{
+    height:auto;
+    width: 80%;
+    max-width: 650px;
+    padding-left: 13%;
 
-
+  }
 
   `
 

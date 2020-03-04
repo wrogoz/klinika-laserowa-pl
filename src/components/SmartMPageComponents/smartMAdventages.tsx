@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import ChapterTitleDesktop from '../globalComponents/chapterTitleDesktop';
 import ListWithTitle from '../globalComponents/listWithTitle';
+import styled from 'styled-components';
+
 export class SmartMAdventages extends Component {
     render() {
         return (
-            <section>
+            <AdventagesSection>
                 <ChapterTitleDesktop
             title='Zalety zabiegu evlt z uzyciem lasera smart m'
           />
@@ -21,9 +23,11 @@ export class SmartMAdventages extends Component {
                 'po zabiegu, możesz szybko wrócić do swoich codziennych zajęć'
             ]}
           />
-            </section>
+            </AdventagesSection>
         )
     }
 }
+const AdventagesSection = styled.section`
 
+`
 export default SmartMAdventages

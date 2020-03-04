@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import ChapterTitleDesktop from '../globalComponents/chapterTitleDesktop';
 import ListWithTitle from '../globalComponents/listWithTitle';
 import BoxUnderList from '../globalComponents/boxUnderList';
-import laser2 from '../../images/co2imgs/laser2.jpg';
+import smartM2 from '../../images/lasotronixImgs/laser3.jpg';
 
 import plusIcon from '../../images/plus.png';
 import minusIcon from '../../images/minus.png';
@@ -87,14 +87,18 @@ const MainBox = styled.main`
   flex-direction:column;
   align-items:center;
   justify-content:center;
-  background-image:url("${laser2}");
-  background-size: auto 64%;
-    background-position: -30px -46px;
+  background-image:url("${smartM2}");
+  background-size: auto 23%;
+  background-position: 102% 3%;
   background-repeat: no-repeat;
   width:100%;
   @media(min-width:600px){
     background-size: auto 77%;
-    background-position: 0% -5%;
+    background-position: 167% 1%;
+  }
+  @media(min-width:1200px){
+    background-size: auto 77%;
+  background-position: 100% 1%;
   }
 
 
