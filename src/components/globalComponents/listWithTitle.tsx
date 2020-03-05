@@ -35,6 +35,7 @@ const UlContainer = styled.section`
     display:flex;
     flex-direction:column;
     align-items:center;
+    width:100%;
 
 
 `
@@ -58,8 +59,14 @@ const PreUlText = styled.p`
 const List = styled.ul`
   display:flex;
   flex-direction:column;
-  padding:0 20%;
+
+
+  width:50%;
+
   color:#999;
+  @media(min-width:1200px){
+    padding-left:15%;
+  }
 `
 
 

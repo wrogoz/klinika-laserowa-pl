@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import ChapterTitleDesktop from '../globalComponents/chapterTitleDesktop';
 import ListWithTitle from '../globalComponents/listWithTitle';
+import styled from 'styled-components';
 export class OverallInfo extends Component {
     render() {
         return (
-            <section>
+            <OverallSection>
                 <ChapterTitleDesktop
             title='Chirurgiczny laser smart m'
           />
@@ -20,9 +21,11 @@ export class OverallInfo extends Component {
                 'neurochirurgii'
             ]}
           />
-            </section>
+            </OverallSection>
         )
     }
 }
-
+const OverallSection = styled.section`
+    width:100%;
+`
 export default OverallInfo
