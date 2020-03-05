@@ -14,18 +14,15 @@ class DesktopNav extends Component<DesktopNavProps, {}> {
   render() {
       const laserLinks = this.props.LaserTypes.map((el,key)=>{
             // disable other lasers
-            if(key===3){
-                return (
-                    <NonWorkinLink key={key} >{el} - wkrótce </NonWorkinLink>
-                )
-          }else{
+
+
               return(
                 <li
                 key={key}>
                     <StyledLink to={el.replace(/ /g,'')}>{el}</StyledLink>
                 </li>
             )
-          }
+
 
       })
 
@@ -116,9 +113,9 @@ const StyledLink = styled(Link)`
     text-decoration:none;
 `
 
-const NonWorkinLink = styled.li`
-    color:#999;
-`
+// const NonWorkinLink = styled.li`
+//     color:#999;
+// `
 
 const mapStateToProps = (state: { LaserTypes:string[]}) => {
     return {

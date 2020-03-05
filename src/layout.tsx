@@ -8,6 +8,8 @@ import Contact from './components/contact';
 import { ThemeProvider } from "styled-components";
 import {theme} from './basicStyles/theme'
 import SmartM from './components/SmartM';
+import Optoyag from './components/optoyag';
+
 export default class Layout extends Component<{}, {}> {
   render() {
     return (<
@@ -28,8 +30,8 @@ export default class Layout extends Component<{}, {}> {
             <Route exact path="/laserco2">
              <Co2ultrafrax/>
             </Route>
-            <Route exact path="/optoslt">
-              <div>optoslt page</div>
+            <Route exact path="/OPTOSLTM">
+              <Optoyag/>
             </Route>
             <Route exact path="/kontakt">
               <Contact/>

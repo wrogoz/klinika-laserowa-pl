@@ -87,18 +87,14 @@ const MainBox = styled.main`
   flex-direction:column;
   align-items:center;
   justify-content:center;
-  background-image:url("${smartM2}");
-  background-size: auto 23%;
-  background-position: 102% 3%;
-  background-repeat: no-repeat;
+
   width:100%;
-  @media(min-width:600px){
-    background-size: auto 77%;
-    background-position: 167% 1%;
-  }
+
   @media(min-width:1200px){
-    background-size: auto 77%;
-  background-position: 100% 1%;
+    background-size: auto 40%;
+    background-position: 102% 25%;
+  background-image:url("${smartM2}");
+  background-repeat: no-repeat;
   }
 
 

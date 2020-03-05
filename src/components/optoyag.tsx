@@ -2,22 +2,23 @@ import React from "react";
 import { connect } from "react-redux";
 import Header from "./header";
 import styled from "styled-components";
-import TitleSectionComponent from './SmartMPageComponents/SmartMTitleSection';
+import TitleSectionComponent from './optoyagPageComponent/optoyagTitleSection';
 import SmartMainSection from './SmartMPageComponents/smartMainSection';
 import SmartOverall from './SmartMPageComponents/smartOverall';
 import SmartMAdventages from './SmartMPageComponents/smartMAdventages';
+
 import BurgerNavigation from "./globalComponents/burgerNavigation";
 import SmartMSummary from './SmartMPageComponents/smartMSummary';
 
 
 import { ChangingWindowWidth } from "../redux/actions/actions";
-interface SmartMProps{
+interface OptoYagProps{
   BurgerNavVisible:boolean
   dispatch:any
   WindowWidth:number | string
 }
 
-class SmartM extends React.Component<SmartMProps, {}> {
+class OptoYag extends React.Component<OptoYagProps, {}> {
   windowResize = ()=>{
     this.props.dispatch(ChangingWindowWidth(window.innerWidth))
 
@@ -57,4 +58,4 @@ const MainContainer = styled.div`
     };
   };
 
-export default connect(mapStateToProps)(SmartM);
+export default connect(mapStateToProps)(OptoYag);
