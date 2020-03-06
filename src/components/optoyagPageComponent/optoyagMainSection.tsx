@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import ChapterTitleDesktop from '../globalComponents/chapterTitleDesktop';
 
 import BoxUnderList from '../globalComponents/boxUnderList';
-import smartM2 from '../../images/lasotronixImgs/laser3.jpg';
+import glassesTop from '../../images/optoyag/glassesTop.jpg';
 
 import plusIcon from '../../images/plus.png';
 
@@ -20,7 +20,7 @@ class OptoyagMainSection extends React.Component<OptoyagMainSectionProps,{}>{
             <MainBox>
 
             <ChapterTitleDesktop
-            title='Komu i w czym może pomóc laser smart M?'
+            title='Komu i w czym może pomóc laser optoyag & slt?'
           />
 
             <Indications>Wskazania</Indications>
@@ -82,14 +82,25 @@ const MainBox = styled.main`
   flex-direction:column;
   align-items:center;
   justify-content:center;
-
+  background-size: contain;
+  background-position: 102% 10%;
+background-image:url("${glassesTop}");
+background-repeat: no-repeat;
   width:100%;
 
-  @media(min-width:1200px){
-    background-size: auto 40%;
-    background-position: 102% 25%;
-  background-image:url("${smartM2}");
-  background-repeat: no-repeat;
+
+  @media(min-width:900px){
+
+    background-position: 100% 45%;
+
+
+  }
+  @media(min-width:1000px){
+
+    background-size: 103% 70%;
+    background-position: 100% 66%;
+
+
   }
 
 
@@ -101,7 +112,7 @@ const Indications = styled.h3`
   font-size: 0.8em;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 15px;
+  margin:0 auto 15px auto;
     &&+p{
       width: 250px;
       color: #999;
@@ -109,6 +120,7 @@ const Indications = styled.h3`
       font-size: 0.6em;
       text-transform: uppercase;
     }
+
     @media(min-width:900px){
       font-size: 1.4em;
       width: 400px;
@@ -119,10 +131,14 @@ const Indications = styled.h3`
   }
 `
 const IndicationsList = styled.ol`
-  width:70%;
+width: 76%;
   font-weight:bold;
   color:#444;
   list-style-position: inside;
+  padding:0;
+  @media(min-width:550px){
+    width:60%;
+  }
 
   ul{
     padding:0;
@@ -134,12 +150,16 @@ const IndicationsList = styled.ol`
       color: #999;
       margin-left:15px;
     }
+    p{
+  text-align:justify;
 
+    }
   }
 `
 const Sign = styled.img`
   height:40px;
   width:40px;
+  margin: 30px 0;
 `
 
 const mapStateToProps = (state: { WindowWidth:number }) => {

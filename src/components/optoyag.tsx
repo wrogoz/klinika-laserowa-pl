@@ -5,10 +5,10 @@ import styled from "styled-components";
 import TitleSectionComponent from './optoyagPageComponent/optoyagTitleSection';
 import OptoyagMainSection from './optoyagPageComponent/optoyagMainSection';
 
-import SmartMAdventages from './SmartMPageComponents/smartMAdventages';
+import OptoyagAdventages from './optoyagPageComponent/optoyaAdventages';
 
 import BurgerNavigation from "./globalComponents/burgerNavigation";
-import SmartMSummary from './SmartMPageComponents/smartMSummary';
+import OptoyaSummary from './optoyagPageComponent/optoyagSummary';
 
 
 import { ChangingWindowWidth } from "../redux/actions/actions";
@@ -31,9 +31,9 @@ class OptoYag extends React.Component<OptoYagProps, {}> {
         <Header pageName="laser smart m evlt" />
         <TitleSectionComponent/>
         <OptoyagMainSection/>
-        <SmartMAdventages/>
+        <OptoyagAdventages/>
 
-        <SmartMSummary/>
+        <OptoyaSummary/>
 
         {window.addEventListener('resize',this.windowResize)}
       </MainContainer>

@@ -11,12 +11,12 @@ export default class BoxUnderList extends React.Component<BoxUnderListProps,{}>{
     render(){
         return(
             <Box>
-                <p>
+                <Text>
                     {this.props.firstLine}
-                </p>
-                <p>
+                </Text>
+                <Text>
                     {this.props.secondLine}
-                </p>
+                </Text>
             </Box>
         )
     }
@@ -33,11 +33,15 @@ const Box = styled.div`
         width: 35%;
 
     }
-    p{
-        text-align:center;
-        color:#fff;
-        margin:0;
-        font-size: 0.8em;
-    }
 
+
+`
+const Text = styled.p`
+text-align:center;
+color:#fff;
+margin:0;
+font-size: 0.7em;
+@media(min-width:430px){
+    font-size:0.8em;
+}
 `

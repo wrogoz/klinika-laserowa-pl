@@ -59,10 +59,7 @@ const PreUlText = styled.p`
 const List = styled.ul`
   display:flex;
   flex-direction:column;
-
-
   width:55%;
-
   color:#999;
   @media(min-width:1200px){
     padding-left:15%;
