@@ -19,7 +19,9 @@ interface MainPageProps{
 }
 
 class MainPage extends React.Component<MainPageProps, {}> {
-
+  componentDidMount(){
+    window.scroll(0,0)
+  }
   windowResize = ()=>{
     this.props.dispatch(ChangingWindowWidth(window.innerWidth))
 

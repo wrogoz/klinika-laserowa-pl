@@ -17,6 +17,9 @@ interface Co2UltrafraxProps{
 }
 
 class Co2Ultrafrax extends React.Component<Co2UltrafraxProps, {}> {
+  componentDidMount(){
+    window.scroll(0,0)
+  }
   windowResize = ()=>{
     this.props.dispatch(ChangingWindowWidth(window.innerWidth))
 

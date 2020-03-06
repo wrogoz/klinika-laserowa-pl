@@ -37,7 +37,7 @@ class DesktopNav extends Component<DesktopNavProps, {}> {
                    {laserLinks}
                </ul>
             </li>
-            <li><StyledLink to='/kontakt'>Kontakt</StyledLink></li>
+            <li><StyledLink to='/kontakt' id='contact'>Kontakt</StyledLink></li>
         </NavUl>
 
 
@@ -79,7 +79,7 @@ const NavUl = styled.ul`
         display:block;
         text-align:center;
         font-size:0.7em;
-
+        background-color:#ffffffe5;
         z-index:22;
         position:absolute;
         top:18px;
@@ -88,9 +88,10 @@ const NavUl = styled.ul`
         color:#333;
     }
     li:hover ul li{
-        padding:10px 0;
+
         cursor:pointer;
         border-bottom:1px solid #fff;
+
 
 
 
@@ -111,6 +112,13 @@ const MenuArrow = styled.img`
 const StyledLink = styled(Link)`
     color:#333;
     text-decoration:none;
+    padding:11px 30px 11px 30px;
+    display:block;
+ &#contact{
+   padding:0;
+ }
+
+
 `
 
 // const NonWorkinLink = styled.li`

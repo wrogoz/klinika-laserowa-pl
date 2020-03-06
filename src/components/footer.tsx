@@ -1,11 +1,11 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React, { Component } from "react";
 import styled from "styled-components";
 import instagram from "../images/instagram.png";
 import twitter from "../images/twitterLogo.png";
 import facebook from "../images/facebook.png";
 import { connect } from "react-redux";
-
-import CallforAction from './globalComponents/callForAction';
+import CallforAction from "./globalComponents/callForAction";
 
 interface FooterProps {
   WindowWidth: number;
@@ -16,15 +16,24 @@ class Footer extends Component<FooterProps, {}> {
       <FooterBox>
         {this.props.WindowWidth < 1240 ? (
           <FirstRow>
-            <CallforAction/>
+            <CallforAction />
           </FirstRow>
         ) : null}
 
         <SecondRow>
           <p>Obserwuj nas:</p>
-          <Social src={instagram} alt="instragram" />
-          <Social src={twitter} alt="twitter" />
-          <Social src={facebook} alt="facebook" />
+
+          <a href="https://www.instagram.com/cmintermed/" target="_blank">
+            <Social src={instagram} alt="instragram" />
+          </a>
+          <a href="https://www.twitter.com" target="_blank">
+            <Social src={twitter} alt="twitter" />
+          </a>
+
+          <a href="https://www.facebook.com/CMIntermed/" target="_blank" >
+            <Social src={facebook} alt="facebook" />
+          </a>
+
           {this.props.WindowWidth < 1240 ? <FooterStroke /> : null}
         </SecondRow>
         <ThirdRow>
@@ -81,11 +90,9 @@ const SecondRow = styled.div`
     font-size: 0.8em;
     white-space: nowrap;
     @media (min-width: 1240px) {
-        font-size:1em;
-
-      }
+      font-size: 1em;
+    }
   }
-
 `;
 const ThirdRow = styled.div`
   width: 100%;
@@ -96,9 +103,9 @@ const ThirdRow = styled.div`
     padding-bottom: 0;
     margin-bottom: 0;
     letter-spacing: 3px;
-    @media(min-width:1240px){
-        font-size:1.4em;
-        margin-top:20px;
+    @media (min-width: 1240px) {
+      font-size: 1.4em;
+      margin-top: 20px;
     }
   }
 `;
@@ -125,10 +132,9 @@ const Social = styled.img`
     width: 15px;
   }
 
-    @media(min-width:1240px){
-        margin: 0px 10px 0px 10px;
-      }
-
+  @media (min-width: 1240px) {
+    margin: 0px 10px 0px 10px;
+  }
 `;
 
 // const FooterBtn = styled.button`

@@ -19,6 +19,11 @@ interface OptoYagProps{
 }
 
 class OptoYag extends React.Component<OptoYagProps, {}> {
+
+  componentDidMount(){
+    window.scroll(0,0)
+  }
+
   windowResize = ()=>{
     this.props.dispatch(ChangingWindowWidth(window.innerWidth))
 

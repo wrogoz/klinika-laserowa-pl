@@ -4,7 +4,7 @@ import LogoIm from "../images/logo-im.png";
 import MobileNav from './globalComponents/mobileNav';
 import { connect } from "react-redux";
 import { BurgerShowHide } from "../redux/actions/actions";
-
+import {Link} from 'react-router-dom';
 import DesktopNav from './globalComponents/desktopNavigation';
 interface HeaderProps {
   pageName: string;
@@ -20,7 +20,9 @@ class Header extends Component<HeaderProps, {}> {
     return (
       <StHeader>
         <div>
+          <Link to='/'>
           <Logo src={LogoIm} alt="logo" />
+          </Link>
         </div>
 
         {this.props.WindowWidth>1240?<DesktopNav
