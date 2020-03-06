@@ -3,8 +3,8 @@ import { connect } from "react-redux";
 import Header from "./header";
 import styled from "styled-components";
 import TitleSectionComponent from './optoyagPageComponent/optoyagTitleSection';
-import SmartMainSection from './SmartMPageComponents/smartMainSection';
-import SmartOverall from './SmartMPageComponents/smartOverall';
+import OptoyagMainSection from './optoyagPageComponent/optoyagMainSection';
+
 import SmartMAdventages from './SmartMPageComponents/smartMAdventages';
 
 import BurgerNavigation from "./globalComponents/burgerNavigation";
@@ -30,8 +30,7 @@ class OptoYag extends React.Component<OptoYagProps, {}> {
         {this.props.BurgerNavVisible?<BurgerNavigation/>:null}
         <Header pageName="laser smart m evlt" />
         <TitleSectionComponent/>
-        <SmartOverall/>
-        <SmartMainSection/>
+        <OptoyagMainSection/>
         <SmartMAdventages/>
 
         <SmartMSummary/>

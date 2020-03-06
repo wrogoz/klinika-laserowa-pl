@@ -61,7 +61,7 @@ const List = styled.ul`
   flex-direction:column;
 
 
-  width:50%;
+  width:55%;
 
   color:#999;
   @media(min-width:1200px){

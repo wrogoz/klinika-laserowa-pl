@@ -44,8 +44,12 @@ background-image:url("${optoyag}");
 background-size: auto 114%;
 background-repeat: no-repeat;
 background-position: 92% 16%;
-
 width:100%;
+min-width:269px;
+@media(max-width:339px){
+  background-position: 150% 16%;
+  height:215px;
+}
   @media(min-width:400px){
     align-items:center;
     padding-right:10%;
@@ -79,7 +83,10 @@ const TitleBox = styled.section`
   width: 50%;
 
   padding-left: 30px;
+  @media(max-width:339px){
+    padding-left:20px;
 
+  }
   @media (min-width: 400px) {
     width: 60%;
     padding-right: 21%;
@@ -151,6 +158,7 @@ const AdvertismentText = styled.p`
 width: 60%;
     font-size: 0.8em;
     letter-spacing: 1px;
+    text-align:justify;
   span{
     font-weight:bold;
   }
