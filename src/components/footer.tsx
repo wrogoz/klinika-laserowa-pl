@@ -37,7 +37,7 @@ class Footer extends Component<FooterProps, {}> {
           {this.props.WindowWidth < 1240 ? <FooterStroke /> : null}
         </SecondRow>
         <ThirdRow>
-          <p>Inter-Med 2020</p>
+          <p>&copy;Inter-Med 2020</p>
         </ThirdRow>
       </FooterBox>
     );

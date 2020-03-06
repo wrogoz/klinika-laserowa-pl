@@ -21,7 +21,7 @@ class MainSection extends React.Component<MainSectionProps,{}>{
             <MainBox>
 
             <ChapterTitleDesktop
-            title='Komu i w czym może pomóc Laser Excel V?'
+            title='Komu i w czym może pomóc Laser Excel V&trade;?'
           />
 
             <Indications>Wskazania do zabiegu z użyciem lasera excel V</Indications>
@@ -41,7 +41,7 @@ class MainSection extends React.Component<MainSectionProps,{}>{
               secondLine='Nie musisz obawiać się bólu, blizn czy komplikacji po zabiegu'
               />
              <ChapterTitleDesktop
-            title='Czy każdy może skorzystać z tego, co oferuje laser excel V'
+            title='Czy każdy może skorzystać z tego, co oferuje laser excel V&trade;?'
           />
 
 

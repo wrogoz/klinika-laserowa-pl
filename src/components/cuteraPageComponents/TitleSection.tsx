@@ -6,7 +6,7 @@ export default class TitleSectionComponent extends React.Component<{},{}>{
         return(
             <TitleSection>
             <TitleBox>
-              <EquipmentName>Laser Excel V</EquipmentName>
+              <EquipmentName>Laser Excel V&trade;</EquipmentName>
               <p>- przełom w leczeniu zmian naczyniowych <br/> i pigmentacyjnych</p>
 
             </TitleBox>

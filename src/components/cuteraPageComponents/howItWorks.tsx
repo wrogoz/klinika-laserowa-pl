@@ -16,7 +16,7 @@ class HowItWorks extends React.Component<HowItWorksProps,{}>{
             <HowItWorksBox>
 
                 <ChapterTitleDesktop
-                title='Jak działa excel V'
+                title='Jak działa excel V&trade;?'
                 />
                 <Paragraph
                     text='Laser excel V Cutera to urządzenie,
