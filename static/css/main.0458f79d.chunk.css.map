@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.css"],"names":[],"mappings":"AAAA,KACI,QAAQ,CACR,SAAS,CACT,qBACJ,CACA,uBAAyB,OAAS,CAAE,QAAW","file":"main.0458f79d.chunk.css","sourcesContent":["body{\r\n    margin:0;\r\n    padding:0;\r\n    box-sizing: border-box;\r\n}\r\n.row:before, .row:after {width:0px; height:0px;}"]}
