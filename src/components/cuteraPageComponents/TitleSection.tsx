@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-import cuteraHead from '../../images/cuteraHead.png';
+import cuteraHead from '../../images/cuteraHead.jpg';
 export default class TitleSectionComponent extends React.Component<{},{}>{
     render(){
         return(
@@ -23,26 +23,21 @@ export default class TitleSectionComponent extends React.Component<{},{}>{
 }
 
 const TitleSection = styled.section`
-display:flex;
-flex-direction:column;
-background-image:url("${cuteraHead}");
-background-size:auto;
-background-repeat:no-repeat;
-background-position: 0% 40%;
-width:100%;
-@media(min-width:600px){
-  background-position: 100% 20%;
-}
-@media(min-width:900px){
+    display:flex;
+    flex-direction:column;
+    background-image:url("${cuteraHead}");
+    background-size: 600px;
+    background-repeat: no-repeat;
+    background-position: -45% 0%;
+    width:100%;
+      @media(min-width:600px){
+        background-size: 120%;
+    background-position: -196% 64%;
+      }
 
-
-    background-size: 67% auto;
-    background-position: 100% 65px;
-}
 @media(min-width:1200px){
 
-    background-size: 86% auto;
-    background-position: 100% -55px;
+  background-position: -180% 64%;
 
 }
 `
