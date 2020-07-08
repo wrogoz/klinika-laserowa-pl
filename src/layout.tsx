@@ -16,7 +16,7 @@ export default class Layout extends Component<{}, {}> {
       ThemeProvider theme={theme}>
       <LayoutContainer>
 
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
           <Switch>
             <Route exact path="/">
               <MainPage/>
