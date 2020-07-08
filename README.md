@@ -1,5 +1,5 @@
 # Klinika Laserowa  
-Site project which promotes modern dermatological lasers for medical company. / Project was temporary suspend in march'20 due covid'19.
+Site project which promotes modern dermatological lasers for medical company. / Project is temporary suspend  due covid'19.
 
 # Technologies:
 - Typescript
@@ -10,7 +10,7 @@ Site project which promotes modern dermatological lasers for medical company. / 
 
 # Status:
 
-- In progress
+- In progress / temporary suspend
 
 # How to start:
 First:
