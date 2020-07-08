@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/klinika-laserowa-pl/precache-manifest.2eec043d9c3168e44d95aa4a6b66d337.js"
+  "/klinika-laserowa-pl/precache-manifest.56342850fa438be711038f56e5fc0af3.js"
 );
 
 self.addEventListener('message', (event) => {

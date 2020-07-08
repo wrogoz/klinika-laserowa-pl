@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8b8c911a8b65e2ea51903b2ef15dbd4b",
+    "revision": "0e6368135ca9284c7d945be48ab1d6c8",
     "url": "/klinika-laserowa-pl/index.html"
   },
   {
-    "revision": "f511f2897b93250e361f",
+    "revision": "a8f81ae1bc8f5498c516",
     "url": "/klinika-laserowa-pl/static/css/main.0458f79d.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/klinika-laserowa-pl/static/js/2.0518b614.chunk.js.LICENSE"
   },
   {
-    "revision": "f511f2897b93250e361f",
-    "url": "/klinika-laserowa-pl/static/js/main.f2718991.chunk.js"
+    "revision": "a8f81ae1bc8f5498c516",
+    "url": "/klinika-laserowa-pl/static/js/main.64484b00.chunk.js"
   },
   {
     "revision": "462c25b803ff91010b30",

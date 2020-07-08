@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/klinika-laserowa-pl/static/css/main.0458f79d.chunk.css",
-    "main.js": "/klinika-laserowa-pl/static/js/main.f2718991.chunk.js",
-    "main.js.map": "/klinika-laserowa-pl/static/js/main.f2718991.chunk.js.map",
+    "main.js": "/klinika-laserowa-pl/static/js/main.64484b00.chunk.js",
+    "main.js.map": "/klinika-laserowa-pl/static/js/main.64484b00.chunk.js.map",
     "runtime-main.js": "/klinika-laserowa-pl/static/js/runtime-main.d73964c5.js",
     "runtime-main.js.map": "/klinika-laserowa-pl/static/js/runtime-main.d73964c5.js.map",
     "static/js/2.0518b614.chunk.js": "/klinika-laserowa-pl/static/js/2.0518b614.chunk.js",
     "static/js/2.0518b614.chunk.js.map": "/klinika-laserowa-pl/static/js/2.0518b614.chunk.js.map",
     "index.html": "/klinika-laserowa-pl/index.html",
-    "precache-manifest.2eec043d9c3168e44d95aa4a6b66d337.js": "/klinika-laserowa-pl/precache-manifest.2eec043d9c3168e44d95aa4a6b66d337.js",
+    "precache-manifest.56342850fa438be711038f56e5fc0af3.js": "/klinika-laserowa-pl/precache-manifest.56342850fa438be711038f56e5fc0af3.js",
     "service-worker.js": "/klinika-laserowa-pl/service-worker.js",
     "static/css/main.0458f79d.chunk.css.map": "/klinika-laserowa-pl/static/css/main.0458f79d.chunk.css.map",
     "static/js/2.0518b614.chunk.js.LICENSE": "/klinika-laserowa-pl/static/js/2.0518b614.chunk.js.LICENSE",
@@ -40,6 +40,6 @@
     "static/js/runtime-main.d73964c5.js",
     "static/js/2.0518b614.chunk.js",
     "static/css/main.0458f79d.chunk.css",
-    "static/js/main.f2718991.chunk.js"
+    "static/js/main.64484b00.chunk.js"
   ]
 }
