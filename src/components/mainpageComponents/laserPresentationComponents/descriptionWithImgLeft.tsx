@@ -1,10 +1,12 @@
 import React from 'react'
 import styled from 'styled-components';
-
+import LaserDescriptionOnLeft from './descriptionComponents/descriptionOnLeft'
 
 interface DescriptionWithImgOnLeftProps{
     imgSrc:string
     boxTitle:string
+    descriptionHeader:string
+    descriptionText:string
 }
 
 export default class DescriptionWithImgOnLeft extends React.Component<DescriptionWithImgOnLeftProps,{}>{
@@ -18,19 +20,10 @@ export default class DescriptionWithImgOnLeft extends React.Component<Descriptio
                         <p>{this.props.boxTitle}</p>
                     </div>
                 </ImageToLeft>
-
-                <DescriptionBox>
-                    <DescriptionH>
-                        Lorem Ipsum Ipsum Ipsum  Ipsum Ipsum Ipsum Ipsum
-
-                    </DescriptionH>
-                    <DescriptionP>
-                        Lorem ipsum dolor sit amet consectetur,
-                        adipisicing elit. Expedita, esse repellendus.
-                        Vel sit impedit, aperiam nam quo dolor. Debitis esse temporibus
-                        repellendus consectetur non placeat laudantium, aut iusto ab recusandae.
-                    </DescriptionP>
-                </DescriptionBox>
+                <LaserDescriptionOnLeft
+                    descriptionHeader={this.props.descriptionHeader}
+                    descriptionText={this.props.descriptionText}
+                />
 
             </DescriptionWithImgBox>
 
@@ -56,11 +49,13 @@ const DescriptionWithImgBox = styled.div`
             background-color:${props=>props.theme.interViolet};
             position:absolute;
             z-index:1;
-            padding:5px 10px 7px 15px;
-            bottom:20px;
+            padding: 10px 4% 10px 60px;
+            top:12%;
             height:5%;
             right:14.5%;
             border-radius:5px;
+            display:flex;
+            align-items:center;
             @media(min-width:500px ){
 
                 right:24.5%;
@@ -72,7 +67,7 @@ const DescriptionWithImgBox = styled.div`
             p{
                 text-transform:uppercase;
                 padding:0;
-                padding-right:45px;
+                padding-right:3px;
                 margin:0;
                 color:#fff;
 
@@ -102,35 +97,8 @@ const DescriptionWithImgBox = styled.div`
             }
             @media(min-width:1240px){
                 width:520px;
-                height:392px;
+                height:250px;
             }
             }
 
         `
-    const DescriptionBox = styled.div`
-        display:flex;
-        flex-direction:column;
-        text-align:justify;
-        width:77%;
-        padding-left:10%;
-        @media(min-width:500px ){
-        padding-left: 3%;
-        width: 72%;
-        }
-        @media(min-width:600px ){
-            font-size:1.4em;
-
-        }
-        @media(min-width:1240px){
-            justify-content:center;
-            padding-left:4%;
-        }
-    `
-
-    const DescriptionH = styled.h3`
-    text-transform:uppercase;
-    `
-    const DescriptionP = styled.p`
-        margin:0;
-
-    `

@@ -1,11 +1,13 @@
 import React from 'react'
-
+import LaserDescriptionOnRight from './descriptionComponents/descriptionOnRight'
 import styled from 'styled-components';
 
 
 interface DescriptionWithImgOnRightProps{
     imgSrc:string,
     boxTitle:string
+    descriptionHeader:string
+    descriptionText:string
 }
 
 export default class DescriptionWithImgOnRight extends React.Component<DescriptionWithImgOnRightProps,{}>{
@@ -19,18 +21,10 @@ export default class DescriptionWithImgOnRight extends React.Component<Descripti
                         <p>{this.props.boxTitle}</p>
                     </div>
                 </ImageToRight>
-                <DescriptionBox>
-                    <DescriptionH>
-                        Lorem Ipsum Ipsum Ipsum  Ipsum Ipsum Ipsum Ipsum
-
-                    </DescriptionH>
-                    <DescriptionP>
-                        Lorem ipsum dolor sit amet consectetur,
-                        adipisicing elit. Expedita, esse repellendus.
-                        Vel sit impedit, aperiam nam quo dolor. Debitis esse temporibus
-                        repellendus consectetur non placeat laudantium, aut iusto ab recusandae.
-                    </DescriptionP>
-                </DescriptionBox>
+                <LaserDescriptionOnRight
+                    descriptionHeader={this.props.descriptionHeader}
+                    descriptionText={this.props.descriptionText}
+                />
 
             </DescriptionWithImgBox>
 
@@ -57,11 +51,13 @@ const DescriptionWithImgBox = styled.div`
             background-color:${props=>props.theme.interOrange};
             position:absolute;
             z-index:1;
-            padding:5px 10px 10px 100px;
-            bottom:20px;
+            padding:10px 10px 10px 10%;
+            top: 12%;
             height:5%;
             left:14.5%;
             border-radius:5px;
+            display:flex;
+            align-items:center;
             @media(min-width:500px){
                 left:24.5%;
             }
@@ -98,36 +94,8 @@ const DescriptionWithImgBox = styled.div`
             }
             @media(min-width:1240px){
                 width:520px;
-                height:392px;
+                height:250px;
             }
         }
-
-    `
-    const DescriptionBox = styled.div`
-    display:flex;
-    flex-direction:column;
-    text-align:justify;
-    width:77%;
-    padding-left:15%;
-    @media(min-width:500px){
-        width: 72%;
-        padding-left: 25%;
-    }
-    @media(min-width:600px ){
-        font-size:1.4em;
-    }
-
-    @media(min-width:1240px){
-        justify-content:center;
-        padding: 0 4% 0 0;
-    }
-    `
-
-    const DescriptionH = styled.h3`
-    text-transform:uppercase;
-
-    `
-    const DescriptionP = styled.p`
-        margin:0;
 
     `
