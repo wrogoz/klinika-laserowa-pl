@@ -45,6 +45,7 @@ const DescriptionBox = styled.div`
     `
     const DescriptionP = styled.p`
         margin:0;
+        font-size:0.8em;
 
     `
 export default LaserDescription

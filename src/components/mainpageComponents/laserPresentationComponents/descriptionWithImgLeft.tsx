@@ -49,7 +49,7 @@ const DescriptionWithImgBox = styled.div`
             background-color:${props=>props.theme.interViolet};
             position:absolute;
             z-index:1;
-            padding: 10px 4% 10px 60px;
+            padding: 10px 2% 10px 60px;
             top:12%;
             height:5%;
             right:14.5%;
@@ -70,7 +70,10 @@ const DescriptionWithImgBox = styled.div`
                 padding-right:3px;
                 margin:0;
                 color:#fff;
-
+                font-size: 0.8em;
+                @media(min-width:1240px){
+                    font-size: 1em;
+                }
             }
         }
         img{

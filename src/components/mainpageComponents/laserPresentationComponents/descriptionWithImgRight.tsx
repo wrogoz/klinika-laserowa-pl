@@ -70,7 +70,10 @@ const DescriptionWithImgBox = styled.div`
                 padding:0;
                 margin:0;
                 color:#fff;
-
+                font-size: 0.8em;
+                @media(min-width:1240px){
+                    font-size: 1em;
+                }
             }
         }
     img{
