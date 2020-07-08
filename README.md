@@ -14,12 +14,4 @@ https://wrogoz.github.io/klinika-laserowa-pl/
 
 - In progress / temporary suspend
 
-# How to start:
-First:
-npm install
-
-Then:
-npm start
-
-
 
