@@ -1,7 +1,8 @@
 # Klinika Laserowa  
-https://wrogoz.github.io/klinika-laserowa-pl/
-Site project which promotes modern dermatological lasers for medical company. / Project is temporary suspend  due covid'19.
 
+Site project which promotes modern dermatological lasers for medical company. / Project is temporary suspend  due covid'19.
+# Demo
+https://wrogoz.github.io/klinika-laserowa-pl/
 # Technologies:
 - Typescript
 - React
