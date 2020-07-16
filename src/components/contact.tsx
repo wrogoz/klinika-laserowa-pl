@@ -27,12 +27,18 @@ interface ContactProps{
                 {this.props.BurgerNavVisible?<BurgerNavigation/>:null}
                     <h2>Kontakt</h2>
                     <section>
-                    <p>(32)360 10 20</p>
-                    <address>
+                        <div>
+                        <h3>Telefon</h3>
+                        <p>(32)360 10 20</p>
+                        </div>
+
+
+
+                    <div>
                         <h3>Adres</h3>
                         <p>ul. Krasickiego 14</p>
                         <p>40-500 Będzin</p>
-                    </address>
+                    </div>
                     <div>
                         <h3>Godziny otwarcia</h3>
                         <p>Pon-Pt 8:00 - 19:00</p>
@@ -58,11 +64,26 @@ display:flex;
 justify-content:center;
 align-items:center;
 flex-direction:column;
+
+
 section,div,address{
     display:flex;
     flex-direction:column;
     justify-content:center;
 align-items:center;
+@media(min-width:1240px ){
+        margin:0 5%;
+        align-items:flex-start;
+        justify-content:center;
+}
+
+}
+section{
+    @media(min-width:1240px ){
+        width:80vw;
+        display:flex;
+        flex-direction:row;
+}
 }
 h2{
     color: ${props=>props.theme.interBlue};
@@ -70,9 +91,19 @@ h2{
     font-size: 2em;
     margin:0;
 }
+h3{
+    @media(min-width:1240px ){
+    text-align:center;
+    margin:30px auto 0 auto;
+    }
+}
 p{
+    margin-top:0;
     font-size: 1.3em;
-
+    @media(min-width:1240px ){
+        margin-bottom:0;
+        margin-top:19px;
+    }
 }
 `
 const mapStateToProps = (state: { BurgerNavVisible:boolean}) => {
