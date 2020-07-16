@@ -7,7 +7,6 @@ import MainSection from './cuteraPageComponents/mainSection';
 import HowItWorks from './cuteraPageComponents/howItWorks';
 import InvervetionCourse from './cuteraPageComponents/IntervetionCourse';
 import BurgerNavigation from "./globalComponents/burgerNavigation";
-
 import { ChangingWindowWidth } from "../redux/actions/actions";
 interface CuteraVProps{
   BurgerNavVisible:boolean
