@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components';
-import Cutera1 from '../../images/cutera1.png';
 import Nowoczesnosc from '../../images/mainImages/nowoczesnosc.png'
 import Personel from '../../images/mainImages/personel.png'
 import Szpital1dnia from '../../images/mainImages/szpital1dnia.png'

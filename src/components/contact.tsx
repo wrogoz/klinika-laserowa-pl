@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import { ChangingWindowWidth } from '../redux/actions/actions';
 import { connect } from 'react-redux';
 import BurgerNavigation from './globalComponents/burgerNavigation';
-import Womens from '../images/womens.png'
 interface ContactProps{
     BurgerNavVisible:boolean
     dispatch:any
@@ -25,7 +24,6 @@ interface ContactProps{
             <>
                 <Header pageName="Kontakt" />
                 <ContactContainer>
-                    <div>
                 {this.props.BurgerNavVisible?<BurgerNavigation/>:null}
                     <h2>Kontakt</h2>
                     <section>
@@ -44,7 +42,6 @@ interface ContactProps{
 
 
                     {window.addEventListener('resize',this.windowResize)}
-                    </div>
             </ContactContainer>
 
             </>
@@ -56,24 +53,16 @@ interface ContactProps{
 
 const ContactContainer=styled.div`
 width:100vw;
-height:88vh;
+height:80vh;
 display:flex;
 justify-content:center;
 align-items:center;
 flex-direction:column;
-background-image:url(${Womens});
-background-size:cover;
-background-repeat:no-repeat;
 section,div,address{
     display:flex;
     flex-direction:column;
     justify-content:center;
 align-items:center;
-}
-&& >div:nth-of-type(1){
-    background-color:rgba(255,255,255,0.8);
-    height:100%;
-    width:100%;
 }
 h2{
     color: ${props=>props.theme.interBlue};
